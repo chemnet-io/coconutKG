@@ -17,6 +17,10 @@ Usage:
 
 ```<column_name>``` name of the column you want to use for the x- or y-axis
 
+## extract_fragments.py
+
+This script saves all fragments into a new json file. The original structure of the fragments caused us problems with mapping the data to RDF. For this reason we decided to use this workaround.
+
 ## License
 
 The code and experiments are available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
