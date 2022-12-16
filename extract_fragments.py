@@ -1,7 +1,7 @@
 import json
 from tqdm import tqdm
 
-f = open('cocojson/original/coconut_02.json')
+f = open('cocojson/original/coconut.json')
 
 data = json.load(f)
 fragments_dict = {}
@@ -36,5 +36,5 @@ for i in tqdm(data):
                 for frag, frag_int in v['ertlFunctionalFragmentsPseudoSmiles'].items():
                     fragments_dict[compound_id]['ertlFunctionalFragmentsPseudoSmiles'].append(frag + ':' + str(frag_int))
 
-with open("coconut_fragments_02.json", "w") as outfile:
+with open("coconut_fragments.json", "w") as outfile:
     json.dump(fragments_dict, outfile)
