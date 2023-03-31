@@ -1,25 +1,33 @@
-# Knowledge Graph files
+# Schema
 
-## Query.csv
+## Coconut
 
-A csv file with all properties and number of entities.
+As a data basis we have used [Coconut](https://coconut.naturalproducts.net/documentation). Coconut is an open source project for natural products. It combines content from more than 50 datasets.
 
-## plot_properties.py
+## Schema creation process
 
-Script plots graph of properties and number of entities. 
-Usage:
+Some properties occur multiple times in original Coconut record. This is probably due to the fact that Coconut was created from multiple datasets. We decided not to transfer these duplications into our ontology, as far as they are visible to us. We used the command line tool [jq](https://stedolan.github.io/jq/) to verify the duplicates. For example with the following command: ```jq 'select(.simpleInchi != .uniqueNaturalProduct.inchi)' sourceNaturalProduct.jsonl```
 
-```python plot_properties.py -i <your_file.csv> -o <filename.pdf> -x <column_name> -y <column_name>```
+List of duplicates:
+- ```$oid``` and ```$oid```
+- ```totalAtomNumber``` and ```total_atom_number``` 
+- ```simpleInchi``` and ```inchi```
+- ```simpleInchiKey``` and ```inchikey```
 
-```<your_file.csv>``` path to your csv file
+We have decided to merge ```citation``` and ```citationDOI``` to ```citationDOI```.
 
-```<filename.pdf>``` path and name of your output file. You can also export as png, ...
+```synonyms``` and ```uniqueNaturalProduct.synonyms``` will also be merged.
 
-```<column_name>``` name of the column you want to use for the x- or y-axis
+Since in many cases there is no information in the property ```continent``` and in ```geoLocation``` there is information about the origin, we decided to keep only ```geoLocation```.
 
-## extract_fragments.py
+We also used the command line tool jq to find out which properties do not contain values. For example with the following command: ```jq '.uniqueNaturalProduct.collection | select(length > 0)' sourceNaturalProduct.jsonl```
 
-This script saves all fragments into a new json file. The original structure of the fragments caused us problems with mapping the data to RDF. For this reason we decided to use this workaround.
+List of empty properties:
+- ```allTaxa```
+- ```collection```
+- ```allWikidataIds```
+- ```taxid```
+- ```allChemClassifications```
 
 ## License
 

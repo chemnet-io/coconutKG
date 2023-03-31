@@ -1,0 +1,519 @@
+<!-- Created with WebVOWL (version 1.1.2), http://vowl.visualdataweb.org -->
+<svg class="vowlGraph" width="1497.6" height="923" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(-288.9954506340746,-117.60773281983319)scale(1.2692708860198032)" style="opacity: 1;">
+  <g class="linkContainer">
+    <defs>
+      <marker id="marker5" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker34" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker62" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker65" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker66" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker71" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker99" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker129" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker139" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker165" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker173" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker175" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker181" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker197" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+      <marker id="marker205" viewBox="-14 -10 28 20" markerWidth="10" markerHeight="10" orient="auto">
+        <path d="M0,0L -12,8L-12,-8L0,0" class="filled" style="fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 2px; stroke-dasharray: 100px;">
+        </path>
+      </marker>
+    </defs>
+    <g class="link" marker-end="url(#marker5)">
+      <path class="link-path node1 node6 normal" d="M554.6962429786356,503.6966968503622Q505.12566258316167,528.5950328099842,492.73301748429316,534.8196167998897Q480.34037238542464,541.0442007897951,430.7697919899507,565.9425367494172" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker62)">
+      <path class="link-path node1 node45 normal" d="M575.3684639363233,436.29845469786255Q554.3483805352954,398.72922210860827,549.0933596850384,389.33691396129467Q543.8383388347814,379.94460581398107,522.8182554337534,342.3753732247268" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker65)">
+      <path class="link-path node49 node32 normal" d="M1092.0734529500392,430.62087692046714Q1092.4074102348397,397.5842907182004,1092.49089955604,389.3251441676337Q1092.5743888772402,381.065997617067,1092.9083461620407,348.0294114148003" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker66)">
+      <path class="link-path node1 node18 normal" d="M628.9623212276297,438.6420554071648Q656.785724803366,397.754754530601,663.7415756973,387.53292931146007Q670.6974265912341,377.3111040923191,698.5208301669705,336.42380321575524" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker71)">
+      <path class="link-path node1 node72 normal" d="M646.3848958737333,459.0237874159677Q693.2089765172115,436.906719825169,704.914996678081,431.3774529274693Q716.6210168389506,425.8481860297696,763.4450974824287,403.73111843897084" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker99)">
+      <path class="link-path node49 node8 normal" d="M1130.0144525611604,515.1159766901642Q1153.0390278596392,535.1716262479912,1158.7951716842588,540.185538637448Q1164.5513155088784,545.1994510269047,1187.5758908073572,565.2551005847317" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker129)">
+      <path class="link-path node1 node16 normal" d="M645.5460971215081,504.28141838043285Q689.3160782164954,526.9764086064707,700.2585734902422,532.6501561629802Q711.2010687639889,538.3239037194897,754.9710498589762,561.0188939455276" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker139)">
+      <path class="link-path node1 node74 normal" d="M554.3166321057746,458.68663294675355Q497.4589839263323,431.3191618974615,483.2445718814717,424.47729413513855Q469.0301598366111,417.6354263728156,412.1725116571688,390.26795532352355" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker165)">
+      <path class="link-path node49 node84 normal" d="M1131.8149177168207,450.30732525611535Q1162.5979290981145,426.3650139588715,1170.293681943438,420.37943613456054Q1177.9894347887616,414.3938583102496,1208.7724461700552,390.4515470130058" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker173)">
+      <path class="link-path node49 node24 normal" d="M1091.8686618592983,532.6173247877985Q1092.0558692286536,563.3433467819142,1092.1026710709925,571.0248522804432Q1092.1494729133315,578.7063577789721,1092.336680282687,609.4323797730877" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker175)">
+      <path class="link-path node1 node11 normal" d="M549.2708584892698,480.5850518369016Q479.5750308990407,480.2835202196851,462.15107400148344,480.208137315381Q444.72711710392616,480.1327544110769,375.0312895136971,479.83122279386043" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker181)">
+      <path class="link-path node1 node14 normal" d="M573.7046949446842,524.3403293718128Q545.6110139583593,570.3789708699239,538.587593711778,581.8886312444517Q531.5641734651967,593.3982916189796,503.47049247887196,639.4369331170906" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker197)">
+      <path class="link-path node1 node49 normal" d="M651.2703114367872,480.89004829101344Q806.9853887872747,481.1475965571815,845.9141581248966,481.2119836237235Q884.8429274625186,481.2763706902655,1040.5580048130062,481.5339189564335" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker205)">
+      <path class="link-path node49 node21 normal" d="M1142.554093970883,480.9923514079286Q1191.1026032721466,480.39647356026745,1203.2397305974623,480.2475040983522Q1215.376857922778,480.0985346364369,1263.9253672240413,479.50265678877577" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+    <g class="link" marker-end="url(#marker34)">
+      <path class="link-path node1 node26 normal" d="M626.390099842328,524.6093520857795Q653.5231018398304,570.1123189293528,660.3063523392059,581.4880606402462Q667.0896028385814,592.8638023511396,694.2226048360837,638.366769194713" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;">
+      </path>
+    </g>
+  </g>
+  <g class="cardinalityContainer">
+  </g>
+  <g class="labelContainer">
+    <g class="labelGroup" transform="translate(492.73301748429316,534.8196167998897)">
+      <g class="label" id="5">
+        <rect class="objectproperty property object" x="-40" y="-14" width="80" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has citation</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">has citation</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(549.0933596850384,389.33691396129467)">
+      <g class="label" id="62">
+        <rect class="objectproperty property object" x="-62" y="-14" width="125" height="28" style="fill: rgb(222, 204, 211);">
+          <title>data originated from</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">data originated from</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(1092.49089955604,389.3251441676337)">
+      <g class="label" id="65">
+        <rect class="objectproperty property object" x="-42" y="-14" width="84" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is Electronic</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is Electronic</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(663.7415756973,387.53292931146007)">
+      <g class="label" id="66">
+        <rect class="objectproperty property object" x="-48" y="-14" width="96" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has fingerprint</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">has fingerprint</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(704.914996678081,431.3774529274693)">
+      <g class="label" id="71">
+        <rect class="objectproperty property object" x="-60" y="-14" width="120" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has taxonomy data</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">has taxonomy data</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(1158.7951716842588,540.185538637448)">
+      <g class="label" id="99">
+        <rect class="objectproperty property object" x="-44.5" y="-14" width="89" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is topological</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is topological</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(700.2585734902422,532.6501561629802)">
+      <g class="label" id="129">
+        <rect class="objectproperty property object" x="-77" y="-14" width="155" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has molecular properties</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">has molecular properties</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(483.2445718814717,424.47729413513855)">
+      <g class="label" id="139">
+        <rect class="objectproperty property object" x="-70" y="-14" width="140" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has molecular features</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">has molecular features</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(1170.293681943438,420.37943613456054)">
+      <g class="label" id="165">
+        <rect class="objectproperty property object" x="-47" y="-14" width="94" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is geometrical</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is geometrical</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(1092.1026710709925,571.0248522804432)">
+      <g class="label" id="173">
+        <rect class="objectproperty property object" x="-42" y="-14" width="84" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is molecular</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is molecular</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(462.15107400148344,480.208137315381)">
+      <g class="label" id="175">
+        <rect class="objectproperty property object" x="-48" y="-14" width="96" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is identified by</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">is identified by</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(538.587593711778,581.8886312444517)">
+      <g class="label" id="181">
+        <rect class="objectproperty property object" x="-75" y="-1" width="107" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has geo location</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="5.696757793426514px">
+          <tspan class="text" x="-22" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">has geolocation</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(845.9141581248966,481.2119836237235)">
+      <g class="label" id="197">
+        <rect class="objectproperty property object" x="-50.5" y="-14" width="101" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has descriptors</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">has descriptors</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(1203.2397305974623,480.2475040983522)">
+      <g class="label" id="205">
+        <rect class="objectproperty property object" x="-51" y="-14" width="102" height="28" style="fill: rgb(222, 204, 211);">
+          <title>is constitutional</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">is constitutional</tspan>
+        </text>
+      </g>
+    </g>
+    <g class="labelGroup" transform="translate(660.3063523392059,581.4880606402462)">
+      <g class="label" id="34">
+        <rect class="objectproperty property object" x="-77" y="-14" width="155" height="28" style="fill: rgb(222, 204, 211);">
+          <title>has molecular fragments</title>
+        </rect>
+        <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">has molecular fragments</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+  <g class="nodeContainer">
+    <g class="node" id="26" transform="translate(720.3423234834321,682.1704254095014)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Molecular fragments</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">Molecular-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">fragments</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="14" transform="translate(476.9048062285765,682.9715666179122)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Geolocation</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">Geolocation</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="49" transform="translate(1091.5579350548137,481.6182713764558)">
+      <circle class="class" r="50" style="fill: rgb(111, 200, 111); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif ; font-size: 14px; pointer-events: none;">Descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="24" transform="translate(1092.6474070871716,660.4314331844304)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Molecular descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Molecular-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="84" transform="translate(1249.0294288320622,359.14060089266525)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Geometrical descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Geometrical-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="32" transform="translate(1093.4238640572662,297.0320169588116)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Electronic descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Electronic-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="1" transform="translate(600.2703811949797,480.80569587099114)">
+      <circle class="class" r="50" style="fill: rgb(111, 200, 111); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Compound</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Compound</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="11" transform="translate(324.0317668079872,479.6105787597709)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Unique Identifiers</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Unique</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">identifiers</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="72" transform="translate(809.5596121611823,381.9492099839474)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Taxonomy</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Taxonomy</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="18" transform="translate(727.2127701996205,294.26016275192893)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Fingerprint</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Fingerprint</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="45" transform="translate(497.91633817509705,297.8681320515982)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Data origin source</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Data</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">origin source</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="74" transform="translate(366.2187625679637,368.14889239928596)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Molecular features</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Molecular-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">features</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="21" transform="translate(1314.9215261401107,478.87673682024854)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Constitutional descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Constitutional-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="6" transform="translate(385.19565377360664,588.8335377287882)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Citation</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Citation</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="8" transform="translate(1226.0324083137039,598.7528058984402)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Topological descriptors</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Topological-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">descriptors</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+    <g class="node" id="16" transform="translate(800.2467657855046,584.4946164549692)">
+      <circle class="class" r="50" style="fill: rgb(170, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        <title>Molecular properties</title>
+      </circle>
+      <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-12.696757793426514px">
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">Molecular-</tspan>
+        <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">properties</tspan>
+      </text>
+      <g class="hidden-in-export" transform="translate(20,-35)" style="display: none;">
+        <circle class="class pin feature" r="12" style="fill: rgb(255, 0, 0); stroke: rgb(0, 0, 0); cursor: pointer; stroke-width: 2px;">
+        </circle>
+        <line x1="0" x2="0" y1="12" y2="16" style="stroke: rgb(0, 0, 0); stroke-width: 2px;">
+        </line>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
