@@ -1,10 +1,11 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
-
 let toggleTheme = (theme) => {
-  if (theme == "dark") {
+  if (theme === "dark") {
     setTheme("light");
+    document.getElementById("light-toggle").innerHTML = `<img class="icon" src="../assets/img/darkmode.svg">`
   } else {
     setTheme("dark");
+    document.getElementById("light-toggle").innerHTML = `<img class="icon" src="../assets/img/lightmode.svg">`
   }
 }
 
@@ -41,11 +42,11 @@ let initTheme = (theme) => {
   if (theme == null) {
     const userPref = window.matchMedia;
     if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'light';
+        theme = 'dark';
     }
   }
   setTheme(theme);
 }
 
 
-setTheme('light');
+initTheme(localStorage.getItem("theme"));

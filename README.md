@@ -1,6 +1,10 @@
-## Acknowledgements
+CoconutKG webpages
 
-The webpage theme was created on basis of the [al-folio](https://travis-ci.org/alshedivat/al-folio) template
+# Start as a local web server
+- To Start a local development server, firstly run ```npm install``` in the root directory
+- After all npm packages are installed, run ```ws``` to start a local development server. Depending on your npm setup, you might need to install ws globally first using ```npm install -g local-web-server```
+
+
 
 ## License
 
