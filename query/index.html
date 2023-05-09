@@ -47,7 +47,7 @@
         let yasgui = new Yasgui(document.getElementById("yasgui"), {
             corsProxy: "/proxy",
             nonSslDomain:"http://yasgui.triply.cc",
-            requestConfig: { endpoint: "http://coconut-kg.aksw.org/sparql" },
+            requestConfig: { endpoint: "https://coconut-kg.aksw.org/sparql" },
             copyEndpointOnNewTab: false,
             yasqe: {
                 createShortLink: function(yasqe, longString) {
@@ -60,7 +60,7 @@
                 }
             }
         });
-    querya = "PREFIX coco:  <http://coconut-kg.aksw.org/ontology#>" ;
+    querya = "PREFIX coco:  <http://coconutKG.aksw.org/ontology#>" ;
     queryb = "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" ;
     queryc = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" ;
     queryd = "PREFIX owl:  <http://www.w3.org/2002/07/owl#>" ;

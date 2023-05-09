@@ -218,7 +218,7 @@ class Footer extends HTMLElement {
         <!-- Footer -->
 <footer class="fixed-bottom">
     <div class="container mt-0">
-        © Copyright 2022 COCONUT[KG]
+        © Copyright 2023 COCONUT[KG]
     </div>
 </footer>
       `
