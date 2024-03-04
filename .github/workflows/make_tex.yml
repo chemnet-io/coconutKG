@@ -24,6 +24,8 @@ jobs:
       - name: upload as latest release
         run: |
           cd ${{github.workspace}}
+          gh release delete v0.0.1 -y || true
+          gh release create v0.0.1
           gh release upload v0.0.1 tex/sample-1col.pdf
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
