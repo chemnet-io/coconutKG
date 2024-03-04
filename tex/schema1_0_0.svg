@@ -151,10 +151,10 @@
     <g class="labelGroup" transform="translate(1092.49089955604,389.3251441676337)">
       <g class="label" id="65">
         <rect class="objectproperty property object" x="-42" y="-14" width="84" height="28" style="fill: rgb(222, 204, 211);">
-          <title>is Electronic</title>
+          <title>is electronic</title>
         </rect>
         <text class="text" style="fill: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;" text-anchor="middle" y="-6.696757793426514px">
-          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is Electronic</tspan>
+          <tspan class="text" x="0" dy="12px" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; pointer-events: none;">is electronic</tspan>
         </text>
       </g>
     </g>
