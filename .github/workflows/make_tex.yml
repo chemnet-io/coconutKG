@@ -24,7 +24,7 @@ jobs:
       - name: upload as latest release
         run: |
           cd ${{github.workspace}}
-          gh release upload v1.0.0 tex/sample-1col.pdf
+          gh release upload v0.0.1 tex/sample-1col.pdf
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
         shell: bash
