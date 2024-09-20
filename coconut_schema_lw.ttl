@@ -1,0 +1,817 @@
+@prefix : <http://coconutKG.aksw.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://coconutKG.aksw.org/ontology#> 
+	<http://purl.org/dc/terms/creator> "Louis Westerheide" ;
+	<http://purl.org/dc/terms/description> ""@en ;
+	<http://purl.org/dc/terms/rights> ""@en ;
+	<http://purl.org/dc/terms/title> "COCONUT[KG]"@en ;
+	<http://purl.org/vocab/vann/preferredNamespacePrefix> "" ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> "http://coconutKG.aksw.org/ontology#" ;
+	rdf:type owl:Ontology ;
+	rdfs:comment ""@en ;
+	rdfs:label ""@en ;
+	owl:versionInfo "SNAPSHOT" .
+
+############################
+# Classes
+############################
+
+:Citation rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Citation"@en .
+
+:Collection rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Collection"@en .
+
+:Entry rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Entry"@en .
+
+:GeoLocation rdf:type owl:Class ;
+	rdfs:comment "A location on earth."@en ;
+	rdfs:label "GeoLocation"@en .
+
+:Organism rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Organism"@en .
+
+:Properties rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Properties"@en .
+
+:Molecule rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Molecule"@en .
+
+:License rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "License"@en .
+
+:SampleLocation rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "SampleLocation"@en .
+
+:Identifier rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Identifier"@en .
+
+:Classification rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Classification"@en .
+
+:DescriptiveInformation rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Descriptive Information"@en .
+
+:Counts rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Counts"@en .
+
+:Status rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Status"@en .
+
+:Descriptor rdf:type owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Descriptor"@en .
+
+:GeometricalDescriptor rdf:type owl:Class ;
+  rdfs:subClassOf :Descriptor ;
+  rdfs:comment ""@en ;
+	rdfs:label "Geometrical Descriptor"@en .
+
+:TopologicalDescriptor rdf:type owl:Class ;
+  rdfs:subClassOf :Descriptor ;
+  rdfs:comment ""@en ;
+	rdfs:label "Topological Descriptor"@en .
+
+:ElectronicDescriptor rdf:type owl:Class ;
+  rdfs:subClassOf :Descriptor ;
+  rdfs:comment ""@en ;
+	rdfs:label "Electronic Descriptor"@en .
+
+:ConstitutionalDescriptor rdf:type owl:Class ;
+  rdfs:subClassOf :Descriptor ;
+  rdfs:comment ""@en ;
+	rdfs:label "Constitutional Descriptor"@en .
+
+############################
+# Object Properties
+############################
+
+:defines rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Descriptor ;
+	rdfs:label "defines"@en ;
+	rdfs:range :Properties .
+
+
+:labeledBy rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "labeledBy"@en ;
+	rdfs:range :Identifier .
+
+
+:specifiesLocationOf rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :SampleLocation ;
+	rdfs:label "specifiesLocationOf"@en ;
+	rdfs:range :Organism .
+
+
+:specifiesLocationOf rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :SampleLocation ;
+	rdfs:label "specifiesLocationOf"@en ;
+	rdfs:range :Molecule .
+
+
+:permits rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :License ;
+	rdfs:label "permits"@en ;
+	rdfs:range :Collection .
+
+
+:citedIn rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Entry ;
+	rdfs:label "citedIn"@en ;
+	rdfs:range :Citation .
+
+:citedIn rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Collection ;
+	rdfs:label "citedIn"@en ;
+	rdfs:range :Citation .
+
+:describedBy rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "describedBy"@en ;
+	rdfs:range :Properties .
+
+:foundIn rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "foundIn"@en ;
+	rdfs:range :GeoLocation .
+
+:originatesFrom rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "originatesFrom"@en ;
+	rdfs:range :Organism .
+
+:contains rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Entry ;
+	rdfs:label "contains"@en ;
+	rdfs:range :Molecule .
+
+
+:includes rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Collection ;
+	rdfs:label "includes"@en ;
+	rdfs:range :Molecule .
+
+
+:isRepresentedIn rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Collection ;
+	rdfs:label "isRepresentedIn"@en ;
+	rdfs:range :Entry .
+
+:classifiedBy rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "classifiedBy"@en ;
+	rdfs:range :Classification .
+
+:isDescripedBy rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "isDescripedBy"@en ;
+	rdfs:range :DescriptiveInformation .
+
+:hasAmounts rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "hasAmounts"@en ;
+	rdfs:range :Counts .
+
+:hasStatus rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Molecule ;
+	rdfs:label "hasStatus"@en ;
+	rdfs:range :Status .
+
+
+############################
+# Data Properties
+############################
+
+# Electronic Descriptor
+:formalCharge rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ElectronicDescriptor ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The formal charge of the molecule."@en ;
+              rdfs:label "Formal Charge"@en .
+
+:hydrogenBondDonors rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ElectronicDescriptor ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "The number of Hydrogen Bond Donors in a molecule."@en ;
+                    rdfs:label "Hydrogen Bond Donors"@en .
+
+:hydrogenBondDonorsLipinski rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ElectronicDescriptor ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "Number of Hydrogen Bond Donors in a molecule using the Lipinski module."@en ;
+                    rdfs:label "Hydrogen Bond Donors Lipinski"@en .
+
+:hydrogenBondAcceptors rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ElectronicDescriptor ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "The number of Hydrogen Bond Acceptors in a molecule."@en ;
+                    rdfs:label "Hydrogen Bond Acceptors"@en .
+
+:hydrogenBondAcceptorsLipinski rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ElectronicDescriptor ;
+                    rdfs:range xsd:int ;
+                    rdfs:comment "Number of Hydrogen Bond Acceptors in a molecule using the Lipinski module."@en ;
+                    rdfs:label "Hydrogen Bond Acceptors Lipinski"@en .
+
+:AlogP rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ElectronicDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment "The logarithm of the partition between n-octanol and water (logP). AlogP is used to estimate the lipophilicity of a molecule, which is an important factor in drug absorption and distribution."@en ;
+       rdfs:label "AlogP"@en .
+
+:LipinskiRuleOfFiveViolations rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ElectronicDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment "A custom function to determine the number of Lipinski's rule violations for a given molecule."@en ;
+       rdfs:label "Lipinski Rule Of Five Violations"@en .
+
+:qedDrugLikeliness rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ElectronicDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment "Quantative estimation of drug-likeness (q weighted sum)."@en ;
+       rdfs:label "Qed Drug Likeliness"@en .
+
+# Topological Descriptors
+:topologicalPolarSurfaceArea rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"Topological Polar Surface Area (TPSA) of a molecule. TPSA is an important descriptor in medicinal chemistry and drug design, as it provides an estimate of the polar surface area of a molecule."@en ;
+       rdfs:label "Topological Polar Surface Area"@en .
+
+:rotatableBondCount rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment"The number of rotatable bonds in a molecule."@en ;
+       rdfs:label "Rotatable Bond Count"@en .
+
+:aromaticRingCount rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment"The number of aromatic rings in a molecule."@en ;
+       rdfs:label "Aromatic Ring Count"@en .
+
+:numberOfMinimalRings rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment"The number rings present in a molecule."@en ;
+       rdfs:label "Number Of Minimal Rings"@en .
+
+:murkoFramework rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"Custom function based on CDK to get the Murko Framework."@en ;
+       rdfs:label "Murko Framework"@en .
+
+### Sind derzeit in jsonb gespeicherte Daten, weiss nicht wie modellieren. ###
+
+#:fragments rdf:type owl:DatatypeProperty ;
+ #      rdfs:domain :TopologicalDescriptor ;
+  #     rdfs:range xsd:string ;
+   #    rdfs:comment""@en ;
+    #   rdfs:label ""@en .
+
+#:fragmentsWithSugar rdf:type owl:DatatypeProperty ;
+ #      rdfs:domain :TopologicalDescriptor ;
+  #     rdfs:range xsd:string ;
+   #    rdfs:comment""@en ;
+    #   rdfs:label ""@en .
+
+:containsSugar rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:boolean ;
+       rdfs:comment"Utilizing the Sugar Removal Utility to check for the presence of circular or linear sugars."@en ;
+       rdfs:label "Contains Sugar"@en .
+
+:containsRingSugars rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:boolean ;
+       rdfs:comment"Utilizing the Sugar Removal Utility to check for the presence of circular sugars."@en ;
+       rdfs:label "Contains Ring Sugars"@en .
+
+:containsLinearSugars rdf:type owl:DatatypeProperty ;
+       rdfs:domain :TopologicalDescriptor ;
+       rdfs:range xsd:boolean ;
+       rdfs:comment"Utilizing the Sugar Removal Utility to check for the presence of linear sugars."@en ;
+       rdfs:label "Contains Linear Sugars"@en .
+
+# Geometrical Descriptors
+:vanDerWallsVolume rdf:type owl:DatatypeProperty ;
+       rdfs:domain :GeometricalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"The function calculates the volume of a molecule using RDKit's molecular modelling functionalities. It adds hydrogens to the molecule, embeds it into 3D space, and computes the molecular volume."@en ;
+       rdfs:label "Van Der Walls Volume"@en .
+
+:exactMolecularWeight rdf:type owl:DatatypeProperty ;
+       rdfs:domain :GeometricalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"The exact molecular weight of the molecule which is based on the isotope masses of the atoms in the molecule."@en ;
+       rdfs:label "Exact Molecular Weight"@en .
+
+:heavyAtomCount rdf:type owl:DatatypeProperty ;
+       rdfs:domain :GeometricalDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment"Total count of the heavy atoms."@en ;
+       rdfs:label "Heavy Atom Count"@en .
+
+:totalAtomCount rdf:type owl:DatatypeProperty ;
+       rdfs:domain :GeometricalDescriptor ;
+       rdfs:range xsd:int ;
+       rdfs:comment"Total count of the atoms."@en ;
+       rdfs:label "Total Atom Count"@en .
+
+# Constitutional Descriptors 
+### Unsicher, ob npLikeness hier richtig ###
+:npLikeness rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"NPLikeness score generated using RDKit. The likelyness of a molecule to be a natural product."@en ;
+       rdfs:label "NPLikeness"@en .
+
+
+:molecularFormula rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"The molecular formula is a string that represents the types and number of atoms in the molecule."@en ;
+       rdfs:label "Molecular Formula"@en .
+
+:molecularWeight rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"The average molecular weight of the molecule."@en ;
+       rdfs:label "Molecular Weight"@en .
+
+:chemicalClass rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"Chemical Class generated using ClassyFire."@en ;
+       rdfs:label "Chemical Class"@en .
+
+:chemicalSubClass rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"Chemical Sub Class generated using ClassyFire."@en ;
+       rdfs:label "Chemical Sub Class"@en .
+
+:chemicalSuperClass rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"Chemical Super Class generated using ClassyFire."@en ;
+       rdfs:label "Chemical Super Class"@en .
+
+:directParentClassification rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:string ;
+       rdfs:comment"Direct Parent Classification generated using ClassyFire."@en ;
+       rdfs:label "Direct Parent Classification"@en .
+
+:fractioncsp3 rdf:type owl:DatatypeProperty ;
+       rdfs:domain :ConstitutionalDescriptor ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment"The fraction of C atoms that are SP3 hybridized."@en ;
+       rdfs:label "Fraction CSP3"@en .
+
+# GeoLocation
+:locationName rdf:type owl:DatatypeProperty ;
+  rdfs:domain :GeoLocation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+#Citation
+:citationType rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:citationDoi rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:citationTitle rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+
+:authors rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+
+:activeCitation rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+
+:citationText rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Citation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+#Organism
+:organismParts rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Organism ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:name rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Organism ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:iri rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Organism ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:rank rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Organism ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+#Collection
+:collectionTitle rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:slug rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:description rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:comments rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Collection ;
+          rdfs:range xsd:string ;
+          rdfs:comment ""@en ;
+          rdfs:label ""@en .
+
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Collection ;
+            rdfs:range xsd:string ;
+            rdfs:comment ""@en ;
+            rdfs:label ""@en .
+
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Collection ;
+     rdfs:range xsd:string ;
+     rdfs:comment ""@en ;
+     rdfs:label ""@en .
+
+:photo rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:isPublic rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:jobStatus rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:jobInfo rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:collectionDoi rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+:image rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label ""@en .
+
+# Licenses
+:licenseTitle rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Title"@en .
+
+:licenseSlug rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Slug"@en .
+
+:spdxId rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment "An SPDX ID is a standardized identifier used to clearly and consistently specify software licenses, enabling easier license compliance and automation in software projects."@en ;
+  rdfs:label "SPDX ID"@en .
+
+:licenseURL rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License URL"@en .
+
+:licenseDescription rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Description"@en .
+
+:licenseBody rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Body"@en .
+
+:licenseCategory rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Category"@en .
+
+:licenseActive rdf:type owl:DatatypeProperty ;
+  rdfs:domain :License ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "License Activeness"@en .
+
+# Sample Locations
+:sampleLocationName rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SampleLocation ;   
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Sample Location Name"@en .
+
+:sampleLocationSlug rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SampleLocation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Sample Location Slug"@en .
+
+:sampleLocationIRI rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SampleLocation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Sample Location IRI"@en .
+
+:sampleLocationCollections rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SampleLocation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Sample Location Collections"@en .
+
+:sampleLocationMoleculeCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SampleLocation ;
+  rdfs:range xsd:int ;
+  rdfs:comment "Count of molecules found in a sample location."@en ;
+  rdfs:label "Sample Location Molecule Count"@en .
+
+# Identifier
+:standardInchi rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Standard Inchi"@en .
+
+:standardInchiKey rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Standard Inchi Key"@en .
+
+:canonicalSmiles rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Canonical Smiles"@en .
+
+:sugarFreeSmiles rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Sugar Free Smiles"@en .
+
+:iupacName rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "IUPAC Name"@en .
+
+:moleculeName rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Molecule Name"@en .
+
+:moleculeIdentifier rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Identifier ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Molecule Identifier"@en .
+
+# Classification
+:murkoFramework rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Murko Framework"@en .
+
+:isTautomer rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "is Tautomer"@en .
+
+:isParent rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "is Parent"@en .
+
+:parentID rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Parent ID"@en .
+
+:hasStereo rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "has Stereo"@en .
+
+:hasVariants rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Classification ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "has Variants"@en .
+
+#Descriptive Information
+:synonyms rdf:type owl:DatatypeProperty ;
+  rdfs:domain :DescriptiveInformation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Synonyms"@en .
+
+:structuralComments rdf:type owl:DatatypeProperty ;
+  rdfs:domain :DescriptiveInformation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Structural Comments"@en .
+
+:nameTrustLevel rdf:type owl:DatatypeProperty ;
+  rdfs:domain :DescriptiveInformation ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Name Trust Level"@en .
+
+:annotationLevel rdf:type owl:DatatypeProperty ;
+  rdfs:domain :DescriptiveInformation ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Annotation Level"@en .
+
+:comment rdf:type owl:DatatypeProperty ;
+  rdfs:domain :DescriptiveInformation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Comment"@en .
+
+# Status
+:ticker rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Status ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Ticker"@en .
+
+:status rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Status ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Status"@en .
+
+:active rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Status ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "Active"@en .
+
+:isPlaceholder rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Status ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "is Placeholder"@en .
+
+# Counts
+:variantsCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Variants Count"@en .
+
+:geoCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Geo Count"@en .
+
+:organismCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Organism Count"@en .
+
+:citationCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Citation Count"@en .
+
+:collectionCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Collection Count"@en .
+
+:synonymCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Counts ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Synonym Count"@en .
+
+### Missing ###
+
+# :relatedTo rdf:type owl:ObjectProperty ;
+# rdfs:comment ""@en ;
+# rdfs:domain :Molecule ;
+#	rdfs:label "relatedTo"@en ;
+#	rdfs:range :Molecule .
+
+### also missing ###
+# fragments 
