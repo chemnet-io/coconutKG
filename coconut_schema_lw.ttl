@@ -58,32 +58,32 @@
 	rdfs:label "SampleLocation"@en .
 
 :Identifier rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Unique Identifiers for a given molecule."@en ;
 	rdfs:label "Identifier"@en .
 
 :Classification rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Attributes related to the classification molecules."@en ;
 	rdfs:label "Classification"@en .
 
 :DescriptiveInformation rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Descriptive information related to synonyms, comments, or other textual metadata of a molecule."@en ;
 	rdfs:label "Descriptive Information"@en .
 
 :Counts rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Attributes counting variants, collections, and other related data of a molecule."@en ;
 	rdfs:label "Counts"@en .
 
 :Status rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Current state and activity of a molecule."@en ;
 	rdfs:label "Status"@en .
 
 :Descriptor rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Descriptors of a molecule."@en ;
 	rdfs:label "Descriptor"@en .
 
 :GeometricalDescriptor rdf:type owl:Class ;
   rdfs:subClassOf :Descriptor ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Geometrical descriptors of a chemical compound."@en ;
 	rdfs:label "Geometrical Descriptor"@en .
 
 :TopologicalDescriptor rdf:type owl:Class ;
@@ -93,12 +93,12 @@
 
 :ElectronicDescriptor rdf:type owl:Class ;
   rdfs:subClassOf :Descriptor ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Electronic descriptors of a chemical compound."@en ;
 	rdfs:label "Electronic Descriptor"@en .
 
 :ConstitutionalDescriptor rdf:type owl:Class ;
   rdfs:subClassOf :Descriptor ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Constitutional descriptors of a chemical compound."@en ;
 	rdfs:label "Constitutional Descriptor"@en .
 
 ############################
