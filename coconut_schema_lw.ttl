@@ -22,11 +22,11 @@
 ############################
 
 :Citation rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An article, book or document with a DOI in which a molecule or a collection was mentioned."@en ;
 	rdfs:label "Citation"@en .
 
 :Collection rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Groups of molecules are organized within collections, each linked to metadata such as titles, descriptions, and related jobs."@en ;
 	rdfs:label "Collection"@en .
 
 :Entry rdf:type owl:Class ;
@@ -34,27 +34,27 @@
 	rdfs:label "Entry"@en .
 
 :GeoLocation rdf:type owl:Class ;
-	rdfs:comment "A location on earth."@en ;
+	rdfs:comment "A geographical location where an organism is reported to be found."@en ;
 	rdfs:label "GeoLocation"@en .
 
 :Organism rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A living thing that has an organized structure. The biological origin of a given molecule."@en ;
 	rdfs:label "Organism"@en .
 
 :Properties rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The chemical and biological properties of a molecule."@en ;
 	rdfs:label "Properties"@en .
 
 :Molecule rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound that can take part in a chemical reaction."@en ;
 	rdfs:label "Molecule"@en .
 
 :License rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Licenses under which the respective collections are made available."@en ;
 	rdfs:label "License"@en .
 
 :SampleLocation rdf:type owl:Class ;
-	rdfs:comment ""@en ;
+	rdfs:comment "Sample location within the organism from where the sample of the compound is taken."@en ;
 	rdfs:label "SampleLocation"@en .
 
 :Identifier rdf:type owl:Class ;
@@ -124,14 +124,6 @@
 	rdfs:domain :SampleLocation ;
 	rdfs:label "specifiesLocationOf"@en ;
 	rdfs:range :Organism .
-
-
-:specifiesLocationOf rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :SampleLocation ;
-	rdfs:label "specifiesLocationOf"@en ;
-	rdfs:range :Molecule .
-
 
 :permits rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
@@ -411,8 +403,8 @@
 :locationName rdf:type owl:DatatypeProperty ;
   rdfs:domain :GeoLocation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The name of the location where the molecule was found."@en ;
+  rdfs:label "Location Name."@en .
 
 #Citation
 :citationType rdf:type owl:DatatypeProperty ;
@@ -424,133 +416,133 @@
 :citationDoi rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The DOI (Digital Object Identifier) of the citation."@en ;
+  rdfs:label "Citation DOI"@en .
 
 :citationTitle rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The title of the citation."@en ;
+  rdfs:label "Citation Title"@en .
 
 
 :authors rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The names of the authors of the citation."@en ;
+  rdfs:label "Authors"@en .
 
 
 :activeCitation rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Active Citation"@en .
 
 
 :citationText rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Citation Text"@en .
 
 #Organism
 :organismParts rdf:type owl:DatatypeProperty ;
   rdfs:domain :Organism ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The parts of the organism from which molecules can be extracted."@en ;
+  rdfs:label "Organism Parts"@en .
 
-:name rdf:type owl:DatatypeProperty ;
+:organismName rdf:type owl:DatatypeProperty ;
   rdfs:domain :Organism ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The name of the organism."@en ;
+  rdfs:label "Organism Name"@en .
 
 :iri rdf:type owl:DatatypeProperty ;
   rdfs:domain :Organism ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The IRI (Internationalized Resource Identifier) is the internationalised version of the URI (Uniform Resource Identifier)"@en ;
+  rdfs:label "IRI"@en .
 
 :rank rdf:type owl:DatatypeProperty ;
   rdfs:domain :Organism ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Rank"@en .
 
 #Collection
 :collectionTitle rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "The title of the collection."@en ;
+  rdfs:label "Collection Title"@en .
 
-:slug rdf:type owl:DatatypeProperty ;
+:collectionSlug rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:comment "A user- and search engine-friendly text consisting of one or a few words as part of a URL"@en ;
+  rdfs:label "Collection Slug"@en .
 
 :description rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Description"@en .
 
 :comments rdf:type owl:DatatypeProperty ;
           rdfs:domain :Collection ;
           rdfs:range xsd:string ;
           rdfs:comment ""@en ;
-          rdfs:label ""@en .
+          rdfs:label "Comments"@en .
 
 :identifier rdf:type owl:DatatypeProperty ;
             rdfs:domain :Collection ;
             rdfs:range xsd:string ;
             rdfs:comment ""@en ;
-            rdfs:label ""@en .
+            rdfs:label "Identifier"@en .
 
 :url rdf:type owl:DatatypeProperty ;
      rdfs:domain :Collection ;
      rdfs:range xsd:string ;
      rdfs:comment ""@en ;
-     rdfs:label ""@en .
+     rdfs:label "URL"@en .
 
 :photo rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Photo"@en .
 
 :isPublic rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:boolean ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Is Public"@en .
 
 :jobStatus rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Job Status"@en .
 
 :jobInfo rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Job Info"@en .
 
 :collectionDoi rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Collection DOI"@en .
 
 :image rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
-  rdfs:label ""@en .
+  rdfs:label "Image"@en .
 
 # Licenses
 :licenseTitle rdf:type owl:DatatypeProperty ;
@@ -676,12 +668,6 @@
   rdfs:label "Molecule Identifier"@en .
 
 # Classification
-:murkoFramework rdf:type owl:DatatypeProperty ;
-  rdfs:domain :Classification ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "Murko Framework"@en .
-
 :isTautomer rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:boolean ;
@@ -815,3 +801,8 @@
 
 ### also missing ###
 # fragments 
+
+
+
+
+### also: maybe making organism parts as a own class ###
