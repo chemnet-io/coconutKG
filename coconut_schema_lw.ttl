@@ -569,167 +569,161 @@
 :standardInchi rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The Standard International Chemical Identifier (InChI) for the molecule, providing a unique textual representation of its structure."@en ;
   rdfs:label "Standard Inchi"@en .
 
 :standardInchiKey rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A hashed version of the InChI, known as the InChI Key, designed for easy digital searching and identification of the molecule."@en ;
   rdfs:label "Standard Inchi Key"@en .
 
 :canonicalSmiles rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The canonical Simplified Molecular Input Line Entry System (SMILES) notation for the molecule, representing its structure in a line of text."@en ;
   rdfs:label "Canonical Smiles"@en .
 
 :sugarFreeSmiles rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A SMILES representation of the molecule that excludes sugars."@en ;
   rdfs:label "Sugar Free Smiles"@en .
 
 :iupacName rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The name assigned to the molecule according to the International Union of Pure and Applied Chemistry (IUPAC) nomenclature rules, providing a standardized name for communication."@en ;
   rdfs:label "IUPAC Name"@en .
 
 :moleculeName rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The common or preferred name of the molecule, which may be used in various contexts and could differ from the IUPAC name."@en ;
   rdfs:label "Molecule Name"@en .
 
 :moleculeIdentifier rdf:type owl:DatatypeProperty ;
   rdfs:domain :Identifier ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A unique identifier assigned to the molecule."@en ;
   rdfs:label "Molecule Identifier"@en .
 
 # Classification
 :isTautomer rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the molecule is a tautomer, which is a specific type of chemical structure that can easily interconvert with another form."@en ;
   rdfs:label "is Tautomer"@en .
 
 :isParent rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the molecule serves as a parent classification in a hierarchical relationship, meaning it has child entities or variants."@en ;
   rdfs:label "is Parent"@en .
 
-:parentID rdf:type owl:DatatypeProperty ;
+:parentMolecule rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
-  rdfs:label "Parent ID"@en .
+  rdfs:comment "Molecule parent classification, allowing for traceability in hierarchical relationships."@en ;
+  rdfs:label "Parent Molecule"@en .
 
 :hasStereo rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the molecule has stereochemistry, which refers to the spatial arrangement of atoms in a molecule."@en ;
   rdfs:label "has Stereo"@en .
 
 :hasVariants rdf:type owl:DatatypeProperty ;
   rdfs:domain :Classification ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates if there are alternative forms or variants of the entity."@en ;
   rdfs:label "has Variants"@en .
 
 #Descriptive Information
 :synonyms rdf:type owl:DatatypeProperty ;
   rdfs:domain :DescriptiveInformation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A list of alternative names or terms that refer to the same molecule."@en ;
   rdfs:label "Synonyms"@en .
 
 :structuralComments rdf:type owl:DatatypeProperty ;
   rdfs:domain :DescriptiveInformation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Observations or notes about the structural characteristics of the molecule."@en ;
   rdfs:label "Structural Comments"@en .
 
 :nameTrustLevel rdf:type owl:DatatypeProperty ;
   rdfs:domain :DescriptiveInformation ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A numerical value representing the confidence or reliability of the name assigned to the molecule, indicating how well it is established in scientific literature."@en ;
   rdfs:label "Name Trust Level"@en .
 
 :annotationLevel rdf:type owl:DatatypeProperty ;
   rdfs:domain :DescriptiveInformation ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A numerical value indicating the thoroughness or depth of the annotation provided for the molecule, reflecting its level of detail."@en ;
   rdfs:label "Annotation Level"@en .
 
 :comment rdf:type owl:DatatypeProperty ;
   rdfs:domain :DescriptiveInformation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "General remarks or additional notes regarding the molecule."@en ;
   rdfs:label "Comment"@en .
 
 # Status
-:ticker rdf:type owl:DatatypeProperty ;
-  rdfs:domain :Status ;
-  rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
-  rdfs:label "Ticker"@en .
-
 :status rdf:type owl:DatatypeProperty ;
   rdfs:domain :Status ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "A textual description of the current state or condition of the molecule."@en ;
   rdfs:label "Status"@en .
 
 :active rdf:type owl:DatatypeProperty ;
   rdfs:domain :Status ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the molecule is currently active or inactive."@en ;
   rdfs:label "Active"@en .
 
 :isPlaceholder rdf:type owl:DatatypeProperty ;
   rdfs:domain :Status ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the molecule is a placeholder in the dataset, serving as a temporary or default entry without full attributes."@en ;
   rdfs:label "is Placeholder"@en .
 
 # Counts
 :variantsCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The total number of variants associated with the molecule."@en ;
   rdfs:label "Variants Count"@en .
 
 :geoCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The count of geographical occurrences or representations related to the molecule."@en ;
   rdfs:label "Geo Count"@en .
 
 :organismCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The total number of organisms associated with the molecule."@en ;
   rdfs:label "Organism Count"@en .
 
 :citationCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The number of times the molecule has been cited in literature or other references."@en ;
   rdfs:label "Citation Count"@en .
 
 :collectionCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The total number of collections in which the molecule is included."@en ;
   rdfs:label "Collection Count"@en .
 
 :synonymCount rdf:type owl:DatatypeProperty ;
   rdfs:domain :Counts ;
   rdfs:range xsd:int ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The total number of synonyms associated with the molecule."@en ;
   rdfs:label "Synonym Count"@en .
 
 ### Missing ###
