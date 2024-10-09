@@ -53,9 +53,10 @@
 	rdfs:comment "Licenses under which the respective collections are made available."@en ;
 	rdfs:label "License"@en .
 
-:SampleLocation rdf:type owl:Class ;
-	rdfs:comment "Sample location within the organism from where the sample of the compound is taken."@en ;
-	rdfs:label "SampleLocation"@en .
+# Commented out due to it not being in the dataset yet
+#:SampleLocation rdf:type owl:Class ;
+#	rdfs:comment "Sample location within the organism from where the sample of the compound is taken."@en ;
+#	rdfs:label "SampleLocation"@en .
 
 :Identifier rdf:type owl:Class ;
 	rdfs:comment "Unique Identifiers for a given molecule."@en ;
@@ -118,12 +119,12 @@
 	rdfs:label "labeledBy"@en ;
 	rdfs:range :Identifier .
 
-
-:specifiesLocationOf rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :SampleLocation ;
-	rdfs:label "specifiesLocationOf"@en ;
-	rdfs:range :Organism .
+# Commented out due to it not being in the dataset yet
+#:specifiesLocationOf rdf:type owl:ObjectProperty ;
+#	rdfs:comment ""@en ;
+#	rdfs:domain :SampleLocation ;
+#	rdfs:label "specifiesLocationOf"@en ;
+#	rdfs:range :Organism .
 
 :permits rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
@@ -593,36 +594,36 @@
   rdfs:comment ""@en ;
   rdfs:label "License Activeness"@en .
 
-# Sample Locations
-:sampleLocationName rdf:type owl:DatatypeProperty ;
-  rdfs:domain :SampleLocation ;   
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "Sample Location Name"@en .
+# Sample Locations (commented out due to it not being in the dataset yet)
+#:sampleLocationName rdf:type owl:DatatypeProperty ;
+#  rdfs:domain :SampleLocation ;   
+#  rdfs:range xsd:string ;
+#  rdfs:comment ""@en ;
+#  rdfs:label "Sample Location Name"@en .
 
-:sampleLocationSlug rdf:type owl:DatatypeProperty ;
-  rdfs:domain :SampleLocation ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "Sample Location Slug"@en .
+#:sampleLocationSlug rdf:type owl:DatatypeProperty ;
+#  rdfs:domain :SampleLocation ;
+#  rdfs:range xsd:string ;
+#  rdfs:comment ""@en ;
+#  rdfs:label "Sample Location Slug"@en .
 
-:sampleLocationIRI rdf:type owl:DatatypeProperty ;
-  rdfs:domain :SampleLocation ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "Sample Location IRI"@en .
+#:sampleLocationIRI rdf:type owl:DatatypeProperty ;
+#  rdfs:domain :SampleLocation ;
+#  rdfs:range xsd:string ;
+#  rdfs:comment ""@en ;
+#  rdfs:label "Sample Location IRI"@en .
 
-:sampleLocationCollections rdf:type owl:DatatypeProperty ;
-  rdfs:domain :SampleLocation ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "Sample Location Collections"@en .
+#:sampleLocationCollections rdf:type owl:DatatypeProperty ;
+#  rdfs:domain :SampleLocation ;
+#  rdfs:range xsd:string ;
+#  rdfs:comment ""@en ;
+#  rdfs:label "Sample Location Collections"@en .
 
-:sampleLocationMoleculeCount rdf:type owl:DatatypeProperty ;
-  rdfs:domain :SampleLocation ;
-  rdfs:range xsd:int ;
-  rdfs:comment "Count of molecules found in a sample location."@en ;
-  rdfs:label "Sample Location Molecule Count"@en .
+#:sampleLocationMoleculeCount rdf:type owl:DatatypeProperty ;
+#  rdfs:domain :SampleLocation ;
+#  rdfs:range xsd:int ;
+#  rdfs:comment "Count of molecules found in a sample location."@en ;
+#  rdfs:label "Sample Location Molecule Count"@en .
 
 # Identifier
 :standardInchi rdf:type owl:DatatypeProperty ;
@@ -801,8 +802,6 @@
 
 ### also missing ###
 # fragments 
-
-
-
+# sample_location and all its edges and attributes
 
 ### also: maybe making organism parts as a own class ###
