@@ -49,10 +49,6 @@
 	rdfs:comment "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound that can take part in a chemical reaction."@en ;
 	rdfs:label "Molecule"@en .
 
-:License rdf:type owl:Class ;
-	rdfs:comment "Licenses under which the respective collections are made available."@en ;
-	rdfs:label "License"@en .
-
 # Commented out due to it not being in the dataset yet
 #:SampleLocation rdf:type owl:Class ;
 #	rdfs:comment "Sample location within the organism from where the sample of the compound is taken."@en ;
@@ -125,13 +121,6 @@
 #	rdfs:domain :SampleLocation ;
 #	rdfs:label "specifiesLocationOf"@en ;
 #	rdfs:range :Organism .
-
-:permits rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :License ;
-	rdfs:label "permits"@en ;
-	rdfs:range :Collection .
-
 
 :citedIn rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
@@ -544,55 +533,6 @@
   rdfs:range xsd:string ;
   rdfs:comment ""@en ;
   rdfs:label "Image"@en .
-
-# Licenses
-:licenseTitle rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Title"@en .
-
-:licenseSlug rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Slug"@en .
-
-:spdxId rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment "An SPDX ID is a standardized identifier used to clearly and consistently specify software licenses, enabling easier license compliance and automation in software projects."@en ;
-  rdfs:label "SPDX ID"@en .
-
-:licenseURL rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License URL"@en .
-
-:licenseDescription rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Description"@en .
-
-:licenseBody rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Body"@en .
-
-:licenseCategory rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Category"@en .
-
-:licenseActive rdf:type owl:DatatypeProperty ;
-  rdfs:domain :License ;
-  rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
-  rdfs:label "License Activeness"@en .
 
 # Sample Locations (commented out due to it not being in the dataset yet)
 #:sampleLocationName rdf:type owl:DatatypeProperty ;
