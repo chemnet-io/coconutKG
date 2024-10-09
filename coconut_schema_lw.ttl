@@ -397,12 +397,6 @@
   rdfs:label "Location Name."@en .
 
 #Citation
-:citationType rdf:type owl:DatatypeProperty ;
-  rdfs:domain :Citation ;
-  rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
-  rdfs:label ""@en .
-
 :citationDoi rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
