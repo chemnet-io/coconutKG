@@ -420,14 +420,14 @@
 :activeCitation rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Determines wheater a citation is still active or not."@en ;
   rdfs:label "Active Citation"@en .
 
 
 :citationText rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The text from which the citation is from."@en ;
   rdfs:label "Citation Text"@en .
 
 #Organism
@@ -452,7 +452,7 @@
 :rank rdf:type owl:DatatypeProperty ;
   rdfs:domain :Organism ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The hierarchical rank that helps categorize and describe the relationships from organisms to other organisms."@en ;
   rdfs:label "Rank"@en .
 
 #Collection
@@ -471,62 +471,68 @@
 :description rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The description of a given Collection."@en ;
   rdfs:label "Description"@en .
 
 :comments rdf:type owl:DatatypeProperty ;
           rdfs:domain :Collection ;
           rdfs:range xsd:string ;
-          rdfs:comment ""@en ;
+          rdfs:comment "Additional remarks or notes about the collection that might provide further context or insight."@en ;
           rdfs:label "Comments"@en .
 
 :identifier rdf:type owl:DatatypeProperty ;
             rdfs:domain :Collection ;
             rdfs:range xsd:string ;
-            rdfs:comment ""@en ;
+            rdfs:comment "The identifier of the collection."@en ;
             rdfs:label "Identifier"@en .
 
 :url rdf:type owl:DatatypeProperty ;
      rdfs:domain :Collection ;
      rdfs:range xsd:string ;
-     rdfs:comment ""@en ;
+     rdfs:comment "The web address where the collection can be accessed or viewed."@en ;
      rdfs:label "URL"@en .
 
 :photo rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "An image or visual representation associated with the collection."@en ;
   rdfs:label "Photo"@en .
 
 :isPublic rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:boolean ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Indicates whether the collection is publicly accessible or private."@en ;
   rdfs:label "Is Public"@en .
 
 :jobStatus rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The current status of any processing or tasks associated with the collection."@en ;
   rdfs:label "Job Status"@en .
 
 :jobInfo rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "Information about any tasks or processes performed on the collection."@en ;
   rdfs:label "Job Info"@en .
 
 :collectionDoi rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The Digital Object Identifier (DOI) assigned to the collection."@en ;
   rdfs:label "Collection DOI"@en .
 
 :image rdf:type owl:DatatypeProperty ;
   rdfs:domain :Collection ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "An additional or alternative image related to the collection."@en ;
   rdfs:label "Image"@en .
+
+:moleculeCount rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Collection ;
+  rdfs:range xsd:int ;
+  rdfs:comment "The number of molecules included within the collection."@en ;
+  rdfs:label "Molecule Count"@en .
 
 # Sample Locations (commented out due to it not being in the dataset yet)
 #:sampleLocationName rdf:type owl:DatatypeProperty ;
