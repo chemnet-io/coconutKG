@@ -7,13 +7,13 @@
 
 <http://coconutKG.aksw.org/ontology#> 
 	<http://purl.org/dc/terms/creator> "Louis Westerheide" ;
-	<http://purl.org/dc/terms/description> ""@en ;
+	<http://purl.org/dc/terms/description> "COCONUT[KG] is a knowledge graph based on the Coconut Dataset, which is a comprehensive platform that facilitates natural product research by providing data, tools, and other resources.
+and provides services for the deposition, curation, and reuse of data."@en ;
 	<http://purl.org/dc/terms/rights> ""@en ;
 	<http://purl.org/dc/terms/title> "COCONUT[KG]"@en ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "coco" ;
 	<http://purl.org/vocab/vann/preferredNamespaceUri> "http://coconutKG.aksw.org/ontology#" ;
 	rdf:type owl:Ontology ;
-	rdfs:comment ""@en ;
 	rdfs:label "coco: CoconutKG"@en ;
 	owl:versionInfo "SNAPSHOT" .
 
