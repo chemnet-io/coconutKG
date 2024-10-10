@@ -7,8 +7,7 @@
 
 <http://coconutKG.aksw.org/ontology#> 
 	<http://purl.org/dc/terms/creator> "Louis Westerheide" ;
-	<http://purl.org/dc/terms/description> "COCONUT[KG] is a knowledge graph based on the Coconut Dataset, which is a comprehensive platform that facilitates natural product research by providing data, tools, and other resources.
-and provides services for the deposition, curation, and reuse of data."@en ;
+	<http://purl.org/dc/terms/description> "COCONUT[KG] is a knowledge graph based on the Coconut Dataset, which is a comprehensive platform that facilitates natural product research by providing data, tools, and other resources and provides services for the deposition, curation, and reuse of data."@en ;
 	<http://purl.org/dc/terms/rights> ""@en ;
 	<http://purl.org/dc/terms/title> "COCONUT[KG]"@en ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "coco" ;
@@ -394,7 +393,7 @@ and provides services for the deposition, curation, and reuse of data."@en ;
   rdfs:domain :GeoLocation ;
   rdfs:range xsd:string ;
   rdfs:comment "The name of the location where the molecule was found."@en ;
-  rdfs:label "Location Name."@en .
+  rdfs:label "Location Name"@en .
 
 #Citation
 :citationDoi rdf:type owl:DatatypeProperty ;
@@ -419,16 +418,9 @@ and provides services for the deposition, curation, and reuse of data."@en ;
 
 :activeCitation rdf:type owl:DatatypeProperty ;
   rdfs:domain :Citation ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:boolean ;
   rdfs:comment "Determines wheater a citation is still active or not."@en ;
   rdfs:label "Active Citation"@en .
-
-
-:citationText rdf:type owl:DatatypeProperty ;
-  rdfs:domain :Citation ;
-  rdfs:range xsd:string ;
-  rdfs:comment "The text from which the citation is from."@en ;
-  rdfs:label "Citation Text"@en .
 
 #Organism
 :organismParts rdf:type owl:DatatypeProperty ;
