@@ -127,10 +127,10 @@
 	rdfs:label "citedIn"@en ;
 	rdfs:range :Citation .
 
-:citedIn rdf:type owl:ObjectProperty ;
+:referencedIn rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain :Collection ;
-	rdfs:label "citedIn"@en ;
+	rdfs:label "referencedIn"@en ;
 	rdfs:range :Citation .
 
 :describedBy rdf:type owl:ObjectProperty ;
@@ -177,10 +177,10 @@
 	rdfs:label "classifiedBy"@en ;
 	rdfs:range :Classification .
 
-:isDescripedBy rdf:type owl:ObjectProperty ;
+:isExplainedThrough rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain :Molecule ;
-	rdfs:label "isDescripedBy"@en ;
+	rdfs:label "isExplainedThrough"@en ;
 	rdfs:range :DescriptiveInformation .
 
 :hasAmounts rdf:type owl:ObjectProperty ;
