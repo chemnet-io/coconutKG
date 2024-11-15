@@ -127,12 +127,6 @@
 	rdfs:label "citedIn"@en ;
 	rdfs:range :Citation .
 
-:referencedIn rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :Collection ;
-	rdfs:label "referencedIn"@en ;
-	rdfs:range :Citation .
-
 :describedBy rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain :Molecule ;
