@@ -124,7 +124,7 @@
 :specifiesExtractionLocationOf rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
 	rdfs:domain :SampleLocation ;
-	rdfs:label "specifiesLocationOf"@en ;
+	rdfs:label "specifiesExtractionLocationOf"@en ;
 	rdfs:range :Molecule .
 
 :citedIn rdf:type owl:ObjectProperty ;
