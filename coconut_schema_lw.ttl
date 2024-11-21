@@ -466,7 +466,7 @@
           rdfs:comment "Additional remarks or notes about the collection that might provide further context or insight."@en ;
           rdfs:label "Comments"@en .
 
-:identifier rdf:type owl:DatatypeProperty ;
+:collectionIdentifier rdf:type owl:DatatypeProperty ;
             rdfs:domain :Collection ;
             rdfs:range xsd:string ;
             rdfs:comment "The identifier of the collection."@en ;
