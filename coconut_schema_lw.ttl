@@ -115,11 +115,17 @@
 	rdfs:range :Identifier .
 
 # Commented out due to it not being in the dataset yet
-#:specifiesLocationOf rdf:type owl:ObjectProperty ;
-#	rdfs:comment ""@en ;
-#	rdfs:domain :SampleLocation ;
-#	rdfs:label "specifiesLocationOf"@en ;
-#	rdfs:range :Organism .
+:specifiesLocationOf rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :SampleLocation ;
+	rdfs:label "specifiesLocationOf"@en ;
+	rdfs:range :Organism .
+
+:specifiesExtractionLocationOf rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :SampleLocation ;
+	rdfs:label "specifiesLocationOf"@en ;
+	rdfs:range :Molecule .
 
 :citedIn rdf:type owl:ObjectProperty ;
 	rdfs:comment ""@en ;
