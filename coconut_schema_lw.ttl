@@ -109,87 +109,85 @@
 
 
 :labeledBy rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molceule is labeled by an Identifier."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "labeledBy"@en ;
 	rdfs:range :Identifier .
 
 :specifiesLocationOf rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The sample location specifies the location of the organism it originated from."@en ;
 	rdfs:domain :SampleLocation ;
 	rdfs:label "specifiesLocationOf"@en ;
 	rdfs:range :Organism .
 
 :specifiesExtractionLocationOf rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The sample location specifies from where the molecule was extracted from."@en ;
 	rdfs:domain :SampleLocation ;
 	rdfs:label "specifiesExtractionLocationOf"@en ;
 	rdfs:range :Molecule .
 
 :citedIn rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The entry and its corresponding citation."@en ;
 	rdfs:domain :Entry ;
 	rdfs:label "citedIn"@en ;
 	rdfs:range :Citation .
 
 :describedBy rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule is descriped by its properties."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "describedBy"@en ;
 	rdfs:range :Properties .
 
 :foundIn rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule is found in a geo location."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "foundIn"@en ;
 	rdfs:range :GeoLocation .
 
 :originatesFrom rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The molecule origintes from a certain organism."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "originatesFrom"@en ;
 	rdfs:range :Organism .
 
 :contains rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "An entry contains a given molecule."@en ;
 	rdfs:domain :Entry ;
 	rdfs:label "contains"@en ;
 	rdfs:range :Molecule .
 
-
 :includes rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "The collection includes a molecule."@en ;
 	rdfs:domain :Collection ;
 	rdfs:label "includes"@en ;
 	rdfs:range :Molecule .
 
-
 :isRepresentedIn rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A collection is represented in an entry."@en ;
 	rdfs:domain :Collection ;
 	rdfs:label "isRepresentedIn"@en ;
 	rdfs:range :Entry .
 
 :classifiedBy rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule is classified by its classification."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "classifiedBy"@en ;
 	rdfs:range :Classification .
 
 :isExplainedThrough rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule is explained through its descriptive information."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "isExplainedThrough"@en ;
 	rdfs:range :DescriptiveInformation .
 
 :hasAmounts rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule has certain amounts of different countable properties."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "hasAmounts"@en ;
 	rdfs:range :Counts .
 
 :hasStatus rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
+	rdfs:comment "A molecule has various statuses."@en ;
 	rdfs:domain :Molecule ;
 	rdfs:label "hasStatus"@en ;
 	rdfs:range :Status .
@@ -529,25 +527,25 @@
 :sampleLocationName rdf:type owl:DatatypeProperty ;
   rdfs:domain :SampleLocation ;   
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The name of the sample location."@en ;
   rdfs:label "Sample Location Name"@en .
 
 :sampleLocationSlug rdf:type owl:DatatypeProperty ;
   rdfs:domain :SampleLocation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The slug of the sample location name."@en ;
   rdfs:label "Sample Location Slug"@en .
 
 :sampleLocationIRI rdf:type owl:DatatypeProperty ;
   rdfs:domain :SampleLocation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The IRI of the sample location."@en ;
   rdfs:label "Sample Location IRI"@en .
 
 :sampleLocationCollections rdf:type owl:DatatypeProperty ;
   rdfs:domain :SampleLocation ;
   rdfs:range xsd:string ;
-  rdfs:comment ""@en ;
+  rdfs:comment "The corresponding collections of the given sample location."@en ;
   rdfs:label "Sample Location Collections"@en .
 
 :sampleLocationMoleculeCount rdf:type owl:DatatypeProperty ;
