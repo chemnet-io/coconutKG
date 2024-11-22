@@ -107,7 +107,6 @@
 	rdfs:label "defines"@en ;
 	rdfs:range :Properties .
 
-
 :labeledBy rdf:type owl:ObjectProperty ;
 	rdfs:comment "A molceule is labeled by an Identifier."@en ;
 	rdfs:domain :Molecule ;
@@ -191,6 +190,19 @@
 	rdfs:domain :Molecule ;
 	rdfs:label "hasStatus"@en ;
 	rdfs:range :Status .
+
+:locatedIn rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Entry ;
+	rdfs:label "locatedIn"@en ;
+	rdfs:range :GeoLocation .
+
+:derivedFrom rdf:type owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:domain :Entry ;
+	rdfs:label "derivedFrom"@en ;
+	rdfs:range :Organism .
+
 
 
 ############################
@@ -715,6 +727,100 @@
   rdfs:comment "The total number of synonyms associated with the molecule."@en ;
   rdfs:label "Synonym Count"@en .
 
+# Entry
+:entryName rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Name"@en .
+
+:entryCanonicalSmiles rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Canonical Smiles"@en .
+
+
+:referenceID rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Reference ID"@en .
+
+:entryLink rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Link"@en .
+
+
+:entryOrganismPart rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Organism Part"@en .
+
+:entryMolecularFormula rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Molecular Formula"@en .
+
+:entryStructuralComments rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Structural Comments"@en .
+
+:entryPreciseLocation rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Precise Location"@en .
+
+:entryStatus rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Status"@en .
+
+:entryErrors rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Errors"@en .
+
+:entryErrorCode rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:int ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Error Code"@en .
+
+:entryStandardizedCanonicalSmiles rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Standardized Canonical Smiles"@en .
+
+:entryParentCanonicalSmiles rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry Parent Canonical Smiles"@en .
+
+:entryIsInvalid rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry is invalid"@en .
+
+:entryHasStereocenters rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Entry ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment ""@en ;
+  rdfs:label "Entry has stereocenters"@en .
+
+
 ### Missing ###
 
 # :relatedTo rdf:type owl:ObjectProperty ;
@@ -727,3 +833,6 @@
 # fragments 
 
 ### also: maybe making organism parts as a own class ###
+
+### entry missing maybe:
+# cm_data (json), uuid, coconutID, mol_filename
