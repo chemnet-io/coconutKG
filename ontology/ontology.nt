@@ -1,12 +1,11 @@
 <http://coconutKG.aksw.org/ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/creator> "Edgard Marx, Stefan Schmidt-Dichte, Istvan J. Mocsy" .
-<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/description> "The Coconut Ontology contains the data model of Coconut Knowledge Graph. It facilitates the knowledge graph data manipulation and consumption through concepts such as natural products, molecules, and their respective properties."@en .
-<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/rights> "Copyright © 2022 ChemNet"@en .
-<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/title> "coco: The data model for Coconut Knowledge Graph"@en .
+<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/creator> "Louis Westerheide" .
+<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/description> "COCONUT[KG] is a knowledge graph based on the Coconut Dataset, which is a comprehensive platform that facilitates natural product research by providing data, tools, and other resources and provides services for the deposition, curation, and reuse of data."@en .
+<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/rights> ""@en .
+<http://coconutKG.aksw.org/ontology#> <http://purl.org/dc/terms/title> "COCONUT[KG]"@en .
 <http://coconutKG.aksw.org/ontology#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "coco" .
 <http://coconutKG.aksw.org/ontology#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://coconutKG.aksw.org/ontology#" .
-<http://coconutKG.aksw.org/ontology#> <http://www.w3.org/2000/01/rdf-schema#comment> "The Coconut Ontology contains the data model of Coconut Knowledge Graph. It facilitates the knowledge graph data manipulation and consumption through concepts such as natural products, molecules, and their respective properties."@en .
-<http://coconutKG.aksw.org/ontology#> <http://www.w3.org/2000/01/rdf-schema#label> "coco: The data model for Coconut Knowledge Graph"@en .
+<http://coconutKG.aksw.org/ontology#> <http://www.w3.org/2000/01/rdf-schema#label> "coco: CoconutKG"@en .
 <http://coconutKG.aksw.org/ontology#> <http://www.w3.org/2002/07/owl#versionInfo> "SNAPSHOT" .
 # 
 # 
@@ -39,127 +38,129 @@
 # 
 # #################################################################
 # #
-# #    Datatypes
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2001/XMLSchema#date
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# 
-# 
-# #################################################################
-# #
 # #    Object Properties
 # #
 # #################################################################
 # 
 # 
-# http://coconutKG.aksw.org/ontology#dataOriginatedFrom
-<http://coconutKG.aksw.org/ontology#dataOriginatedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#dataOriginatedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#dataOriginatedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#dataOriginatedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compounds data has been taken from a origin source."@en .
-<http://coconutKG.aksw.org/ontology#dataOriginatedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "data originated from"@en .
+# http://coconutKG.aksw.org/ontology#citedIn
+<http://coconutKG.aksw.org/ontology#citedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#citedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#citedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Citation> .
+<http://coconutKG.aksw.org/ontology#citedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The entry and its corresponding citation."@en .
+<http://coconutKG.aksw.org/ontology#citedIn> <http://www.w3.org/2000/01/rdf-schema#label> "citedIn"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasCitation
-<http://coconutKG.aksw.org/ontology#hasCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Citation> .
-<http://coconutKG.aksw.org/ontology#hasCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound was cited in a document identifiyable by a DOI."@en .
-<http://coconutKG.aksw.org/ontology#hasCitation> <http://www.w3.org/2000/01/rdf-schema#label> "has citation"@en .
+# http://coconutKG.aksw.org/ontology#classifiedBy
+<http://coconutKG.aksw.org/ontology#classifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#classifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#classifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#classifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule is classified by its classification."@en .
+<http://coconutKG.aksw.org/ontology#classifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "classifiedBy"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasDescriptors
-<http://coconutKG.aksw.org/ontology#hasDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasDescriptors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasDescriptors> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#hasDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has various descriptors."@en .
-<http://coconutKG.aksw.org/ontology#hasDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "has descriptors"@en .
+# http://coconutKG.aksw.org/ontology#contains
+<http://coconutKG.aksw.org/ontology#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "An entry contains a given molecule."@en .
+<http://coconutKG.aksw.org/ontology#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasFingerprint
-<http://coconutKG.aksw.org/ontology#hasFingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasFingerprint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasFingerprint> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#hasFingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has a specific fingerprints."@en .
-<http://coconutKG.aksw.org/ontology#hasFingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "has fingerprint"@en .
+# http://coconutKG.aksw.org/ontology#defines
+<http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptor> .
+<http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Properties> .
+<http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#label> "defines"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasGeolocation
-<http://coconutKG.aksw.org/ontology#hasGeolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasGeolocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasGeolocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Geolocation> .
-<http://coconutKG.aksw.org/ontology#hasGeolocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound can be found at certain geo locations."@en .
-<http://coconutKG.aksw.org/ontology#hasGeolocation> <http://www.w3.org/2000/01/rdf-schema#label> "has geo location"@en .
+# http://coconutKG.aksw.org/ontology#derivedFrom
+<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derivedFrom"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasMolecularFeatures
-<http://coconutKG.aksw.org/ontology#hasMolecularFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#MolecularFeatures> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has molecular features."@en .
-<http://coconutKG.aksw.org/ontology#hasMolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "has molecular features"@en .
+# http://coconutKG.aksw.org/ontology#describedBy
+<http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Properties> .
+<http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule is descriped by its properties."@en .
+<http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "describedBy"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasMolecularFragments
-<http://coconutKG.aksw.org/ontology#hasMolecularFragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFragments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFragments> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#MolecularFragments> .
-<http://coconutKG.aksw.org/ontology#hasMolecularFragments> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has lists of circular fragments (molecular signatures) and functional fragments(ERTL)."@en .
-<http://coconutKG.aksw.org/ontology#hasMolecularFragments> <http://www.w3.org/2000/01/rdf-schema#label> "has molecular fragments"@en .
+# http://coconutKG.aksw.org/ontology#foundIn
+<http://coconutKG.aksw.org/ontology#foundIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#foundIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#foundIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#GeoLocation> .
+<http://coconutKG.aksw.org/ontology#foundIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule is found in a geo location."@en .
+<http://coconutKG.aksw.org/ontology#foundIn> <http://www.w3.org/2000/01/rdf-schema#label> "foundIn"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasMolecularProperties
-<http://coconutKG.aksw.org/ontology#hasMolecularProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasMolecularProperties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasMolecularProperties> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#hasMolecularProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has molecular properties."@en .
-<http://coconutKG.aksw.org/ontology#hasMolecularProperties> <http://www.w3.org/2000/01/rdf-schema#label> "has molecular properties"@en .
+# http://coconutKG.aksw.org/ontology#hasAmounts
+<http://coconutKG.aksw.org/ontology#hasAmounts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#hasAmounts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#hasAmounts> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#hasAmounts> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule has certain amounts of different countable properties."@en .
+<http://coconutKG.aksw.org/ontology#hasAmounts> <http://www.w3.org/2000/01/rdf-schema#label> "hasAmounts"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hasTaxonomyData
-<http://coconutKG.aksw.org/ontology#hasTaxonomyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#hasTaxonomyData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#hasTaxonomyData> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Taxonomy> .
-<http://coconutKG.aksw.org/ontology#hasTaxonomyData> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound has a taxonomy structure."@en .
-<http://coconutKG.aksw.org/ontology#hasTaxonomyData> <http://www.w3.org/2000/01/rdf-schema#label> "has taxonomy data"@en .
+# http://coconutKG.aksw.org/ontology#hasStatus
+<http://coconutKG.aksw.org/ontology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Status> .
+<http://coconutKG.aksw.org/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule has various statuses."@en .
+<http://coconutKG.aksw.org/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "hasStatus"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isConstitutional
-<http://coconutKG.aksw.org/ontology#isConstitutional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isConstitutional> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#isConstitutional> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#isConstitutional> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of constitutional descriptors."@en .
-<http://coconutKG.aksw.org/ontology#isConstitutional> <http://www.w3.org/2000/01/rdf-schema#label> "is constitutional"@en .
+# http://coconutKG.aksw.org/ontology#includes
+<http://coconutKG.aksw.org/ontology#includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#includes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#includes> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "The collection includes a molecule."@en .
+<http://coconutKG.aksw.org/ontology#includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isElectronic
-<http://coconutKG.aksw.org/ontology#isElectronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isElectronic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#isElectronic> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#ElectronicDescriptors> .
-<http://coconutKG.aksw.org/ontology#isElectronic> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of electronic descriptors."@en .
-<http://coconutKG.aksw.org/ontology#isElectronic> <http://www.w3.org/2000/01/rdf-schema#label> "is Electronic"@en .
+# http://coconutKG.aksw.org/ontology#isExplainedThrough
+<http://coconutKG.aksw.org/ontology#isExplainedThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#isExplainedThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#isExplainedThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
+<http://coconutKG.aksw.org/ontology#isExplainedThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecule is explained through its descriptive information."@en .
+<http://coconutKG.aksw.org/ontology#isExplainedThrough> <http://www.w3.org/2000/01/rdf-schema#label> "isExplainedThrough"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isGeometrical
-<http://coconutKG.aksw.org/ontology#isGeometrical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isGeometrical> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#isGeometrical> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#GeometricalDescriptors> .
-<http://coconutKG.aksw.org/ontology#isGeometrical> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of geometrical descriptors."@en .
-<http://coconutKG.aksw.org/ontology#isGeometrical> <http://www.w3.org/2000/01/rdf-schema#label> "is geometrical"@en .
+# http://coconutKG.aksw.org/ontology#isRepresentedIn
+<http://coconutKG.aksw.org/ontology#isRepresentedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#isRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#isRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#isRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection is represented in an entry."@en .
+<http://coconutKG.aksw.org/ontology#isRepresentedIn> <http://www.w3.org/2000/01/rdf-schema#label> "isRepresentedIn"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isIdentifiedBy
-<http://coconutKG.aksw.org/ontology#isIdentifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical compound is identified by it's unique identifiers."@en .
-<http://coconutKG.aksw.org/ontology#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is identified by"@en .
+# http://coconutKG.aksw.org/ontology#labeledBy
+<http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A molceule is labeled by an Identifier."@en .
+<http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#label> "labeledBy"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isMolecular
-<http://coconutKG.aksw.org/ontology#isMolecular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isMolecular> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#isMolecular> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#isMolecular> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of molecular descriptors."@en .
-<http://coconutKG.aksw.org/ontology#isMolecular> <http://www.w3.org/2000/01/rdf-schema#label> "is molecular"@en .
+# http://coconutKG.aksw.org/ontology#locatedIn
+<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#GeoLocation> .
+<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "locatedIn"@en .
 # 
-# http://coconutKG.aksw.org/ontology#isTopological
-<http://coconutKG.aksw.org/ontology#isTopological> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#isTopological> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Descriptors> .
-<http://coconutKG.aksw.org/ontology#isTopological> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#isTopological> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of topological descriptors."@en .
-<http://coconutKG.aksw.org/ontology#isTopological> <http://www.w3.org/2000/01/rdf-schema#label> "is topological"@en .
+# http://coconutKG.aksw.org/ontology#originatesFrom
+<http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The molecule origintes from a certain organism."@en .
+<http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "originatesFrom"@en .
+# 
+# http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf
+<http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Molecule> .
+<http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The sample location specifies from where the molecule was extracted from."@en .
+<http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "specifiesExtractionLocationOf"@en .
+# 
+# http://coconutKG.aksw.org/ontology#specifiesLocationOf
+<http://coconutKG.aksw.org/ontology#specifiesLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coconutKG.aksw.org/ontology#specifiesLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#specifiesLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#specifiesLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The sample location specifies the location of the organism it originated from."@en .
+<http://coconutKG.aksw.org/ontology#specifiesLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "specifiesLocationOf"@en .
 # 
 # 
 # 
@@ -170,614 +171,677 @@
 # #################################################################
 # 
 # 
-# http://coconutKG.aksw.org/ontology#absoluteSmiles
-<http://coconutKG.aksw.org/ontology#absoluteSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#absoluteSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#absoluteSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#absoluteSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Absolute smiles of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#absoluteSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "absolute smiles"@en .
+# http://coconutKG.aksw.org/ontology#AlogP
+<http://coconutKG.aksw.org/ontology#AlogP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#AlogP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#AlogP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#AlogP> <http://www.w3.org/2000/01/rdf-schema#comment> "The logarithm of the partition between n-octanol and water (logP). AlogP is used to estimate the lipophilicity of a molecule, which is an important factor in drug absorption and distribution."@en .
+<http://coconutKG.aksw.org/ontology#AlogP> <http://www.w3.org/2000/01/rdf-schema#label> "AlogP"@en .
 # 
-# http://coconutKG.aksw.org/ontology#absoluteSmilesSources
-<http://coconutKG.aksw.org/ontology#absoluteSmilesSources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#absoluteSmilesSources> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#absoluteSmilesSources> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#absoluteSmilesSources> <http://www.w3.org/2000/01/rdf-schema#comment> "Source databases of the absolute smiles."@en .
-<http://coconutKG.aksw.org/ontology#absoluteSmilesSources> <http://www.w3.org/2000/01/rdf-schema#label> "absolute smiles sources"@en .
+# http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations
+<http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations> <http://www.w3.org/2000/01/rdf-schema#comment> "A custom function to determine the number of Lipinski's rule violations for a given molecule."@en .
+<http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations> <http://www.w3.org/2000/01/rdf-schema#label> "Lipinski Rule Of Five Violations"@en .
 # 
-# http://coconutKG.aksw.org/ontology#alogp
-<http://coconutKG.aksw.org/ontology#alogp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#alogp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#alogp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#alogp> <http://www.w3.org/2000/01/rdf-schema#comment> "Prediction of logP based on the atom-type method called AlogP (Ghose-Crippen LogKow)."@en .
-<http://coconutKG.aksw.org/ontology#alogp> <http://www.w3.org/2000/01/rdf-schema#label> "a logP"@en .
+# http://coconutKG.aksw.org/ontology#active
+<http://coconutKG.aksw.org/ontology#active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#active> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Status> .
+<http://coconutKG.aksw.org/ontology#active> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#active> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the molecule is currently active or inactive."@en .
+<http://coconutKG.aksw.org/ontology#active> <http://www.w3.org/2000/01/rdf-schema#label> "Active"@en .
 # 
-# http://coconutKG.aksw.org/ontology#alogp2
-<http://coconutKG.aksw.org/ontology#alogp2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#alogp2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#alogp2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#alogp2> <http://www.w3.org/2000/01/rdf-schema#comment> "Prediction of logP based on the atom-type method called AlogP2 (Ghose-Crippen LogKow)"@en .
-<http://coconutKG.aksw.org/ontology#alogp2> <http://www.w3.org/2000/01/rdf-schema#label> "a logP2"@en .
-# 
-# http://coconutKG.aksw.org/ontology#amralogp
-<http://coconutKG.aksw.org/ontology#amralogp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#amralogp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#amralogp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#amralogp> <http://www.w3.org/2000/01/rdf-schema#comment> "Ghose-Crippen molar refractivity."@en .
-<http://coconutKG.aksw.org/ontology#amralogp> <http://www.w3.org/2000/01/rdf-schema#label> "AMR a logP "@en .
+# http://coconutKG.aksw.org/ontology#activeCitation
+<http://coconutKG.aksw.org/ontology#activeCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#activeCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Citation> .
+<http://coconutKG.aksw.org/ontology#activeCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#activeCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines wheater a citation is still active or not."@en .
+<http://coconutKG.aksw.org/ontology#activeCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Active Citation"@en .
 # 
 # http://coconutKG.aksw.org/ontology#annotationLevel
 <http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
+<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
 <http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation level of the natural product (from 1 to 5)."@en .
-<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "annotation level"@en .
+<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value indicating the thoroughness or depth of the annotation provided for the molecule, reflecting its level of detail."@en .
+<http://coconutKG.aksw.org/ontology#annotationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation Level"@en .
 # 
-# http://coconutKG.aksw.org/ontology#apol
-<http://coconutKG.aksw.org/ontology#apol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#apol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptors> .
-<http://coconutKG.aksw.org/ontology#apol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#apol> <http://www.w3.org/2000/01/rdf-schema#comment> "Sum of the atomic polarizabilities (including implicit hydrogens)"@en .
-<http://coconutKG.aksw.org/ontology#apol> <http://www.w3.org/2000/01/rdf-schema#label> "apol"@en .
+# http://coconutKG.aksw.org/ontology#aromaticRingCount
+<http://coconutKG.aksw.org/ontology#aromaticRingCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#aromaticRingCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
+<http://coconutKG.aksw.org/ontology#aromaticRingCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#aromaticRingCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of aromatic rings in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#aromaticRingCount> <http://www.w3.org/2000/01/rdf-schema#label> "Aromatic Ring Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#aquisitionDate
-<http://coconutKG.aksw.org/ontology#aquisitionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#aquisitionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#aquisitionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<http://coconutKG.aksw.org/ontology#aquisitionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date the chemical compounds data was aquired from the source."@en .
-<http://coconutKG.aksw.org/ontology#aquisitionDate> <http://www.w3.org/2000/01/rdf-schema#label> "aquisition date"@en .
+# http://coconutKG.aksw.org/ontology#authors
+<http://coconutKG.aksw.org/ontology#authors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#authors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Citation> .
+<http://coconutKG.aksw.org/ontology#authors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#authors> <http://www.w3.org/2000/01/rdf-schema#comment> "The names of the authors of the citation."@en .
+<http://coconutKG.aksw.org/ontology#authors> <http://www.w3.org/2000/01/rdf-schema#label> "Authors"@en .
 # 
-# http://coconutKG.aksw.org/ontology#baseId
-<http://coconutKG.aksw.org/ontology#baseId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#baseId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#baseId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#baseId> <http://www.w3.org/2000/01/rdf-schema#comment> "Object Id within the coconut database."@en .
-<http://coconutKG.aksw.org/ontology#baseId> <http://www.w3.org/2000/01/rdf-schema#label> "base Id"@en .
+# http://coconutKG.aksw.org/ontology#canonicalSmiles
+<http://coconutKG.aksw.org/ontology#canonicalSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#canonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#canonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#canonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "The canonical Simplified Molecular Input Line Entry System (SMILES) notation for the molecule, representing its structure in a line of text."@en .
+<http://coconutKG.aksw.org/ontology#canonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Smiles"@en .
 # 
-# http://coconutKG.aksw.org/ontology#bcutDescriptor
-<http://coconutKG.aksw.org/ontology#bcutDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#bcutDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#bcutDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#bcutDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "BCUT decriptor (Eigenvalue based). Eigenvalue based descriptor noted for its utility in chemical diversity."@en .
-<http://coconutKG.aksw.org/ontology#bcutDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "bcut descriptor"@en .
+# http://coconutKG.aksw.org/ontology#chemicalClass
+<http://coconutKG.aksw.org/ontology#chemicalClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#chemicalClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#chemicalClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#chemicalClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical Class generated using ClassyFire."@en .
+<http://coconutKG.aksw.org/ontology#chemicalClass> <http://www.w3.org/2000/01/rdf-schema#label> "Chemical Class"@en .
 # 
-# http://coconutKG.aksw.org/ontology#bondCount
-<http://coconutKG.aksw.org/ontology#bondCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#bondCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#bondCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#bondCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of bonds within the compound."@en .
-<http://coconutKG.aksw.org/ontology#bondCount> <http://www.w3.org/2000/01/rdf-schema#label> "bond count"@en .
+# http://coconutKG.aksw.org/ontology#chemicalSubClass
+<http://coconutKG.aksw.org/ontology#chemicalSubClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#chemicalSubClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#chemicalSubClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#chemicalSubClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical Sub Class generated using ClassyFire."@en .
+<http://coconutKG.aksw.org/ontology#chemicalSubClass> <http://www.w3.org/2000/01/rdf-schema#label> "Chemical Sub Class"@en .
 # 
-# http://coconutKG.aksw.org/ontology#bpol
-<http://coconutKG.aksw.org/ontology#bpol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#bpol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptors> .
-<http://coconutKG.aksw.org/ontology#bpol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#bpol> <http://www.w3.org/2000/01/rdf-schema#comment> "Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens) with polarizabilities taken from http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm This descriptor assuemes 2-centered bonds."@en .
-<http://coconutKG.aksw.org/ontology#bpol> <http://www.w3.org/2000/01/rdf-schema#label> "bpol"@en .
+# http://coconutKG.aksw.org/ontology#chemicalSuperClass
+<http://coconutKG.aksw.org/ontology#chemicalSuperClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#chemicalSuperClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#chemicalSuperClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#chemicalSuperClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical Super Class generated using ClassyFire."@en .
+<http://coconutKG.aksw.org/ontology#chemicalSuperClass> <http://www.w3.org/2000/01/rdf-schema#label> "Chemical Super Class"@en .
 # 
-# http://coconutKG.aksw.org/ontology#cas
-<http://coconutKG.aksw.org/ontology#cas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#cas> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#cas> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#cas> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical Abstracts Service registry number."@en .
-<http://coconutKG.aksw.org/ontology#cas> <http://www.w3.org/2000/01/rdf-schema#label> "cas"@en .
-# 
-# http://coconutKG.aksw.org/ontology#circularFingerprint
-<http://coconutKG.aksw.org/ontology#circularFingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#circularFingerprint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#circularFingerprint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#circularFingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "circular fingerprint sequence."@en .
-<http://coconutKG.aksw.org/ontology#circularFingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "circular fingerprint"@en .
+# http://coconutKG.aksw.org/ontology#citationCount
+<http://coconutKG.aksw.org/ontology#citationCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#citationCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#citationCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#citationCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of times the molecule has been cited in literature or other references."@en .
+<http://coconutKG.aksw.org/ontology#citationCount> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Count"@en .
 # 
 # http://coconutKG.aksw.org/ontology#citationDoi
 <http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Citation> .
 <http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#comment> "DOI of publications the compound has been mentioned."@en .
-<http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#label> "citation DOI."@en .
+<http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#comment> "The DOI (Digital Object Identifier) of the citation."@en .
+<http://coconutKG.aksw.org/ontology#citationDoi> <http://www.w3.org/2000/01/rdf-schema#label> "Citation DOI"@en .
 # 
-# http://coconutKG.aksw.org/ontology#cleanSmiles
-<http://coconutKG.aksw.org/ontology#cleanSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#cleanSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#cleanSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#cleanSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Clean Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#cleanSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "clean smiles"@en .
+# http://coconutKG.aksw.org/ontology#citationTitle
+<http://coconutKG.aksw.org/ontology#citationTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#citationTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Citation> .
+<http://coconutKG.aksw.org/ontology#citationTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#citationTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the citation."@en .
+<http://coconutKG.aksw.org/ontology#citationTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Title"@en .
+# 
+# http://coconutKG.aksw.org/ontology#collectionCount
+<http://coconutKG.aksw.org/ontology#collectionCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#collectionCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#collectionCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#collectionCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of collections in which the molecule is included."@en .
+<http://coconutKG.aksw.org/ontology#collectionCount> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Count"@en .
+# 
+# http://coconutKG.aksw.org/ontology#collectionDoi
+<http://coconutKG.aksw.org/ontology#collectionDoi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#collectionDoi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#collectionDoi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#collectionDoi> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Object Identifier (DOI) assigned to the collection."@en .
+<http://coconutKG.aksw.org/ontology#collectionDoi> <http://www.w3.org/2000/01/rdf-schema#label> "Collection DOI"@en .
+# 
+# http://coconutKG.aksw.org/ontology#collectionIdentifier
+<http://coconutKG.aksw.org/ontology#collectionIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#collectionIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#collectionIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#collectionIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of the collection."@en .
+<http://coconutKG.aksw.org/ontology#collectionIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
+# 
+# http://coconutKG.aksw.org/ontology#collectionSlug
+<http://coconutKG.aksw.org/ontology#collectionSlug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#collectionSlug> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#collectionSlug> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#collectionSlug> <http://www.w3.org/2000/01/rdf-schema#comment> "A user- and search engine-friendly text consisting of one or a few words as part of a URL"@en .
+<http://coconutKG.aksw.org/ontology#collectionSlug> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Slug"@en .
+# 
+# http://coconutKG.aksw.org/ontology#collectionTitle
+<http://coconutKG.aksw.org/ontology#collectionTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#collectionTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#collectionTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#collectionTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the collection."@en .
+<http://coconutKG.aksw.org/ontology#collectionTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Title"@en .
+# 
+# http://coconutKG.aksw.org/ontology#comment
+<http://coconutKG.aksw.org/ontology#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
+<http://coconutKG.aksw.org/ontology#comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "General remarks or additional notes regarding the molecule."@en .
+<http://coconutKG.aksw.org/ontology#comment> <http://www.w3.org/2000/01/rdf-schema#label> "Comment"@en .
+# 
+# http://coconutKG.aksw.org/ontology#comments
+<http://coconutKG.aksw.org/ontology#comments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#comments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#comments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#comments> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional remarks or notes about the collection that might provide further context or insight."@en .
+<http://coconutKG.aksw.org/ontology#comments> <http://www.w3.org/2000/01/rdf-schema#label> "Comments"@en .
 # 
 # http://coconutKG.aksw.org/ontology#containsLinearSugars
 <http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFeatures> .
+<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
 <http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#comment> "Information if there are any linear sugars present in the chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#label> "contains linear sugars"@en .
+<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#comment> "Utilizing the Sugar Removal Utility to check for the presence of linear sugars."@en .
+<http://coconutKG.aksw.org/ontology#containsLinearSugars> <http://www.w3.org/2000/01/rdf-schema#label> "Contains Linear Sugars"@en .
 # 
 # http://coconutKG.aksw.org/ontology#containsRingSugars
 <http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFeatures> .
+<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
 <http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#comment> "Information if there are any ring sugars present in the chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#label> "contains ring sugars"@en .
+<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#comment> "Utilizing the Sugar Removal Utility to check for the presence of circular sugars."@en .
+<http://coconutKG.aksw.org/ontology#containsRingSugars> <http://www.w3.org/2000/01/rdf-schema#label> "Contains Ring Sugars"@en .
 # 
 # http://coconutKG.aksw.org/ontology#containsSugar
 <http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFeatures> .
+<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
 <http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#comment> "Information if the chemical compound contains sugar."@en .
-<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#label> "contains sugar"@en .
+<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#comment> "Utilizing the Sugar Removal Utility to check for the presence of circular or linear sugars."@en .
+<http://coconutKG.aksw.org/ontology#containsSugar> <http://www.w3.org/2000/01/rdf-schema#label> "Contains Sugar"@en .
 # 
-# http://coconutKG.aksw.org/ontology#deepSmiles
-<http://coconutKG.aksw.org/ontology#deepSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#deepSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#deepSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#deepSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Deep Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#deepSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "deep smiles"@en .
+# http://coconutKG.aksw.org/ontology#description
+<http://coconutKG.aksw.org/ontology#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#description> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of a given Collection."@en .
+<http://coconutKG.aksw.org/ontology#description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
 # 
-# http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor
-<http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "A topological descriptor combining distance and adjacency information."@en .
-<http://coconutKG.aksw.org/ontology#eccentricConnectivityIndexDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "eccentric connectivity index descriptor"@en .
+# http://coconutKG.aksw.org/ontology#directParentClassification
+<http://coconutKG.aksw.org/ontology#directParentClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#directParentClassification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#directParentClassification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#directParentClassification> <http://www.w3.org/2000/01/rdf-schema#comment> "Direct Parent Classification generated using ClassyFire."@en .
+<http://coconutKG.aksw.org/ontology#directParentClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Parent Classification"@en .
 # 
-# http://coconutKG.aksw.org/ontology#ertlFunctionalFragments
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFragments> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragments> <http://www.w3.org/2000/01/rdf-schema#comment> "List of Ertl Functional Groups."@en .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragments> <http://www.w3.org/2000/01/rdf-schema#label> "ERTL functional fragments"@en .
+# http://coconutKG.aksw.org/ontology#entryCanonicalSmiles
+<http://coconutKG.aksw.org/ontology#entryCanonicalSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Canonical Smiles"@en .
 # 
-# http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFragments> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "List of Ertl Functional Groups in pseudo SMILES."@en .
-<http://coconutKG.aksw.org/ontology#ertlFunctionalFragmentsPseudoSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "ERTL functional fragments pseudo smiles"@en .
+# http://coconutKG.aksw.org/ontology#entryErrorCode
+<http://coconutKG.aksw.org/ontology#entryErrorCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryErrorCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryErrorCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#entryErrorCode> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryErrorCode> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Error Code"@en .
 # 
-# http://coconutKG.aksw.org/ontology#extendedFingerprint
-<http://coconutKG.aksw.org/ontology#extendedFingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#extendedFingerprint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#extendedFingerprint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#extendedFingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "extended fingerprint sequence"@en .
-<http://coconutKG.aksw.org/ontology#extendedFingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "extended fingerprint"@en .
+# http://coconutKG.aksw.org/ontology#entryErrors
+<http://coconutKG.aksw.org/ontology#entryErrors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryErrors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryErrors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryErrors> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryErrors> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Errors"@en .
 # 
-# http://coconutKG.aksw.org/ontology#fmfDescriptor
-<http://coconutKG.aksw.org/ontology#fmfDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#fmfDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#fmfDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#fmfDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "FMF descriptor characterizing complexity of a molecule. The descriptor is described in (Yang, Y. et. al.. J. Med. Chem.. 2010. ASAP) and is an approach to characterizing molecular complexity based on the Murcko framework present in the molecule."@en .
-<http://coconutKG.aksw.org/ontology#fmfDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "fmf descriptor"@en .
+# http://coconutKG.aksw.org/ontology#entryHasStereocenters
+<http://coconutKG.aksw.org/ontology#entryHasStereocenters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryHasStereocenters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryHasStereocenters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#entryHasStereocenters> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryHasStereocenters> <http://www.w3.org/2000/01/rdf-schema#label> "Entry has stereocenters"@en .
 # 
-# http://coconutKG.aksw.org/ontology#foundInDatabases
-<http://coconutKG.aksw.org/ontology#foundInDatabases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#foundInDatabases> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#foundInDatabases> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#foundInDatabases> <http://www.w3.org/2000/01/rdf-schema#comment> "Nametags of databases where the compound can be found."@en .
-<http://coconutKG.aksw.org/ontology#foundInDatabases> <http://www.w3.org/2000/01/rdf-schema#label> "found in databases"@en .
+# http://coconutKG.aksw.org/ontology#entryIsInvalid
+<http://coconutKG.aksw.org/ontology#entryIsInvalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryIsInvalid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryIsInvalid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#entryIsInvalid> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryIsInvalid> <http://www.w3.org/2000/01/rdf-schema#label> "Entry is invalid"@en .
 # 
-# http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor
-<http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that returns the complexity of a system. The complexity is defined as (Nilakantan, R. et. al.. Journal of chemical information and modeling. 2006. 46)."@en .
-<http://coconutKG.aksw.org/ontology#fragmentComplexityDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "fragment complexity descriptor"@en .
+# http://coconutKG.aksw.org/ontology#entryLink
+<http://coconutKG.aksw.org/ontology#entryLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryLink> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryLink> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Link"@en .
 # 
-# http://coconutKG.aksw.org/ontology#fragments
-<http://coconutKG.aksw.org/ontology#fragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#fragments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFragments> .
-<http://coconutKG.aksw.org/ontology#fragments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#fragments> <http://www.w3.org/2000/01/rdf-schema#comment> "List of circular fragments (molecular signatures) of the deglycosylated natural product."@en .
-<http://coconutKG.aksw.org/ontology#fragments> <http://www.w3.org/2000/01/rdf-schema#label> "fragments"@en .
+# http://coconutKG.aksw.org/ontology#entryMolecularFormula
+<http://coconutKG.aksw.org/ontology#entryMolecularFormula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryMolecularFormula> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryMolecularFormula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryMolecularFormula> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryMolecularFormula> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Molecular Formula"@en .
 # 
-# http://coconutKG.aksw.org/ontology#fragmentsWithSugar
-<http://coconutKG.aksw.org/ontology#fragmentsWithSugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#fragmentsWithSugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularFragments> .
-<http://coconutKG.aksw.org/ontology#fragmentsWithSugar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#fragmentsWithSugar> <http://www.w3.org/2000/01/rdf-schema#comment> "List of circular fragments (molecular signatures) of the whole natural product."@en .
-<http://coconutKG.aksw.org/ontology#fragmentsWithSugar> <http://www.w3.org/2000/01/rdf-schema#label> "fragments with sugar"@en .
+# http://coconutKG.aksw.org/ontology#entryName
+<http://coconutKG.aksw.org/ontology#entryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryName> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryName> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Name"@en .
 # 
-# http://coconutKG.aksw.org/ontology#fsp3
-<http://coconutKG.aksw.org/ontology#fsp3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#fsp3> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#fsp3> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#fsp3> <http://www.w3.org/2000/01/rdf-schema#comment> "This descriptor is characterizing non-flatness of a molecule."@en .
-<http://coconutKG.aksw.org/ontology#fsp3> <http://www.w3.org/2000/01/rdf-schema#label> "fsp3"@en .
+# http://coconutKG.aksw.org/ontology#entryOrganismPart
+<http://coconutKG.aksw.org/ontology#entryOrganismPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryOrganismPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryOrganismPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryOrganismPart> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryOrganismPart> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Organism Part"@en .
 # 
-# http://coconutKG.aksw.org/ontology#geoLocation
-<http://coconutKG.aksw.org/ontology#geoLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#geoLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Geolocation> .
-<http://coconutKG.aksw.org/ontology#geoLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#geoLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Areas of the world where the chemical compound can be found."@en .
-<http://coconutKG.aksw.org/ontology#geoLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Geolocation"@en .
+# http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles
+<http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Parent Canonical Smiles"@en .
 # 
-# http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms
-<http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeometricalDescriptors> .
-<http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-<http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms> <http://www.w3.org/2000/01/rdf-schema#comment> "Gravitational index descriptor (heavy atoms only). Theses are calculated from the 3D molecular structure, which is defined with coordinates of all atoms in the molecule."@en .
-<http://coconutKG.aksw.org/ontology#gravitationalIndexHeavyAtoms> <http://www.w3.org/2000/01/rdf-schema#label> "gravitational index heavy atoms"@en .
+# http://coconutKG.aksw.org/ontology#entryPreciseLocation
+<http://coconutKG.aksw.org/ontology#entryPreciseLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryPreciseLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryPreciseLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryPreciseLocation> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryPreciseLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Precise Location"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hBondAcceptorCount
-<http://coconutKG.aksw.org/ontology#hBondAcceptorCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#hBondAcceptorCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptors> .
-<http://coconutKG.aksw.org/ontology#hBondAcceptorCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#hBondAcceptorCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Acceptor count is the sum of the acceptor atoms. An acceptor atom always has a lone electron pair/lone electron pairs that is capable of establishing a H bond."@en .
-<http://coconutKG.aksw.org/ontology#hBondAcceptorCount> <http://www.w3.org/2000/01/rdf-schema#label> "hydrogen bond acceptor count"@en .
+# http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles
+<http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Standardized Canonical Smiles"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hBondDonorCount
-<http://coconutKG.aksw.org/ontology#hBondDonorCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#hBondDonorCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptors> .
-<http://coconutKG.aksw.org/ontology#hBondDonorCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#hBondDonorCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Donor count is the sum of the atoms in the molecule which have H donor property."@en .
-<http://coconutKG.aksw.org/ontology#hBondDonorCount> <http://www.w3.org/2000/01/rdf-schema#label> "hydrogen bond donor count"@en .
+# http://coconutKG.aksw.org/ontology#entryStatus
+<http://coconutKG.aksw.org/ontology#entryStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryStatus> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Status"@en .
 # 
-# http://coconutKG.aksw.org/ontology#heavyAtomNumber
-<http://coconutKG.aksw.org/ontology#heavyAtomNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#heavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#heavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#heavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of heavy Atoms."@en .
-<http://coconutKG.aksw.org/ontology#heavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#label> "heavy atom number"@en .
+# http://coconutKG.aksw.org/ontology#entryStructuralComments
+<http://coconutKG.aksw.org/ontology#entryStructuralComments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#entryStructuralComments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#entryStructuralComments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#entryStructuralComments> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#entryStructuralComments> <http://www.w3.org/2000/01/rdf-schema#label> "Entry Structural Comments"@en .
 # 
-# http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor
-<http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Hybridization Ratio Descriptor (fraction of sp3 carbons to sp2 carbons)."@en .
-<http://coconutKG.aksw.org/ontology#hybridizationRatioDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "hybridization ratio descriptor"@en .
+# http://coconutKG.aksw.org/ontology#exactMolecularWeight
+<http://coconutKG.aksw.org/ontology#exactMolecularWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#exactMolecularWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeometricalDescriptor> .
+<http://coconutKG.aksw.org/ontology#exactMolecularWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#exactMolecularWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "The exact molecular weight of the molecule which is based on the isotope masses of the atoms in the molecule."@en .
+<http://coconutKG.aksw.org/ontology#exactMolecularWeight> <http://www.w3.org/2000/01/rdf-schema#label> "Exact Molecular Weight"@en .
 # 
-# http://coconutKG.aksw.org/ontology#idInSource
-<http://coconutKG.aksw.org/ontology#idInSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#idInSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#idInSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#idInSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Id the compound had in it's source database."@en .
-<http://coconutKG.aksw.org/ontology#idInSource> <http://www.w3.org/2000/01/rdf-schema#label> "id in source"@en .
+# http://coconutKG.aksw.org/ontology#formalCharge
+<http://coconutKG.aksw.org/ontology#formalCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#formalCharge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#formalCharge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#formalCharge> <http://www.w3.org/2000/01/rdf-schema#comment> "The formal charge of the molecule."@en .
+<http://coconutKG.aksw.org/ontology#formalCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Formal Charge"@en .
 # 
-# http://coconutKG.aksw.org/ontology#kappaShapeIndex1
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex1> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification of the molecular shape of a compound."@en .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex1> <http://www.w3.org/2000/01/rdf-schema#label> "kappa shape index 1"@en .
+# http://coconutKG.aksw.org/ontology#fractioncsp3
+<http://coconutKG.aksw.org/ontology#fractioncsp3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#fractioncsp3> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#fractioncsp3> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#fractioncsp3> <http://www.w3.org/2000/01/rdf-schema#comment> "The fraction of C atoms that are SP3 hybridized."@en .
+<http://coconutKG.aksw.org/ontology#fractioncsp3> <http://www.w3.org/2000/01/rdf-schema#label> "Fraction CSP3"@en .
 # 
-# http://coconutKG.aksw.org/ontology#kappaShapeIndex2
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex2> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification of the molecular shape of a compound."@en .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex2> <http://www.w3.org/2000/01/rdf-schema#label> "kappa shape index 2"@en .
+# http://coconutKG.aksw.org/ontology#geoCount
+<http://coconutKG.aksw.org/ontology#geoCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#geoCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#geoCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#geoCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The count of geographical occurrences or representations related to the molecule."@en .
+<http://coconutKG.aksw.org/ontology#geoCount> <http://www.w3.org/2000/01/rdf-schema#label> "Geo Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#kappaShapeIndex3
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex3> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex3> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex3> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification of the molecular shape of a compound."@en .
-<http://coconutKG.aksw.org/ontology#kappaShapeIndex3> <http://www.w3.org/2000/01/rdf-schema#label> "kappa shape index 3"@en .
+# http://coconutKG.aksw.org/ontology#hasStereo
+<http://coconutKG.aksw.org/ontology#hasStereo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hasStereo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#hasStereo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#hasStereo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the molecule has stereochemistry, which refers to the spatial arrangement of atoms in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#hasStereo> <http://www.w3.org/2000/01/rdf-schema#label> "has Stereo"@en .
 # 
-# http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures
-<http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of failures in the Lipinski rule of five. The Rule of Five is a rule of thumb for the oral bioavailability of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#lipinskiRuleOf5Failures> <http://www.w3.org/2000/01/rdf-schema#label> "Lipinski rule of 5 failures"@en .
+# http://coconutKG.aksw.org/ontology#hasVariants
+<http://coconutKG.aksw.org/ontology#hasVariants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hasVariants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#hasVariants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#hasVariants> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if there are alternative forms or variants of the entity."@en .
+<http://coconutKG.aksw.org/ontology#hasVariants> <http://www.w3.org/2000/01/rdf-schema#label> "has Variants"@en .
 # 
-# http://coconutKG.aksw.org/ontology#manholdlogp
-<http://coconutKG.aksw.org/ontology#manholdlogp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#manholdlogp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#manholdlogp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#manholdlogp> <http://www.w3.org/2000/01/rdf-schema#comment> "LogP descriptor (Mannhold version)."@en .
-<http://coconutKG.aksw.org/ontology#manholdlogp> <http://www.w3.org/2000/01/rdf-schema#label> "manholdlogp"@en .
+# http://coconutKG.aksw.org/ontology#heavyAtomCount
+<http://coconutKG.aksw.org/ontology#heavyAtomCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#heavyAtomCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeometricalDescriptor> .
+<http://coconutKG.aksw.org/ontology#heavyAtomCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#heavyAtomCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Total count of the heavy atoms."@en .
+<http://coconutKG.aksw.org/ontology#heavyAtomCount> <http://www.w3.org/2000/01/rdf-schema#label> "Heavy Atom Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#maxNumberOfRings
-<http://coconutKG.aksw.org/ontology#maxNumberOfRings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#maxNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#maxNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#maxNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum number of rings in the compound."@en .
-<http://coconutKG.aksw.org/ontology#maxNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#label> "maximum number of rings"@en .
+# http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of Hydrogen Bond Acceptors in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors> <http://www.w3.org/2000/01/rdf-schema#label> "Hydrogen Bond Acceptors"@en .
 # 
-# http://coconutKG.aksw.org/ontology#minNumberOfRings
-<http://coconutKG.aksw.org/ontology#minNumberOfRings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#minNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#minNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#minNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum number of rings in the compound."@en .
-<http://coconutKG.aksw.org/ontology#minNumberOfRings> <http://www.w3.org/2000/01/rdf-schema#label> "minimum number of rings"@en .
+# http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of Hydrogen Bond Acceptors in a molecule using the Lipinski module."@en .
+<http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski> <http://www.w3.org/2000/01/rdf-schema#label> "Hydrogen Bond Acceptors Lipinski"@en .
+# 
+# http://coconutKG.aksw.org/ontology#hydrogenBondDonors
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonors> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of Hydrogen Bond Donors in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonors> <http://www.w3.org/2000/01/rdf-schema#label> "Hydrogen Bond Donors"@en .
+# 
+# http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of Hydrogen Bond Donors in a molecule using the Lipinski module."@en .
+<http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski> <http://www.w3.org/2000/01/rdf-schema#label> "Hydrogen Bond Donors Lipinski"@en .
+# 
+# http://coconutKG.aksw.org/ontology#image
+<http://coconutKG.aksw.org/ontology#image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#image> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#image> <http://www.w3.org/2000/01/rdf-schema#comment> "An additional or alternative image related to the collection."@en .
+<http://coconutKG.aksw.org/ontology#image> <http://www.w3.org/2000/01/rdf-schema#label> "Image"@en .
+# 
+# http://coconutKG.aksw.org/ontology#iri
+<http://coconutKG.aksw.org/ontology#iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#iri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#iri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#iri> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI (Internationalized Resource Identifier) is the internationalised version of the URI (Uniform Resource Identifier)"@en .
+<http://coconutKG.aksw.org/ontology#iri> <http://www.w3.org/2000/01/rdf-schema#label> "IRI"@en .
+# 
+# http://coconutKG.aksw.org/ontology#isParent
+<http://coconutKG.aksw.org/ontology#isParent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#isParent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#isParent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#isParent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the molecule serves as a parent classification in a hierarchical relationship, meaning it has child entities or variants."@en .
+<http://coconutKG.aksw.org/ontology#isParent> <http://www.w3.org/2000/01/rdf-schema#label> "is Parent"@en .
+# 
+# http://coconutKG.aksw.org/ontology#isPlaceholder
+<http://coconutKG.aksw.org/ontology#isPlaceholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#isPlaceholder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Status> .
+<http://coconutKG.aksw.org/ontology#isPlaceholder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#isPlaceholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the molecule is a placeholder in the dataset, serving as a temporary or default entry without full attributes."@en .
+<http://coconutKG.aksw.org/ontology#isPlaceholder> <http://www.w3.org/2000/01/rdf-schema#label> "is Placeholder"@en .
+# 
+# http://coconutKG.aksw.org/ontology#isPublic
+<http://coconutKG.aksw.org/ontology#isPublic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#isPublic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#isPublic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#isPublic> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the collection is publicly accessible or private."@en .
+<http://coconutKG.aksw.org/ontology#isPublic> <http://www.w3.org/2000/01/rdf-schema#label> "Is Public"@en .
+# 
+# http://coconutKG.aksw.org/ontology#isTautomer
+<http://coconutKG.aksw.org/ontology#isTautomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#isTautomer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#isTautomer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://coconutKG.aksw.org/ontology#isTautomer> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the molecule is a tautomer, which is a specific type of chemical structure that can easily interconvert with another form."@en .
+<http://coconutKG.aksw.org/ontology#isTautomer> <http://www.w3.org/2000/01/rdf-schema#label> "is Tautomer"@en .
+# 
+# http://coconutKG.aksw.org/ontology#iupacName
+<http://coconutKG.aksw.org/ontology#iupacName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#iupacName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#iupacName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#iupacName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name assigned to the molecule according to the International Union of Pure and Applied Chemistry (IUPAC) nomenclature rules, providing a standardized name for communication."@en .
+<http://coconutKG.aksw.org/ontology#iupacName> <http://www.w3.org/2000/01/rdf-schema#label> "IUPAC Name"@en .
+# 
+# http://coconutKG.aksw.org/ontology#jobInfo
+<http://coconutKG.aksw.org/ontology#jobInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#jobInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#jobInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#jobInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about any tasks or processes performed on the collection."@en .
+<http://coconutKG.aksw.org/ontology#jobInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Job Info"@en .
+# 
+# http://coconutKG.aksw.org/ontology#jobStatus
+<http://coconutKG.aksw.org/ontology#jobStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#jobStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#jobStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#jobStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The current status of any processing or tasks associated with the collection."@en .
+<http://coconutKG.aksw.org/ontology#jobStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Job Status"@en .
+# 
+# http://coconutKG.aksw.org/ontology#locationName
+<http://coconutKG.aksw.org/ontology#locationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#locationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeoLocation> .
+<http://coconutKG.aksw.org/ontology#locationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#locationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the location where the molecule was found."@en .
+<http://coconutKG.aksw.org/ontology#locationName> <http://www.w3.org/2000/01/rdf-schema#label> "Location Name"@en .
 # 
 # http://coconutKG.aksw.org/ontology#molecularFormula
 <http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
+<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
 <http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular formula of a compound."@en .
-<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#label> "molecular formula"@en .
+<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#comment> "The molecular formula is a string that represents the types and number of atoms in the molecule."@en .
+<http://coconutKG.aksw.org/ontology#molecularFormula> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular Formula"@en .
 # 
 # http://coconutKG.aksw.org/ontology#molecularWeight
 <http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular weight of a compound."@en .
-<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#label> "molecular weight"@en .
+<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "The average molecular weight of the molecule."@en .
+<http://coconutKG.aksw.org/ontology#molecularWeight> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular Weight"@en .
+# 
+# http://coconutKG.aksw.org/ontology#moleculeCount
+<http://coconutKG.aksw.org/ontology#moleculeCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#moleculeCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#moleculeCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#moleculeCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of molecules included within the collection."@en .
+<http://coconutKG.aksw.org/ontology#moleculeCount> <http://www.w3.org/2000/01/rdf-schema#label> "Molecule Count"@en .
+# 
+# http://coconutKG.aksw.org/ontology#moleculeIdentifier
+<http://coconutKG.aksw.org/ontology#moleculeIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#moleculeIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#moleculeIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#moleculeIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier assigned to the molecule."@en .
+<http://coconutKG.aksw.org/ontology#moleculeIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Molecule Identifier"@en .
+# 
+# http://coconutKG.aksw.org/ontology#moleculeName
+<http://coconutKG.aksw.org/ontology#moleculeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#moleculeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#moleculeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#moleculeName> <http://www.w3.org/2000/01/rdf-schema#comment> "The common or preferred name of the molecule, which may be used in various contexts and could differ from the IUPAC name."@en .
+<http://coconutKG.aksw.org/ontology#moleculeName> <http://www.w3.org/2000/01/rdf-schema#label> "Molecule Name"@en .
 # 
 # http://coconutKG.aksw.org/ontology#murkoFramework
 <http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
+<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
 <http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecule string to make it compatible using the Bemis-Murcko framework."@en .
-<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#label> "murcko framework"@en .
-# 
-# http://coconutKG.aksw.org/ontology#name
-<http://coconutKG.aksw.org/ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
-<http://coconutKG.aksw.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Given name of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Custom function based on CDK to get the Murko Framework."@en .
+<http://coconutKG.aksw.org/ontology#murkoFramework> <http://www.w3.org/2000/01/rdf-schema#label> "Murko Framework"@en .
 # 
 # http://coconutKG.aksw.org/ontology#nameTrustLevel
 <http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
+<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
 <http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Trust level of given chemical compound name."@en .
-<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#label> "name trust level"@en .
+<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value representing the confidence or reliability of the name assigned to the molecule, indicating how well it is established in scientific literature."@en .
+<http://coconutKG.aksw.org/ontology#nameTrustLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Name Trust Level"@en .
 # 
-# http://coconutKG.aksw.org/ontology#nplNohScore
-<http://coconutKG.aksw.org/ontology#nplNohScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#nplNohScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#nplNohScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#nplNohScore> <http://www.w3.org/2000/01/rdf-schema#comment> "NP‐likeness score computed on the nitrolic acid molecule."@en .
-<http://coconutKG.aksw.org/ontology#nplNohScore> <http://www.w3.org/2000/01/rdf-schema#label> "NPL-NOH score"@en .
+# http://coconutKG.aksw.org/ontology#npLikeness
+<http://coconutKG.aksw.org/ontology#npLikeness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#npLikeness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> .
+<http://coconutKG.aksw.org/ontology#npLikeness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#npLikeness> <http://www.w3.org/2000/01/rdf-schema#comment> "NPLikeness score generated using RDKit. The likelyness of a molecule to be a natural product."@en .
+<http://coconutKG.aksw.org/ontology#npLikeness> <http://www.w3.org/2000/01/rdf-schema#label> "NPLikeness"@en .
 # 
-# http://coconutKG.aksw.org/ontology#nplScore
-<http://coconutKG.aksw.org/ontology#nplScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#nplScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#nplScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#nplScore> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelyhood of the compound to be a natural product, ranges from -5 (less likely) to 5 (very likely)."@en .
-<http://coconutKG.aksw.org/ontology#nplScore> <http://www.w3.org/2000/01/rdf-schema#label> "NPL score"@en .
+# http://coconutKG.aksw.org/ontology#numberOfMinimalRings
+<http://coconutKG.aksw.org/ontology#numberOfMinimalRings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#numberOfMinimalRings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
+<http://coconutKG.aksw.org/ontology#numberOfMinimalRings> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#numberOfMinimalRings> <http://www.w3.org/2000/01/rdf-schema#comment> "The number rings present in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#numberOfMinimalRings> <http://www.w3.org/2000/01/rdf-schema#label> "Number Of Minimal Rings"@en .
 # 
-# http://coconutKG.aksw.org/ontology#nplSugarScore
-<http://coconutKG.aksw.org/ontology#nplSugarScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#nplSugarScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#nplSugarScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#nplSugarScore> <http://www.w3.org/2000/01/rdf-schema#comment> "NP‐likeness score computed on the glycosylated molecule."@en .
-<http://coconutKG.aksw.org/ontology#nplSugarScore> <http://www.w3.org/2000/01/rdf-schema#label> "NPL sugar score"@en .
+# http://coconutKG.aksw.org/ontology#organismCount
+<http://coconutKG.aksw.org/ontology#organismCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#organismCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#organismCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#organismCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of organisms associated with the molecule."@en .
+<http://coconutKG.aksw.org/ontology#organismCount> <http://www.w3.org/2000/01/rdf-schema#label> "Organism Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#numberOfCarbons
-<http://coconutKG.aksw.org/ontology#numberOfCarbons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#numberOfCarbons> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#numberOfCarbons> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#numberOfCarbons> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of carbon atoms in the compound."@en .
-<http://coconutKG.aksw.org/ontology#numberOfCarbons> <http://www.w3.org/2000/01/rdf-schema#label> "number of carbons"@en .
+# http://coconutKG.aksw.org/ontology#organismName
+<http://coconutKG.aksw.org/ontology#organismName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#organismName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#organismName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#organismName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the organism."@en .
+<http://coconutKG.aksw.org/ontology#organismName> <http://www.w3.org/2000/01/rdf-schema#label> "Organism Name"@en .
 # 
-# http://coconutKG.aksw.org/ontology#numberOfNitrogens
-<http://coconutKG.aksw.org/ontology#numberOfNitrogens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#numberOfNitrogens> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#numberOfNitrogens> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#numberOfNitrogens> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of nitrogen atoms in the compound."@en .
-<http://coconutKG.aksw.org/ontology#numberOfNitrogens> <http://www.w3.org/2000/01/rdf-schema#label> "number of nitrogens"@en .
+# http://coconutKG.aksw.org/ontology#organismParts
+<http://coconutKG.aksw.org/ontology#organismParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#organismParts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#organismParts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#organismParts> <http://www.w3.org/2000/01/rdf-schema#comment> "The parts of the organism from which molecules can be extracted."@en .
+<http://coconutKG.aksw.org/ontology#organismParts> <http://www.w3.org/2000/01/rdf-schema#label> "Organism Parts"@en .
 # 
-# http://coconutKG.aksw.org/ontology#numberOfOxygens
-<http://coconutKG.aksw.org/ontology#numberOfOxygens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#numberOfOxygens> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#numberOfOxygens> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#numberOfOxygens> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of oxygen atoms in the compound."@en .
-<http://coconutKG.aksw.org/ontology#numberOfOxygens> <http://www.w3.org/2000/01/rdf-schema#label> "number of oxygens"@en .
+# http://coconutKG.aksw.org/ontology#parentMolecule
+<http://coconutKG.aksw.org/ontology#parentMolecule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#parentMolecule> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Classification> .
+<http://coconutKG.aksw.org/ontology#parentMolecule> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#parentMolecule> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecule parent classification, allowing for traceability in hierarchical relationships."@en .
+<http://coconutKG.aksw.org/ontology#parentMolecule> <http://www.w3.org/2000/01/rdf-schema#label> "Parent Molecule"@en .
 # 
-# http://coconutKG.aksw.org/ontology#numberSpiroAtoms
-<http://coconutKG.aksw.org/ontology#numberSpiroAtoms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#numberSpiroAtoms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#numberSpiroAtoms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#numberSpiroAtoms> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of atoms that are common to two rings in the molecule of a compound."@en .
-<http://coconutKG.aksw.org/ontology#numberSpiroAtoms> <http://www.w3.org/2000/01/rdf-schema#label> "number of spiro atoms"@en .
+# http://coconutKG.aksw.org/ontology#photo
+<http://coconutKG.aksw.org/ontology#photo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#photo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#photo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#photo> <http://www.w3.org/2000/01/rdf-schema#comment> "An image or visual representation associated with the collection."@en .
+<http://coconutKG.aksw.org/ontology#photo> <http://www.w3.org/2000/01/rdf-schema#label> "Photo"@en .
 # 
-# http://coconutKG.aksw.org/ontology#originalInchi
-<http://coconutKG.aksw.org/ontology#originalInchi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#originalInchi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#originalInchi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#originalInchi> <http://www.w3.org/2000/01/rdf-schema#comment> "Original International Chemical Identifier."@en .
-<http://coconutKG.aksw.org/ontology#originalInchi> <http://www.w3.org/2000/01/rdf-schema#label> "original inchi"@en .
+# http://coconutKG.aksw.org/ontology#qedDrugLikeliness
+<http://coconutKG.aksw.org/ontology#qedDrugLikeliness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#qedDrugLikeliness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ElectronicDescriptor> .
+<http://coconutKG.aksw.org/ontology#qedDrugLikeliness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#qedDrugLikeliness> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantative estimation of drug-likeness (q weighted sum)."@en .
+<http://coconutKG.aksw.org/ontology#qedDrugLikeliness> <http://www.w3.org/2000/01/rdf-schema#label> "Qed Drug Likeliness"@en .
 # 
-# http://coconutKG.aksw.org/ontology#originalInchiKey
-<http://coconutKG.aksw.org/ontology#originalInchiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#originalInchiKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#originalInchiKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#originalInchiKey> <http://www.w3.org/2000/01/rdf-schema#comment> "Original International Chemical Identifier Key."@en .
-<http://coconutKG.aksw.org/ontology#originalInchiKey> <http://www.w3.org/2000/01/rdf-schema#label> "original inchi key"@en .
+# http://coconutKG.aksw.org/ontology#rank
+<http://coconutKG.aksw.org/ontology#rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#rank> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Organism> .
+<http://coconutKG.aksw.org/ontology#rank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#rank> <http://www.w3.org/2000/01/rdf-schema#comment> "The hierarchical rank that helps categorize and describe the relationships from organisms to other organisms."@en .
+<http://coconutKG.aksw.org/ontology#rank> <http://www.w3.org/2000/01/rdf-schema#label> "Rank"@en .
 # 
-# http://coconutKG.aksw.org/ontology#originalSmiles
-<http://coconutKG.aksw.org/ontology#originalSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#originalSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#originalSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#originalSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Original Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#originalSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "original smiles"@en .
+# http://coconutKG.aksw.org/ontology#referenceID
+<http://coconutKG.aksw.org/ontology#referenceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#referenceID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
+<http://coconutKG.aksw.org/ontology#referenceID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#referenceID> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#referenceID> <http://www.w3.org/2000/01/rdf-schema#label> "Reference ID"@en .
 # 
-# http://coconutKG.aksw.org/ontology#petitjeanNumber
-<http://coconutKG.aksw.org/ontology#petitjeanNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#petitjeanNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#petitjeanNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#petitjeanNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "According to the Petitjean definition, the eccentricity of a vertex corresponds to the distance from the vertex to the most remote vertex in the graph. The distance is obtained from the distance matrix as the count of edges between the two vertices."@en .
-<http://coconutKG.aksw.org/ontology#petitjeanNumber> <http://www.w3.org/2000/01/rdf-schema#label> "petitjean Number"@en .
+# http://coconutKG.aksw.org/ontology#rotatableBondCount
+<http://coconutKG.aksw.org/ontology#rotatableBondCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#rotatableBondCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
+<http://coconutKG.aksw.org/ontology#rotatableBondCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#rotatableBondCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of rotatable bonds in a molecule."@en .
+<http://coconutKG.aksw.org/ontology#rotatableBondCount> <http://www.w3.org/2000/01/rdf-schema#label> "Rotatable Bond Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#petitjeanShapeGeom
-<http://coconutKG.aksw.org/ontology#petitjeanShapeGeom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeGeom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeGeom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeGeom> <http://www.w3.org/2000/01/rdf-schema#comment> "The geometric shape index described Petitjean and Bath et al. respectively. It measures the anisotropy in a molecule."@en .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeGeom> <http://www.w3.org/2000/01/rdf-schema#label> "petitjean shape geom"@en .
+# http://coconutKG.aksw.org/ontology#sampleLocationCollections
+<http://coconutKG.aksw.org/ontology#sampleLocationCollections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#sampleLocationCollections> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#sampleLocationCollections> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#sampleLocationCollections> <http://www.w3.org/2000/01/rdf-schema#comment> "The corresponding collections of the given sample location."@en .
+<http://coconutKG.aksw.org/ontology#sampleLocationCollections> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Location Collections"@en .
 # 
-# http://coconutKG.aksw.org/ontology#petitjeanShapeTopo
-<http://coconutKG.aksw.org/ontology#petitjeanShapeTopo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeTopo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeTopo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeTopo> <http://www.w3.org/2000/01/rdf-schema#comment> "The topological shape index described Petitjean and Bath et al. respectively. It measures the anisotropy in a molecule."@en .
-<http://coconutKG.aksw.org/ontology#petitjeanShapeTopo> <http://www.w3.org/2000/01/rdf-schema#label> "petitjean shape topo"@en .
+# http://coconutKG.aksw.org/ontology#sampleLocationIRI
+<http://coconutKG.aksw.org/ontology#sampleLocationIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#sampleLocationIRI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#sampleLocationIRI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#sampleLocationIRI> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI of the sample location."@en .
+<http://coconutKG.aksw.org/ontology#sampleLocationIRI> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Location IRI"@en .
 # 
-# http://coconutKG.aksw.org/ontology#pubchemBits
-<http://coconutKG.aksw.org/ontology#pubchemBits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#pubchemBits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#pubchemBits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#pubchemBits> <http://www.w3.org/2000/01/rdf-schema#comment> "PubChem fingerprint in MongoDB BinData format."@en .
-<http://coconutKG.aksw.org/ontology#pubchemBits> <http://www.w3.org/2000/01/rdf-schema#label> "PubChem bits"@en .
+# http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount
+<http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Count of molecules found in a sample location."@en .
+<http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Location Molecule Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#pubchemBitsString
-<http://coconutKG.aksw.org/ontology#pubchemBitsString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#pubchemBitsString> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#pubchemBitsString> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#pubchemBitsString> <http://www.w3.org/2000/01/rdf-schema#comment> "PubChem fingerprint in MongoDB BinData format."@en .
-<http://coconutKG.aksw.org/ontology#pubchemBitsString> <http://www.w3.org/2000/01/rdf-schema#label> "PubChem bits string"@en .
+# http://coconutKG.aksw.org/ontology#sampleLocationName
+<http://coconutKG.aksw.org/ontology#sampleLocationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#sampleLocationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#sampleLocationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#sampleLocationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the sample location."@en .
+<http://coconutKG.aksw.org/ontology#sampleLocationName> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Location Name"@en .
 # 
-# http://coconutKG.aksw.org/ontology#pubchemFingerprint
-<http://coconutKG.aksw.org/ontology#pubchemFingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#pubchemFingerprint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Fingerprint> .
-<http://coconutKG.aksw.org/ontology#pubchemFingerprint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#pubchemFingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Fingerprint sequence of PubChem database."@en .
-<http://coconutKG.aksw.org/ontology#pubchemFingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "PubChem fingerprint"@en .
+# http://coconutKG.aksw.org/ontology#sampleLocationSlug
+<http://coconutKG.aksw.org/ontology#sampleLocationSlug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#sampleLocationSlug> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#SampleLocation> .
+<http://coconutKG.aksw.org/ontology#sampleLocationSlug> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#sampleLocationSlug> <http://www.w3.org/2000/01/rdf-schema#comment> "The slug of the sample location name."@en .
+<http://coconutKG.aksw.org/ontology#sampleLocationSlug> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Location Slug"@en .
 # 
-# http://coconutKG.aksw.org/ontology#simpleInchi
-<http://coconutKG.aksw.org/ontology#simpleInchi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#simpleInchi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#simpleInchi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#simpleInchi> <http://www.w3.org/2000/01/rdf-schema#comment> "Simple International Chemical Identifier."@en .
-<http://coconutKG.aksw.org/ontology#simpleInchi> <http://www.w3.org/2000/01/rdf-schema#label> "simple inchi"@en .
+# http://coconutKG.aksw.org/ontology#standardInchi
+<http://coconutKG.aksw.org/ontology#standardInchi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#standardInchi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#standardInchi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#standardInchi> <http://www.w3.org/2000/01/rdf-schema#comment> "The Standard International Chemical Identifier (InChI) for the molecule, providing a unique textual representation of its structure."@en .
+<http://coconutKG.aksw.org/ontology#standardInchi> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Inchi"@en .
 # 
-# http://coconutKG.aksw.org/ontology#simpleInchiKey
-<http://coconutKG.aksw.org/ontology#simpleInchiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#simpleInchiKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#simpleInchiKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#simpleInchiKey> <http://www.w3.org/2000/01/rdf-schema#comment> "Simple International Chemical Identifier Key."@en .
-<http://coconutKG.aksw.org/ontology#simpleInchiKey> <http://www.w3.org/2000/01/rdf-schema#label> "simple inchi key"@en .
+# http://coconutKG.aksw.org/ontology#standardInchiKey
+<http://coconutKG.aksw.org/ontology#standardInchiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#standardInchiKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
+<http://coconutKG.aksw.org/ontology#standardInchiKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#standardInchiKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A hashed version of the InChI, known as the InChI Key, designed for easy digital searching and identification of the molecule."@en .
+<http://coconutKG.aksw.org/ontology#standardInchiKey> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Inchi Key"@en .
 # 
-# http://coconutKG.aksw.org/ontology#simpleSmiles
-<http://coconutKG.aksw.org/ontology#simpleSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#simpleSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#simpleSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#simpleSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Simple Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#simpleSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "simple smiles"@en .
+# http://coconutKG.aksw.org/ontology#status
+<http://coconutKG.aksw.org/ontology#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Status> .
+<http://coconutKG.aksw.org/ontology#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#status> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the current state or condition of the molecule."@en .
+<http://coconutKG.aksw.org/ontology#status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
 # 
-# http://coconutKG.aksw.org/ontology#smiles
-<http://coconutKG.aksw.org/ontology#smiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#smiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#smiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#smiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#smiles> <http://www.w3.org/2000/01/rdf-schema#label> "smiles"@en .
-# 
-# http://coconutKG.aksw.org/ontology#source
-<http://coconutKG.aksw.org/ontology#source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#source> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#source> <http://www.w3.org/2000/01/rdf-schema#comment> "Source of the data."@en .
-<http://coconutKG.aksw.org/ontology#source> <http://www.w3.org/2000/01/rdf-schema#label> "source"@en .
-# 
-# http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber
-<http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of heavy Atoms which are not sugar."@en .
-<http://coconutKG.aksw.org/ontology#sugarFreeHeavyAtomNumber> <http://www.w3.org/2000/01/rdf-schema#label> "sugar free heavy atom number"@en .
+# http://coconutKG.aksw.org/ontology#structuralComments
+<http://coconutKG.aksw.org/ontology#structuralComments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#structuralComments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
+<http://coconutKG.aksw.org/ontology#structuralComments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#structuralComments> <http://www.w3.org/2000/01/rdf-schema#comment> "Observations or notes about the structural characteristics of the molecule."@en .
+<http://coconutKG.aksw.org/ontology#structuralComments> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Comments"@en .
 # 
 # http://coconutKG.aksw.org/ontology#sugarFreeSmiles
 <http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
+<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Identifier> .
 <http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Sugar free Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "sugar free smiles"@en .
+<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "A SMILES representation of the molecule that excludes sugars."@en .
+<http://coconutKG.aksw.org/ontology#sugarFreeSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "Sugar Free Smiles"@en .
 # 
-# http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber
-<http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of total Atoms which are not sugar."@en .
-<http://coconutKG.aksw.org/ontology#sugarFreeTotalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#label> "sugar free total atom number"@en .
+# http://coconutKG.aksw.org/ontology#synonymCount
+<http://coconutKG.aksw.org/ontology#synonymCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#synonymCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#synonymCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#synonymCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of synonyms associated with the molecule."@en .
+<http://coconutKG.aksw.org/ontology#synonymCount> <http://www.w3.org/2000/01/rdf-schema#label> "Synonym Count"@en .
 # 
 # http://coconutKG.aksw.org/ontology#synonyms
 <http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Compound> .
+<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DescriptiveInformation> .
 <http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#comment> "Synonyme names of a compound."@en .
-<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#label> "synonyms"@en .
+<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of alternative names or terms that refer to the same molecule."@en .
+<http://coconutKG.aksw.org/ontology#synonyms> <http://www.w3.org/2000/01/rdf-schema#label> "Synonyms"@en .
 # 
-# http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects
-<http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Taxonomy> .
-<http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Taxonomy reference objects."@en .
-<http://coconutKG.aksw.org/ontology#taxonomyReferenceObjects> <http://www.w3.org/2000/01/rdf-schema#label> "taxonomy reference objects"@en .
+# http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea
+<http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptor> .
+<http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Topological Polar Surface Area (TPSA) of a molecule. TPSA is an important descriptor in medicinal chemistry and drug design, as it provides an estimate of the polar surface area of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea> <http://www.w3.org/2000/01/rdf-schema#label> "Topological Polar Surface Area"@en .
 # 
-# http://coconutKG.aksw.org/ontology#textTaxa
-<http://coconutKG.aksw.org/ontology#textTaxa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#textTaxa> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Taxonomy> .
-<http://coconutKG.aksw.org/ontology#textTaxa> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#textTaxa> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual representation of the taxonomy of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#textTaxa> <http://www.w3.org/2000/01/rdf-schema#label> "text Taxa"@en .
+# http://coconutKG.aksw.org/ontology#totalAtomCount
+<http://coconutKG.aksw.org/ontology#totalAtomCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#totalAtomCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeometricalDescriptor> .
+<http://coconutKG.aksw.org/ontology#totalAtomCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#totalAtomCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Total count of the atoms."@en .
+<http://coconutKG.aksw.org/ontology#totalAtomCount> <http://www.w3.org/2000/01/rdf-schema#label> "Total Atom Count"@en .
 # 
-# http://coconutKG.aksw.org/ontology#topoPSA
-<http://coconutKG.aksw.org/ontology#topoPSA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#topoPSA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#topoPSA> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#topoPSA> <http://www.w3.org/2000/01/rdf-schema#comment> "Calculation of topological polar surface area based on fragment contributions (TPSA) (Ertl, P. et. al.. J.Med. Chem.. 2000. 43)."@en .
-<http://coconutKG.aksw.org/ontology#topoPSA> <http://www.w3.org/2000/01/rdf-schema#label> "topo PSA"@en .
+# http://coconutKG.aksw.org/ontology#url
+<http://coconutKG.aksw.org/ontology#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Collection> .
+<http://coconutKG.aksw.org/ontology#url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coconutKG.aksw.org/ontology#url> <http://www.w3.org/2000/01/rdf-schema#comment> "The web address where the collection can be accessed or viewed."@en .
+<http://coconutKG.aksw.org/ontology#url> <http://www.w3.org/2000/01/rdf-schema#label> "URL"@en .
 # 
-# http://coconutKG.aksw.org/ontology#totalAtomNumber
-<http://coconutKG.aksw.org/ontology#totalAtomNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#totalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularProperties> .
-<http://coconutKG.aksw.org/ontology#totalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#totalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of total Atoms."@en .
-<http://coconutKG.aksw.org/ontology#totalAtomNumber> <http://www.w3.org/2000/01/rdf-schema#label> "total atom number"@en .
+# http://coconutKG.aksw.org/ontology#vanDerWallsVolume
+<http://coconutKG.aksw.org/ontology#vanDerWallsVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#vanDerWallsVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#GeometricalDescriptor> .
+<http://coconutKG.aksw.org/ontology#vanDerWallsVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://coconutKG.aksw.org/ontology#vanDerWallsVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "The function calculates the volume of a molecule using RDKit's molecular modelling functionalities. It adds hydrogens to the molecule, embeds it into 3D space, and computes the molecular volume."@en .
+<http://coconutKG.aksw.org/ontology#vanDerWallsVolume> <http://www.w3.org/2000/01/rdf-schema#label> "Van Der Walls Volume"@en .
 # 
-# http://coconutKG.aksw.org/ontology#tpsaEfficiency
-<http://coconutKG.aksw.org/ontology#tpsaEfficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#tpsaEfficiency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#tpsaEfficiency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#tpsaEfficiency> <http://www.w3.org/2000/01/rdf-schema#comment> "Fractional polar surface area descriptor."@en .
-<http://coconutKG.aksw.org/ontology#tpsaEfficiency> <http://www.w3.org/2000/01/rdf-schema#label> "tpsa efficiency"@en .
-# 
-# http://coconutKG.aksw.org/ontology#uniqueSmiles
-<http://coconutKG.aksw.org/ontology#uniqueSmiles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#uniqueSmiles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#UniqueIdentifiers> .
-<http://coconutKG.aksw.org/ontology#uniqueSmiles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://coconutKG.aksw.org/ontology#uniqueSmiles> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique Simplified Molecular Input Line Entry Specification."@en .
-<http://coconutKG.aksw.org/ontology#uniqueSmiles> <http://www.w3.org/2000/01/rdf-schema#label> "unique smiles"@en .
-# 
-# http://coconutKG.aksw.org/ontology#vabcDescriptor
-<http://coconutKG.aksw.org/ontology#vabcDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#vabcDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#MolecularDescriptors> .
-<http://coconutKG.aksw.org/ontology#vabcDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-<http://coconutKG.aksw.org/ontology#vabcDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Volume descriptor"@en .
-<http://coconutKG.aksw.org/ontology#vabcDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "vabc descriptor"@en .
-# 
-# http://coconutKG.aksw.org/ontology#vertexAdjMagnitude
-<http://coconutKG.aksw.org/ontology#vertexAdjMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#vertexAdjMagnitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#vertexAdjMagnitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#vertexAdjMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptor that calculates the vertex adjacency information of a molecule."@en .
-<http://coconutKG.aksw.org/ontology#vertexAdjMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "vertex Adj Magnitude"@en .
-# 
-# http://coconutKG.aksw.org/ontology#wienerPathNumber
-<http://coconutKG.aksw.org/ontology#wienerPathNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#wienerPathNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#wienerPathNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#wienerPathNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Half the sum of all the distance matrix entries."@en .
-<http://coconutKG.aksw.org/ontology#wienerPathNumber> <http://www.w3.org/2000/01/rdf-schema#label> "wiener path number"@en .
-# 
-# http://coconutKG.aksw.org/ontology#wienerPolarityNumber
-<http://coconutKG.aksw.org/ontology#wienerPolarityNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#wienerPolarityNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#wienerPolarityNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#wienerPolarityNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Half the sum of all the distance matrix entries with a value of 3."@en .
-<http://coconutKG.aksw.org/ontology#wienerPolarityNumber> <http://www.w3.org/2000/01/rdf-schema#label> "wiener polarity number"@en .
-# 
-# http://coconutKG.aksw.org/ontology#xRefs
-<http://coconutKG.aksw.org/ontology#xRefs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#xRefs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#DataOriginSource> .
-<http://coconutKG.aksw.org/ontology#xRefs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<http://coconutKG.aksw.org/ontology#xRefs> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossreferences to the sources where the compound can be found."@en .
-<http://coconutKG.aksw.org/ontology#xRefs> <http://www.w3.org/2000/01/rdf-schema#label> "cross references"@en .
-# 
-# http://coconutKG.aksw.org/ontology#xlogp
-<http://coconutKG.aksw.org/ontology#xlogp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#xlogp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> .
-<http://coconutKG.aksw.org/ontology#xlogp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#xlogp> <http://www.w3.org/2000/01/rdf-schema#comment> "Prediction of logP based on the atom-type method calld XlogP. Requires all hydrogens to be explicit."@en .
-<http://coconutKG.aksw.org/ontology#xlogp> <http://www.w3.org/2000/01/rdf-schema#label> "x log p"@en .
-# 
-# http://coconutKG.aksw.org/ontology#zagrebIndex
-<http://coconutKG.aksw.org/ontology#zagrebIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://coconutKG.aksw.org/ontology#zagrebIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#TopologicalDescriptors> .
-<http://coconutKG.aksw.org/ontology#zagrebIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://coconutKG.aksw.org/ontology#zagrebIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The sum of the squares of atom degree over all heavy atoms i."@en .
-<http://coconutKG.aksw.org/ontology#zagrebIndex> <http://www.w3.org/2000/01/rdf-schema#label> "zagreb index"@en .
+# http://coconutKG.aksw.org/ontology#variantsCount
+<http://coconutKG.aksw.org/ontology#variantsCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coconutKG.aksw.org/ontology#variantsCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Counts> .
+<http://coconutKG.aksw.org/ontology#variantsCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://coconutKG.aksw.org/ontology#variantsCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of variants associated with the molecule."@en .
+<http://coconutKG.aksw.org/ontology#variantsCount> <http://www.w3.org/2000/01/rdf-schema#label> "Variants Count"@en .
 # 
 # 
 # 
@@ -790,98 +854,96 @@
 # 
 # http://coconutKG.aksw.org/ontology#Citation
 <http://coconutKG.aksw.org/ontology#Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "The chemical compound was mentioned in a article, book or document with a DOI"@en .
+<http://coconutKG.aksw.org/ontology#Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "An article, book or document with a DOI in which a molecule or a collection was mentioned."@en .
 <http://coconutKG.aksw.org/ontology#Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation"@en .
 # 
-# http://coconutKG.aksw.org/ontology#Compound
-<http://coconutKG.aksw.org/ontology#Compound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Compound> <http://www.w3.org/2000/01/rdf-schema#comment> "A molecular compound"@en .
-<http://coconutKG.aksw.org/ontology#Compound> <http://www.w3.org/2000/01/rdf-schema#label> "Compound"@en .
+# http://coconutKG.aksw.org/ontology#Classification
+<http://coconutKG.aksw.org/ontology#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "Attributes related to the classification molecules."@en .
+<http://coconutKG.aksw.org/ontology#Classification> <http://www.w3.org/2000/01/rdf-schema#label> "Classification"@en .
 # 
-# http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors
-<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutional descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Constitutional descriptors"@en .
+# http://coconutKG.aksw.org/ontology#Collection
+<http://coconutKG.aksw.org/ontology#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "Groups of molecules are organized within collections, each linked to metadata such as titles, descriptions, and related jobs."@en .
+<http://coconutKG.aksw.org/ontology#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection"@en .
 # 
-# http://coconutKG.aksw.org/ontology#DataOriginSource
-<http://coconutKG.aksw.org/ontology#DataOriginSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#DataOriginSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The origin of a chemical compounds data"@en .
-<http://coconutKG.aksw.org/ontology#DataOriginSource> <http://www.w3.org/2000/01/rdf-schema#label> "Data origin source"@en .
+# http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor
+<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coconutKG.aksw.org/ontology#Descriptor> .
+<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutional descriptors of a chemical compound."@en .
+<http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Constitutional Descriptor"@en .
 # 
-# http://coconutKG.aksw.org/ontology#Descriptors
-<http://coconutKG.aksw.org/ontology#Descriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Descriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#Descriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Descriptors"@en .
+# http://coconutKG.aksw.org/ontology#Counts
+<http://coconutKG.aksw.org/ontology#Counts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Counts> <http://www.w3.org/2000/01/rdf-schema#comment> "Attributes counting variants, collections, and other related data of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#Counts> <http://www.w3.org/2000/01/rdf-schema#label> "Counts"@en .
 # 
-# http://coconutKG.aksw.org/ontology#ElectronicDescriptors
-<http://coconutKG.aksw.org/ontology#ElectronicDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#ElectronicDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#ElectronicDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic descriptors"@en .
+# http://coconutKG.aksw.org/ontology#DescriptiveInformation
+<http://coconutKG.aksw.org/ontology#DescriptiveInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#DescriptiveInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptive information related to synonyms, comments, or other textual metadata of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#DescriptiveInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Descriptive Information"@en .
 # 
-# http://coconutKG.aksw.org/ontology#Fingerprint
-<http://coconutKG.aksw.org/ontology#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Fingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "Fingerprint and bitstrings of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#Fingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprint"@en .
+# http://coconutKG.aksw.org/ontology#Descriptor
+<http://coconutKG.aksw.org/ontology#Descriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Descriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Descriptors of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#Descriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Descriptor"@en .
 # 
-# http://coconutKG.aksw.org/ontology#Geolocation
-<http://coconutKG.aksw.org/ontology#Geolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Geolocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Geolocation where a compound can be found"@en .
-<http://coconutKG.aksw.org/ontology#Geolocation> <http://www.w3.org/2000/01/rdf-schema#label> "Geolocation"@en .
+# http://coconutKG.aksw.org/ontology#ElectronicDescriptor
+<http://coconutKG.aksw.org/ontology#ElectronicDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#ElectronicDescriptor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coconutKG.aksw.org/ontology#Descriptor> .
+<http://coconutKG.aksw.org/ontology#ElectronicDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic descriptors of a chemical compound."@en .
+<http://coconutKG.aksw.org/ontology#ElectronicDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic Descriptor"@en .
 # 
-# http://coconutKG.aksw.org/ontology#GeometricalDescriptors
-<http://coconutKG.aksw.org/ontology#GeometricalDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#GeometricalDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometrical descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#GeometricalDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Geometrical descriptors"@en .
+# http://coconutKG.aksw.org/ontology#Entry
+<http://coconutKG.aksw.org/ontology#Entry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Entry> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#Entry> <http://www.w3.org/2000/01/rdf-schema#label> "Entry"@en .
 # 
-# http://coconutKG.aksw.org/ontology#MolecularDescriptors
-<http://coconutKG.aksw.org/ontology#MolecularDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#MolecularDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#MolecularDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular descriptors"@en .
+# http://coconutKG.aksw.org/ontology#GeoLocation
+<http://coconutKG.aksw.org/ontology#GeoLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#GeoLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical location where an organism is reported to be found."@en .
+<http://coconutKG.aksw.org/ontology#GeoLocation> <http://www.w3.org/2000/01/rdf-schema#label> "GeoLocation"@en .
 # 
-# http://coconutKG.aksw.org/ontology#MolecularFeatures
-<http://coconutKG.aksw.org/ontology#MolecularFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#MolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular features of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#MolecularFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular features"@en .
+# http://coconutKG.aksw.org/ontology#GeometricalDescriptor
+<http://coconutKG.aksw.org/ontology#GeometricalDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#GeometricalDescriptor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coconutKG.aksw.org/ontology#Descriptor> .
+<http://coconutKG.aksw.org/ontology#GeometricalDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometrical descriptors of a chemical compound."@en .
+<http://coconutKG.aksw.org/ontology#GeometricalDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Geometrical Descriptor"@en .
 # 
-# http://coconutKG.aksw.org/ontology#MolecularFragments
-<http://coconutKG.aksw.org/ontology#MolecularFragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#MolecularFragments> <http://www.w3.org/2000/01/rdf-schema#comment> "Lists of circular fragments (molecular signatures) and functional fragments(ERTL) of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#MolecularFragments> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular fragments"@en .
+# http://coconutKG.aksw.org/ontology#Identifier
+<http://coconutKG.aksw.org/ontology#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique Identifiers for a given molecule."@en .
+<http://coconutKG.aksw.org/ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
 # 
-# http://coconutKG.aksw.org/ontology#MolecularProperties
-<http://coconutKG.aksw.org/ontology#MolecularProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#MolecularProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular properties of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#MolecularProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular properties"@en .
+# http://coconutKG.aksw.org/ontology#Molecule
+<http://coconutKG.aksw.org/ontology#Molecule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Molecule> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound that can take part in a chemical reaction."@en .
+<http://coconutKG.aksw.org/ontology#Molecule> <http://www.w3.org/2000/01/rdf-schema#label> "Molecule"@en .
 # 
-# http://coconutKG.aksw.org/ontology#Taxonomy
-<http://coconutKG.aksw.org/ontology#Taxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#Taxonomy> <http://www.w3.org/2000/01/rdf-schema#comment> "Taxonomy data of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#Taxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "Taxonomy"@en .
+# http://coconutKG.aksw.org/ontology#Organism
+<http://coconutKG.aksw.org/ontology#Organism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Organism> <http://www.w3.org/2000/01/rdf-schema#comment> "A living thing that has an organized structure. The biological origin of a given molecule."@en .
+<http://coconutKG.aksw.org/ontology#Organism> <http://www.w3.org/2000/01/rdf-schema#label> "Organism"@en .
 # 
-# http://coconutKG.aksw.org/ontology#TopologicalDescriptors
-<http://coconutKG.aksw.org/ontology#TopologicalDescriptors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#TopologicalDescriptors> <http://www.w3.org/2000/01/rdf-schema#comment> "Topological descriptors of a chemical compound."@en .
-<http://coconutKG.aksw.org/ontology#TopologicalDescriptors> <http://www.w3.org/2000/01/rdf-schema#label> "Topological descriptors"@en .
+# http://coconutKG.aksw.org/ontology#Properties
+<http://coconutKG.aksw.org/ontology#Properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Properties> <http://www.w3.org/2000/01/rdf-schema#comment> "The chemical and biological properties of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#Properties> <http://www.w3.org/2000/01/rdf-schema#label> "Properties"@en .
 # 
-# http://coconutKG.aksw.org/ontology#UniqueIdentifiers
-<http://coconutKG.aksw.org/ontology#UniqueIdentifiers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://coconutKG.aksw.org/ontology#UniqueIdentifiers> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifiers of a chemical compound like smiles and inchikeys."@en .
-<http://coconutKG.aksw.org/ontology#UniqueIdentifiers> <http://www.w3.org/2000/01/rdf-schema#label> "Unique Identifiers"@en .
+# http://coconutKG.aksw.org/ontology#SampleLocation
+<http://coconutKG.aksw.org/ontology#SampleLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#SampleLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sample location within the organism from where the sample of the compound is taken."@en .
+<http://coconutKG.aksw.org/ontology#SampleLocation> <http://www.w3.org/2000/01/rdf-schema#label> "SampleLocation"@en .
 # 
-# http://purl.org/vocommons/voaf#Vocabulary
-<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://coconutKG.aksw.org/ontology#Status
+<http://coconutKG.aksw.org/ontology#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "Current state and activity of a molecule."@en .
+<http://coconutKG.aksw.org/ontology#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
 # 
-# 
-# 
-# #################################################################
-# #
-# #    Individuals
-# #
-# #################################################################
-# 
-# 
-# http://coconutKG.aksw.org/ontology#
-<http://coconutKG.aksw.org/ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://coconutKG.aksw.org/ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# http://coconutKG.aksw.org/ontology#TopologicalDescriptor
+<http://coconutKG.aksw.org/ontology#TopologicalDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coconutKG.aksw.org/ontology#TopologicalDescriptor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coconutKG.aksw.org/ontology#Descriptor> .
+<http://coconutKG.aksw.org/ontology#TopologicalDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://coconutKG.aksw.org/ontology#TopologicalDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Topological Descriptor"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
