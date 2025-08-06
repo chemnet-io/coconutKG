@@ -1,0 +1,1657 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://coconutKG.aksw.org/ontology#"
+     xml:base="http://coconutKG.aksw.org/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://coconutKG.aksw.org/ontology#">
+        <terms:creator>Louis Westerheide</terms:creator>
+        <terms:description xml:lang="en">COCONUT[KG] is a knowledge graph based on the Coconut Dataset, which is a comprehensive platform that facilitates natural product research by providing data, tools, and other resources and provides services for the deposition, curation, and reuse of data.</terms:description>
+        <terms:rights xml:lang="en"></terms:rights>
+        <terms:title xml:lang="en">COCONUT[KG]</terms:title>
+        <vann:preferredNamespacePrefix>coco</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://coconutKG.aksw.org/ontology#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">coco: CoconutKG</rdfs:label>
+        <owl:versionInfo>SNAPSHOT</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#citedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#citedIn">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Citation"/>
+        <rdfs:comment xml:lang="en">The entry and its corresponding citation.</rdfs:comment>
+        <rdfs:label xml:lang="en">citedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#classifiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#classifiedBy">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:comment xml:lang="en">A molecule is classified by its classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">classifiedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#contains">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:comment xml:lang="en">An entry contains a given molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#defines -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#defines">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Descriptor"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Properties"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">defines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#derivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#derivedFrom">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">derivedFrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#describedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#describedBy">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Properties"/>
+        <rdfs:comment xml:lang="en">A molecule is descriped by its properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">describedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#foundIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#foundIn">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#GeoLocation"/>
+        <rdfs:comment xml:lang="en">A molecule is found in a geo location.</rdfs:comment>
+        <rdfs:label xml:lang="en">foundIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hasAmounts -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#hasAmounts">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:comment xml:lang="en">A molecule has certain amounts of different countable properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAmounts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hasStatus -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#hasStatus">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Status"/>
+        <rdfs:comment xml:lang="en">A molecule has various statuses.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasStatus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#includes -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#includes">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:comment xml:lang="en">The collection includes a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isExplainedThrough -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#isExplainedThrough">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:comment xml:lang="en">A molecule is explained through its descriptive information.</rdfs:comment>
+        <rdfs:label xml:lang="en">isExplainedThrough</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isRepresentedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#isRepresentedIn">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:comment xml:lang="en">A collection is represented in an entry.</rdfs:comment>
+        <rdfs:label xml:lang="en">isRepresentedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#labeledBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#labeledBy">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:comment xml:lang="en">A molceule is labeled by an Identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">labeledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#locatedIn">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#GeoLocation"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">locatedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#originatesFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#originatesFrom">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:comment xml:lang="en">The molecule origintes from a certain organism.</rdfs:comment>
+        <rdfs:label xml:lang="en">originatesFrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Molecule"/>
+        <rdfs:comment xml:lang="en">The sample location specifies from where the molecule was extracted from.</rdfs:comment>
+        <rdfs:label xml:lang="en">specifiesExtractionLocationOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#specifiesLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#specifiesLocationOf">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:comment xml:lang="en">The sample location specifies the location of the organism it originated from.</rdfs:comment>
+        <rdfs:label xml:lang="en">specifiesLocationOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#AlogP -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#AlogP">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The logarithm of the partition between n-octanol and water (logP). AlogP is used to estimate the lipophilicity of a molecule, which is an important factor in drug absorption and distribution.</rdfs:comment>
+        <rdfs:label xml:lang="en">AlogP</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#LipinskiRuleOfFiveViolations">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">A custom function to determine the number of Lipinski&apos;s rule violations for a given molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lipinski Rule Of Five Violations</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#active -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#active">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Status"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the molecule is currently active or inactive.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#activeCitation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#activeCitation">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Citation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Determines wheater a citation is still active or not.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Citation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#annotationLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#annotationLevel">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">A numerical value indicating the thoroughness or depth of the annotation provided for the molecule, reflecting its level of detail.</rdfs:comment>
+        <rdfs:label xml:lang="en">Annotation Level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#aromaticRingCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#aromaticRingCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of aromatic rings in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Aromatic Ring Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#authors -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#authors">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Citation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The names of the authors of the citation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#canonicalSmiles -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#canonicalSmiles">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The canonical Simplified Molecular Input Line Entry System (SMILES) notation for the molecule, representing its structure in a line of text.</rdfs:comment>
+        <rdfs:label xml:lang="en">Canonical Smiles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#chemicalClass -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#chemicalClass">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Chemical Class generated using ClassyFire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chemical Class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#chemicalSubClass -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#chemicalSubClass">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Chemical Sub Class generated using ClassyFire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chemical Sub Class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#chemicalSuperClass -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#chemicalSuperClass">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Chemical Super Class generated using ClassyFire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chemical Super Class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#citationCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#citationCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of times the molecule has been cited in literature or other references.</rdfs:comment>
+        <rdfs:label xml:lang="en">Citation Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#citationDoi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#citationDoi">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Citation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The DOI (Digital Object Identifier) of the citation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Citation DOI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#citationTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#citationTitle">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Citation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The title of the citation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Citation Title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#collectionCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#collectionCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The total number of collections in which the molecule is included.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#collectionDoi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#collectionDoi">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Digital Object Identifier (DOI) assigned to the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection DOI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#collectionIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#collectionIdentifier">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The identifier of the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#collectionSlug -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#collectionSlug">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A user- and search engine-friendly text consisting of one or a few words as part of a URL</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection Slug</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#collectionTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#collectionTitle">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The title of the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection Title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#comment -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#comment">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">General remarks or additional notes regarding the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#comments -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#comments">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Additional remarks or notes about the collection that might provide further context or insight.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#containsLinearSugars -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#containsLinearSugars">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Utilizing the Sugar Removal Utility to check for the presence of linear sugars.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contains Linear Sugars</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#containsRingSugars -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#containsRingSugars">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Utilizing the Sugar Removal Utility to check for the presence of circular sugars.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contains Ring Sugars</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#containsSugar -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#containsSugar">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Utilizing the Sugar Removal Utility to check for the presence of circular or linear sugars.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contains Sugar</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#description">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The description of a given Collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#directParentClassification -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#directParentClassification">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Direct Parent Classification generated using ClassyFire.</rdfs:comment>
+        <rdfs:label xml:lang="en">Direct Parent Classification</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryCanonicalSmiles -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryCanonicalSmiles">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Canonical Smiles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryErrorCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryErrorCode">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Error Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryErrors -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryErrors">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Errors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryHasStereocenters -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryHasStereocenters">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry has stereocenters</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryIsInvalid -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryIsInvalid">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry is invalid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryLink -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryLink">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryMolecularFormula -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryMolecularFormula">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Molecular Formula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryOrganismPart -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryOrganismPart">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Organism Part</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryParentCanonicalSmiles">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Parent Canonical Smiles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryPreciseLocation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryPreciseLocation">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Precise Location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryStandardizedCanonicalSmiles">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Standardized Canonical Smiles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryStatus">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#entryStructuralComments -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#entryStructuralComments">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry Structural Comments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#exactMolecularWeight -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#exactMolecularWeight">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#GeometricalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The exact molecular weight of the molecule which is based on the isotope masses of the atoms in the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exact Molecular Weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#formalCharge -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#formalCharge">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The formal charge of the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Formal Charge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#fractioncsp3 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#fractioncsp3">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The fraction of C atoms that are SP3 hybridized.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fraction CSP3</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#geoCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#geoCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The count of geographical occurrences or representations related to the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geo Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hasStereo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hasStereo">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the molecule has stereochemistry, which refers to the spatial arrangement of atoms in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Stereo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hasVariants -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hasVariants">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates if there are alternative forms or variants of the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Variants</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#heavyAtomCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#heavyAtomCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#GeometricalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Total count of the heavy atoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heavy Atom Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of Hydrogen Bond Acceptors in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hydrogen Bond Acceptors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hydrogenBondAcceptorsLipinski">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Number of Hydrogen Bond Acceptors in a molecule using the Lipinski module.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hydrogen Bond Acceptors Lipinski</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hydrogenBondDonors -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hydrogenBondDonors">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of Hydrogen Bond Donors in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hydrogen Bond Donors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Number of Hydrogen Bond Donors in a molecule using the Lipinski module.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hydrogen Bond Donors Lipinski</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#image -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#image">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An additional or alternative image related to the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#iri -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#iri">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The IRI (Internationalized Resource Identifier) is the internationalised version of the URI (Uniform Resource Identifier)</rdfs:comment>
+        <rdfs:label xml:lang="en">IRI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isParent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#isParent">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the molecule serves as a parent classification in a hierarchical relationship, meaning it has child entities or variants.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Parent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isPlaceholder -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#isPlaceholder">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Status"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the molecule is a placeholder in the dataset, serving as a temporary or default entry without full attributes.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Placeholder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isPublic -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#isPublic">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the collection is publicly accessible or private.</rdfs:comment>
+        <rdfs:label xml:lang="en">Is Public</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#isTautomer -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#isTautomer">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the molecule is a tautomer, which is a specific type of chemical structure that can easily interconvert with another form.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Tautomer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#iupacName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#iupacName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name assigned to the molecule according to the International Union of Pure and Applied Chemistry (IUPAC) nomenclature rules, providing a standardized name for communication.</rdfs:comment>
+        <rdfs:label xml:lang="en">IUPAC Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#jobInfo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#jobInfo">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Information about any tasks or processes performed on the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Job Info</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#jobStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#jobStatus">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The current status of any processing or tasks associated with the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Job Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#locationName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#locationName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#GeoLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the location where the molecule was found.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#molecularFormula -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#molecularFormula">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The molecular formula is a string that represents the types and number of atoms in the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecular Formula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#molecularWeight -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#molecularWeight">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The average molecular weight of the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecular Weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#moleculeCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#moleculeCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of molecules included within the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecule Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#moleculeIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#moleculeIdentifier">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A unique identifier assigned to the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecule Identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#moleculeName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#moleculeName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The common or preferred name of the molecule, which may be used in various contexts and could differ from the IUPAC name.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecule Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#murkoFramework -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#murkoFramework">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Custom function based on CDK to get the Murko Framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">Murko Framework</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#nameTrustLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#nameTrustLevel">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">A numerical value representing the confidence or reliability of the name assigned to the molecule, indicating how well it is established in scientific literature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Name Trust Level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#npLikeness -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#npLikeness">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">NPLikeness score generated using RDKit. The likelyness of a molecule to be a natural product.</rdfs:comment>
+        <rdfs:label xml:lang="en">NPLikeness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#numberOfMinimalRings -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#numberOfMinimalRings">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number rings present in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Number Of Minimal Rings</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#organismCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#organismCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The total number of organisms associated with the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organism Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#organismName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#organismName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the organism.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organism Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#organismParts -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#organismParts">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The parts of the organism from which molecules can be extracted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organism Parts</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#parentMolecule -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#parentMolecule">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Molecule parent classification, allowing for traceability in hierarchical relationships.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parent Molecule</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#photo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#photo">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">An image or visual representation associated with the collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#qedDrugLikeliness -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#qedDrugLikeliness">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#ElectronicDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Quantative estimation of drug-likeness (q weighted sum).</rdfs:comment>
+        <rdfs:label xml:lang="en">Qed Drug Likeliness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#rank -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#rank">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The hierarchical rank that helps categorize and describe the relationships from organisms to other organisms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rank</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#referenceID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#referenceID">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Reference ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#rotatableBondCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#rotatableBondCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of rotatable bonds in a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rotatable Bond Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sampleLocationCollections -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sampleLocationCollections">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The corresponding collections of the given sample location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Location Collections</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sampleLocationIRI -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sampleLocationIRI">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The IRI of the sample location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Location IRI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Count of molecules found in a sample location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Location Molecule Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sampleLocationName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sampleLocationName">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the sample location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Location Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sampleLocationSlug -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sampleLocationSlug">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#SampleLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The slug of the sample location name.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Location Slug</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#standardInchi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#standardInchi">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Standard International Chemical Identifier (InChI) for the molecule, providing a unique textual representation of its structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard Inchi</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#standardInchiKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#standardInchiKey">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A hashed version of the InChI, known as the InChI Key, designed for easy digital searching and identification of the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard Inchi Key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#status -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#status">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Status"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A textual description of the current state or condition of the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#structuralComments -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#structuralComments">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Observations or notes about the structural characteristics of the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural Comments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#sugarFreeSmiles -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#sugarFreeSmiles">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A SMILES representation of the molecule that excludes sugars.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sugar Free Smiles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#synonymCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#synonymCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The total number of synonyms associated with the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Synonym Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#synonyms -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#synonyms">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#DescriptiveInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A list of alternative names or terms that refer to the same molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Synonyms</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#topologicalPolarSurfaceArea">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#TopologicalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Topological Polar Surface Area (TPSA) of a molecule. TPSA is an important descriptor in medicinal chemistry and drug design, as it provides an estimate of the polar surface area of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Topological Polar Surface Area</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#totalAtomCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#totalAtomCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#GeometricalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Total count of the atoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Total Atom Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#url -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#url">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The web address where the collection can be accessed or viewed.</rdfs:comment>
+        <rdfs:label xml:lang="en">URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#vanDerWallsVolume -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#vanDerWallsVolume">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#GeometricalDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The function calculates the volume of a molecule using RDKit&apos;s molecular modelling functionalities. It adds hydrogens to the molecule, embeds it into 3D space, and computes the molecular volume.</rdfs:comment>
+        <rdfs:label xml:lang="en">Van Der Walls Volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#variantsCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coconutKG.aksw.org/ontology#variantsCount">
+        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Counts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The total number of variants associated with the molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Variants Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Citation -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Citation">
+        <rdfs:comment xml:lang="en">An article, book or document with a DOI in which a molecule or a collection was mentioned.</rdfs:comment>
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Classification -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Classification">
+        <rdfs:comment xml:lang="en">Attributes related to the classification molecules.</rdfs:comment>
+        <rdfs:label xml:lang="en">Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Collection -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Collection">
+        <rdfs:comment xml:lang="en">Groups of molecules are organized within collections, each linked to metadata such as titles, descriptions, and related jobs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#ConstitutionalDescriptor">
+        <rdfs:subClassOf rdf:resource="http://coconutKG.aksw.org/ontology#Descriptor"/>
+        <rdfs:comment xml:lang="en">Constitutional descriptors of a chemical compound.</rdfs:comment>
+        <rdfs:label xml:lang="en">Constitutional Descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Counts -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Counts">
+        <rdfs:comment xml:lang="en">Attributes counting variants, collections, and other related data of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Counts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#DescriptiveInformation -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#DescriptiveInformation">
+        <rdfs:comment xml:lang="en">Descriptive information related to synonyms, comments, or other textual metadata of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Descriptive Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Descriptor -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Descriptor">
+        <rdfs:comment xml:lang="en">Descriptors of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#ElectronicDescriptor -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#ElectronicDescriptor">
+        <rdfs:subClassOf rdf:resource="http://coconutKG.aksw.org/ontology#Descriptor"/>
+        <rdfs:comment xml:lang="en">Electronic descriptors of a chemical compound.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electronic Descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Entry -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Entry">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#GeoLocation -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#GeoLocation">
+        <rdfs:comment xml:lang="en">A geographical location where an organism is reported to be found.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeoLocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#GeometricalDescriptor -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#GeometricalDescriptor">
+        <rdfs:subClassOf rdf:resource="http://coconutKG.aksw.org/ontology#Descriptor"/>
+        <rdfs:comment xml:lang="en">Geometrical descriptors of a chemical compound.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometrical Descriptor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Identifier -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Identifier">
+        <rdfs:comment xml:lang="en">Unique Identifiers for a given molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Molecule -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Molecule">
+        <rdfs:comment xml:lang="en">A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound that can take part in a chemical reaction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Organism -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Organism">
+        <rdfs:comment xml:lang="en">A living thing that has an organized structure. The biological origin of a given molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Properties -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Properties">
+        <rdfs:comment xml:lang="en">The chemical and biological properties of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Properties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#SampleLocation -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#SampleLocation">
+        <rdfs:comment xml:lang="en">Sample location within the organism from where the sample of the compound is taken.</rdfs:comment>
+        <rdfs:label xml:lang="en">SampleLocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#Status -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#Status">
+        <rdfs:comment xml:lang="en">Current state and activity of a molecule.</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://coconutKG.aksw.org/ontology#TopologicalDescriptor -->
+
+
+    <owl:Class rdf:about="http://coconutKG.aksw.org/ontology#TopologicalDescriptor">
+        <rdfs:subClassOf rdf:resource="http://coconutKG.aksw.org/ontology#Descriptor"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Topological Descriptor</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
