@@ -191,17 +191,6 @@
 	rdfs:label "hasStatus"@en ;
 	rdfs:range :Status .
 
-:locatedIn rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :Entry ;
-	rdfs:label "locatedIn"@en ;
-	rdfs:range :GeoLocation .
-
-:derivedFrom rdf:type owl:ObjectProperty ;
-	rdfs:comment ""@en ;
-	rdfs:domain :Entry ;
-	rdfs:label "derivedFrom"@en ;
-	rdfs:range :Organism .
 
 
 
