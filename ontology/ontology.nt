@@ -71,13 +71,6 @@
 <http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <http://coconutKG.aksw.org/ontology#defines> <http://www.w3.org/2000/01/rdf-schema#label> "defines"@en .
 # 
-# http://coconutKG.aksw.org/ontology#derivedFrom
-<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
-<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Organism> .
-<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<http://coconutKG.aksw.org/ontology#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derivedFrom"@en .
-# 
 # http://coconutKG.aksw.org/ontology#describedBy
 <http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://coconutKG.aksw.org/ontology#describedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Molecule> .
@@ -133,13 +126,6 @@
 <http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#Identifier> .
 <http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A molceule is labeled by an Identifier."@en .
 <http://coconutKG.aksw.org/ontology#labeledBy> <http://www.w3.org/2000/01/rdf-schema#label> "labeledBy"@en .
-# 
-# http://coconutKG.aksw.org/ontology#locatedIn
-<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coconutKG.aksw.org/ontology#Entry> .
-<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://coconutKG.aksw.org/ontology#GeoLocation> .
-<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<http://coconutKG.aksw.org/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "locatedIn"@en .
 # 
 # http://coconutKG.aksw.org/ontology#originatesFrom
 <http://coconutKG.aksw.org/ontology#originatesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

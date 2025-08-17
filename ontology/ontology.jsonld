@@ -716,23 +716,6 @@
     "@id" : "http://coconutKG.aksw.org/ontology#Properties"
   } ]
 }, {
-  "@id" : "http://coconutKG.aksw.org/ontology#derivedFrom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://coconutKG.aksw.org/ontology#Entry"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "derivedFrom"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://coconutKG.aksw.org/ontology#Organism"
-  } ]
-}, {
   "@id" : "http://coconutKG.aksw.org/ontology#describedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1479,23 +1462,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://coconutKG.aksw.org/ontology#Identifier"
-  } ]
-}, {
-  "@id" : "http://coconutKG.aksw.org/ontology#locatedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://coconutKG.aksw.org/ontology#Entry"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "locatedIn"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://coconutKG.aksw.org/ontology#GeoLocation"
   } ]
 }, {
   "@id" : "http://coconutKG.aksw.org/ontology#locationName",

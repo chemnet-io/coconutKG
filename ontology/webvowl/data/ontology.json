@@ -22,28 +22,28 @@
         "value" : "Louis Westerheide",
         "type" : "label"
       } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "coco",
-        "type" : "label"
-      } ],
       "rights" : [ {
         "identifier" : "rights",
         "language" : "en",
         "value" : "",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
-        "value" : "http://coconutKG.aksw.org/ontology#",
+        "value" : "coco",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "SNAPSHOT",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://coconutKG.aksw.org/ontology#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -140,7 +140,7 @@
     "id" : "56",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "71",
+    "id" : "73",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "20",
@@ -152,7 +152,7 @@
     "id" : "161",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "129",
+    "id" : "127",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "24",
@@ -176,10 +176,10 @@
     "id" : "33",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "166",
+    "id" : "165",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "167",
+    "id" : "166",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "150",
@@ -191,7 +191,7 @@
     "id" : "47",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "168",
+    "id" : "167",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
@@ -200,10 +200,10 @@
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "127",
+    "id" : "129",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "171",
+    "id" : "170",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "99",
@@ -218,7 +218,7 @@
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "186",
+    "id" : "184",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
@@ -227,7 +227,7 @@
     "id" : "26",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "189",
+    "id" : "187",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "89",
@@ -239,16 +239,16 @@
     "id" : "112",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "191",
+    "id" : "189",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "36",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "103",
+    "id" : "105",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "195",
+    "id" : "193",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "144",
@@ -263,7 +263,7 @@
     "id" : "81",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "181",
+    "id" : "179",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "11",
@@ -275,19 +275,19 @@
     "id" : "115",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "175",
+    "id" : "174",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "197",
+    "id" : "195",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "79",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "73",
+    "id" : "71",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "2",
@@ -296,7 +296,7 @@
     "id" : "121",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "207",
+    "id" : "205",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "8",
@@ -314,37 +314,37 @@
     "id" : "69",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "193",
+    "id" : "191",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "77",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "199",
+    "id" : "197",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "188",
+    "id" : "186",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "101",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "214",
+    "id" : "212",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "185",
+    "id" : "183",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "178",
+    "id" : "176",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "215",
+    "id" : "213",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "148",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "105",
+    "id" : "103",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "160",
@@ -353,7 +353,7 @@
     "id" : "38",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "183",
+    "id" : "181",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "15",
@@ -365,25 +365,25 @@
     "id" : "21",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "125",
+    "id" : "123",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "219",
+    "id" : "217",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "54",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "123",
+    "id" : "125",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "85",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "211",
+    "id" : "209",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "222",
+    "id" : "220",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "1",
@@ -392,7 +392,7 @@
     "id" : "93",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "206",
+    "id" : "204",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "49",
@@ -647,7 +647,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "71",
+    "id" : "73",
     "label" : {
       "IRI-based" : "string"
     }
@@ -680,7 +680,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "129",
+    "id" : "127",
     "label" : {
       "IRI-based" : "int"
     }
@@ -736,14 +736,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "166",
+    "id" : "165",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "167",
+    "id" : "166",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -776,7 +776,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "168",
+    "id" : "167",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -807,14 +807,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "127",
+    "id" : "129",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "171",
+    "id" : "170",
     "label" : {
       "IRI-based" : "string"
     }
@@ -855,7 +855,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "186",
+    "id" : "184",
     "label" : {
       "IRI-based" : "string"
     }
@@ -881,7 +881,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "189",
+    "id" : "187",
     "label" : {
       "IRI-based" : "string"
     }
@@ -909,7 +909,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "191",
+    "id" : "189",
     "label" : {
       "IRI-based" : "string"
     }
@@ -923,14 +923,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "103",
+    "id" : "105",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "195",
+    "id" : "193",
     "label" : {
       "IRI-based" : "int"
     }
@@ -965,7 +965,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "181",
+    "id" : "179",
     "label" : {
       "IRI-based" : "string"
     }
@@ -993,7 +993,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "175",
+    "id" : "174",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1012,7 +1012,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "197",
+    "id" : "195",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1026,7 +1026,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "73",
+    "id" : "71",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1047,7 +1047,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "207",
+    "id" : "205",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -1089,7 +1089,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "193",
+    "id" : "191",
     "label" : {
       "IRI-based" : "int"
     }
@@ -1103,14 +1103,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "199",
+    "id" : "197",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "188",
+    "id" : "186",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -1124,28 +1124,28 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "214",
+    "id" : "212",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "185",
+    "id" : "183",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "178",
+    "id" : "176",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "215",
+    "id" : "213",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1159,7 +1159,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "105",
+    "id" : "103",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1180,7 +1180,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "183",
+    "id" : "181",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1208,14 +1208,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "125",
+    "id" : "123",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "219",
+    "id" : "217",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1229,7 +1229,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "123",
+    "id" : "125",
     "label" : {
       "IRI-based" : "int"
     }
@@ -1243,14 +1243,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "211",
+    "id" : "209",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "222",
+    "id" : "220",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1276,7 +1276,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "206",
+    "id" : "204",
     "label" : {
       "IRI-based" : "int"
     }
@@ -1514,31 +1514,28 @@
     "id" : "162",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "165",
-    "type" : "owl:objectProperty"
+    "id" : "168",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "169",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "170",
-    "type" : "owl:datatypeProperty"
+    "id" : "171",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "172",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "173",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "174",
+    "id" : "175",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "176",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "177",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "179",
+    "id" : "178",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "180",
@@ -1547,10 +1544,10 @@
     "id" : "182",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "184",
+    "id" : "185",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "187",
+    "id" : "188",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "190",
@@ -1568,6 +1565,9 @@
     "id" : "198",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "199",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "200",
     "type" : "owl:datatypeProperty"
   }, {
@@ -1580,64 +1580,58 @@
     "id" : "203",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "204",
+    "id" : "206",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "205",
-    "type" : "owl:datatypeProperty"
+    "id" : "207",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "208",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "209",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "210",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "212",
+    "id" : "211",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "214",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "215",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "213",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "216",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "217",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "218",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "220",
+    "id" : "219",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "221",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "223",
+    "id" : "222",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "223",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "224",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "225",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "226",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "227",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "228",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "229",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "230",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -2042,23 +2036,9 @@
     "attributes" : [ "datatype" ],
     "id" : "68"
   }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#chemicalSuperClass",
-    "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "71",
-    "label" : {
-      "IRI-based" : "chemicalSuperClass",
-      "en" : "Chemical Super Class"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Chemical Super Class generated using ClassyFire."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "70"
-  }, {
     "iri" : "http://coconutKG.aksw.org/ontology#jobStatus",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "73",
+    "range" : "71",
     "label" : {
       "IRI-based" : "jobStatus",
       "en" : "Job Status"
@@ -2066,6 +2046,20 @@
     "domain" : "7",
     "comment" : {
       "en" : "The current status of any processing or tasks associated with the collection."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://coconutKG.aksw.org/ontology#chemicalSuperClass",
+    "baseIri" : "http://coconutKG.aksw.org/ontology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "chemicalSuperClass",
+      "en" : "Chemical Super Class"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Chemical Super Class generated using ClassyFire."
     },
     "attributes" : [ "datatype" ],
     "id" : "72"
@@ -2258,23 +2252,9 @@
     "attributes" : [ "datatype" ],
     "id" : "100"
   }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#organismCount",
-    "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "103",
-    "label" : {
-      "IRI-based" : "organismCount",
-      "en" : "Organism Count"
-    },
-    "domain" : "14",
-    "comment" : {
-      "en" : "The total number of organisms associated with the molecule."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "102"
-  }, {
     "iri" : "http://coconutKG.aksw.org/ontology#AlogP",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "105",
+    "range" : "103",
     "label" : {
       "IRI-based" : "AlogP",
       "en" : "AlogP"
@@ -2282,6 +2262,20 @@
     "domain" : "4",
     "comment" : {
       "en" : "The logarithm of the partition between n-octanol and water (logP). AlogP is used to estimate the lipophilicity of a molecule, which is an important factor in drug absorption and distribution."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://coconutKG.aksw.org/ontology#organismCount",
+    "baseIri" : "http://coconutKG.aksw.org/ontology",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "organismCount",
+      "en" : "Organism Count"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "The total number of organisms associated with the molecule."
     },
     "attributes" : [ "datatype" ],
     "id" : "104"
@@ -2408,23 +2402,9 @@
     "attributes" : [ "datatype" ],
     "id" : "120"
   }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount",
-    "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "123",
-    "label" : {
-      "IRI-based" : "sampleLocationMoleculeCount",
-      "en" : "Sample Location Molecule Count"
-    },
-    "domain" : "20",
-    "comment" : {
-      "en" : "Count of molecules found in a sample location."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "122"
-  }, {
     "iri" : "http://coconutKG.aksw.org/ontology#sampleLocationName",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "125",
+    "range" : "123",
     "label" : {
       "IRI-based" : "sampleLocationName",
       "en" : "Sample Location Name"
@@ -2434,23 +2414,25 @@
       "en" : "The name of the sample location."
     },
     "attributes" : [ "datatype" ],
-    "id" : "124"
+    "id" : "122"
   }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#entryStructuralComments",
+    "iri" : "http://coconutKG.aksw.org/ontology#sampleLocationMoleculeCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "127",
+    "range" : "125",
     "label" : {
-      "IRI-based" : "entryStructuralComments",
-      "en" : "Entry Structural Comments"
+      "IRI-based" : "sampleLocationMoleculeCount",
+      "en" : "Sample Location Molecule Count"
     },
-    "domain" : "12",
-    "comment" : { },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Count of molecules found in a sample location."
+    },
     "attributes" : [ "datatype" ],
-    "id" : "126"
+    "id" : "124"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#hydrogenBondDonorsLipinski",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "129",
+    "range" : "127",
     "label" : {
       "IRI-based" : "hydrogenBondDonorsLipinski",
       "en" : "Hydrogen Bond Donors Lipinski"
@@ -2459,6 +2441,18 @@
     "comment" : {
       "en" : "Number of Hydrogen Bond Donors in a molecule using the Lipinski module."
     },
+    "attributes" : [ "datatype" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://coconutKG.aksw.org/ontology#entryStructuralComments",
+    "baseIri" : "http://coconutKG.aksw.org/ontology",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "entryStructuralComments",
+      "en" : "Entry Structural Comments"
+    },
+    "domain" : "12",
+    "comment" : { },
     "attributes" : [ "datatype" ],
     "id" : "128"
   }, {
@@ -2642,18 +2636,6 @@
     "attributes" : [ "datatype" ],
     "id" : "162"
   }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#derivedFrom",
-    "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "23",
-    "label" : {
-      "IRI-based" : "derivedFrom",
-      "en" : "derivedFrom"
-    },
-    "domain" : "12",
-    "comment" : { },
-    "attributes" : [ "object" ],
-    "id" : "165"
-  }, {
     "iri" : "http://coconutKG.aksw.org/ontology#collectionCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
     "range" : "155",
@@ -2666,11 +2648,11 @@
       "en" : "The total number of collections in which the molecule is included."
     },
     "attributes" : [ "datatype" ],
-    "id" : "169"
+    "id" : "168"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#entryPreciseLocation",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "171",
+    "range" : "170",
     "label" : {
       "IRI-based" : "entryPreciseLocation",
       "en" : "Entry Precise Location"
@@ -2678,7 +2660,7 @@
     "domain" : "12",
     "comment" : { },
     "attributes" : [ "datatype" ],
-    "id" : "170"
+    "id" : "169"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#citedIn",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2692,7 +2674,7 @@
       "en" : "The entry and its corresponding citation."
     },
     "attributes" : [ "object" ],
-    "id" : "172"
+    "id" : "171"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#collectionIdentifier",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2706,11 +2688,11 @@
       "en" : "The identifier of the collection."
     },
     "attributes" : [ "datatype" ],
-    "id" : "173"
+    "id" : "172"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#molecularWeight",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "175",
+    "range" : "174",
     "label" : {
       "IRI-based" : "molecularWeight",
       "en" : "Molecular Weight"
@@ -2720,23 +2702,11 @@
       "en" : "The average molecular weight of the molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "174"
-  }, {
-    "iri" : "http://coconutKG.aksw.org/ontology#locatedIn",
-    "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "30",
-    "label" : {
-      "IRI-based" : "locatedIn",
-      "en" : "locatedIn"
-    },
-    "domain" : "12",
-    "comment" : { },
-    "attributes" : [ "object" ],
-    "id" : "176"
+    "id" : "173"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#canonicalSmiles",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "178",
+    "range" : "176",
     "label" : {
       "IRI-based" : "canonicalSmiles",
       "en" : "Canonical Smiles"
@@ -2746,7 +2716,7 @@
       "en" : "The canonical Simplified Molecular Input Line Entry System (SMILES) notation for the molecule, representing its structure in a line of text."
     },
     "attributes" : [ "datatype" ],
-    "id" : "177"
+    "id" : "175"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#containsSugar",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2760,11 +2730,11 @@
       "en" : "Utilizing the Sugar Removal Utility to check for the presence of circular or linear sugars."
     },
     "attributes" : [ "datatype" ],
-    "id" : "179"
+    "id" : "177"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#murkoFramework",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "181",
+    "range" : "179",
     "label" : {
       "IRI-based" : "murkoFramework",
       "en" : "Murko Framework"
@@ -2774,11 +2744,11 @@
       "en" : "Custom function based on CDK to get the Murko Framework."
     },
     "attributes" : [ "datatype" ],
-    "id" : "180"
+    "id" : "178"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#status",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "183",
+    "range" : "181",
     "label" : {
       "IRI-based" : "status",
       "en" : "Status"
@@ -2788,11 +2758,11 @@
       "en" : "A textual description of the current state or condition of the molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "182"
+    "id" : "180"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#authors",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "185",
+    "range" : "183",
     "label" : {
       "IRI-based" : "authors",
       "en" : "Authors"
@@ -2802,11 +2772,11 @@
       "en" : "The names of the authors of the citation."
     },
     "attributes" : [ "datatype" ],
-    "id" : "184"
+    "id" : "182"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#activeCitation",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "188",
+    "range" : "186",
     "label" : {
       "IRI-based" : "activeCitation",
       "en" : "Active Citation"
@@ -2816,11 +2786,11 @@
       "en" : "Determines wheater a citation is still active or not."
     },
     "attributes" : [ "datatype" ],
-    "id" : "187"
+    "id" : "185"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#entryMolecularFormula",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "186",
+    "range" : "184",
     "label" : {
       "IRI-based" : "entryMolecularFormula",
       "en" : "Entry Molecular Formula"
@@ -2828,11 +2798,11 @@
     "domain" : "12",
     "comment" : { },
     "attributes" : [ "datatype" ],
-    "id" : "190"
+    "id" : "188"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#totalAtomCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "193",
+    "range" : "191",
     "label" : {
       "IRI-based" : "totalAtomCount",
       "en" : "Total Atom Count"
@@ -2842,11 +2812,11 @@
       "en" : "Total count of the atoms."
     },
     "attributes" : [ "datatype" ],
-    "id" : "192"
+    "id" : "190"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#numberOfMinimalRings",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "195",
+    "range" : "193",
     "label" : {
       "IRI-based" : "numberOfMinimalRings",
       "en" : "Number Of Minimal Rings"
@@ -2856,11 +2826,11 @@
       "en" : "The number rings present in a molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "194"
+    "id" : "192"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#jobInfo",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "197",
+    "range" : "195",
     "label" : {
       "IRI-based" : "jobInfo",
       "en" : "Job Info"
@@ -2870,11 +2840,11 @@
       "en" : "Information about any tasks or processes performed on the collection."
     },
     "attributes" : [ "datatype" ],
-    "id" : "196"
+    "id" : "194"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#active",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "199",
+    "range" : "197",
     "label" : {
       "IRI-based" : "active",
       "en" : "Active"
@@ -2884,7 +2854,7 @@
       "en" : "Indicates whether the molecule is currently active or inactive."
     },
     "attributes" : [ "datatype" ],
-    "id" : "198"
+    "id" : "196"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#heavyAtomCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2898,7 +2868,7 @@
       "en" : "Total count of the heavy atoms."
     },
     "attributes" : [ "datatype" ],
-    "id" : "200"
+    "id" : "198"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#entryErrorCode",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2910,11 +2880,11 @@
     "domain" : "12",
     "comment" : { },
     "attributes" : [ "datatype" ],
-    "id" : "201"
+    "id" : "199"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#entryOrganismPart",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "189",
+    "range" : "187",
     "label" : {
       "IRI-based" : "entryOrganismPart",
       "en" : "Entry Organism Part"
@@ -2922,7 +2892,7 @@
     "domain" : "12",
     "comment" : { },
     "attributes" : [ "datatype" ],
-    "id" : "202"
+    "id" : "200"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#comments",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -2936,11 +2906,11 @@
       "en" : "Additional remarks or notes about the collection that might provide further context or insight."
     },
     "attributes" : [ "datatype" ],
-    "id" : "203"
+    "id" : "201"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#photo",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "191",
+    "range" : "189",
     "label" : {
       "IRI-based" : "photo",
       "en" : "Photo"
@@ -2950,11 +2920,11 @@
       "en" : "An image or visual representation associated with the collection."
     },
     "attributes" : [ "datatype" ],
-    "id" : "204"
+    "id" : "202"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#rotatableBondCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "206",
+    "range" : "204",
     "label" : {
       "IRI-based" : "rotatableBondCount",
       "en" : "Rotatable Bond Count"
@@ -2964,11 +2934,11 @@
       "en" : "The number of rotatable bonds in a molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "205"
+    "id" : "203"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#exactMolecularWeight",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "168",
+    "range" : "167",
     "label" : {
       "IRI-based" : "exactMolecularWeight",
       "en" : "Exact Molecular Weight"
@@ -2978,16 +2948,16 @@
       "en" : "The exact molecular weight of the molecule which is based on the isotope masses of the atoms in the molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "208"
+    "id" : "206"
   }, {
     "range" : "41",
     "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "209"
+    "id" : "207"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#sampleLocationCollections",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "211",
+    "range" : "209",
     "label" : {
       "IRI-based" : "sampleLocationCollections",
       "en" : "Sample Location Collections"
@@ -2997,7 +2967,7 @@
       "en" : "The corresponding collections of the given sample location."
     },
     "attributes" : [ "datatype" ],
-    "id" : "210"
+    "id" : "208"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#hydrogenBondAcceptors",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3011,7 +2981,7 @@
       "en" : "The number of Hydrogen Bond Acceptors in a molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "212"
+    "id" : "210"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#defines",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3023,7 +2993,7 @@
     "domain" : "41",
     "comment" : { },
     "attributes" : [ "object" ],
-    "id" : "213"
+    "id" : "211"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#labeledBy",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3037,7 +3007,7 @@
       "en" : "A molceule is labeled by an Identifier."
     },
     "attributes" : [ "object" ],
-    "id" : "216"
+    "id" : "214"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#citationTitle",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3051,11 +3021,11 @@
       "en" : "The title of the citation."
     },
     "attributes" : [ "datatype" ],
-    "id" : "217"
+    "id" : "215"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#standardInchiKey",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "219",
+    "range" : "217",
     "label" : {
       "IRI-based" : "standardInchiKey",
       "en" : "Standard Inchi Key"
@@ -3065,11 +3035,11 @@
       "en" : "A hashed version of the InChI, known as the InChI Key, designed for easy digital searching and identification of the molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "218"
+    "id" : "216"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#chemicalClass",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "215",
+    "range" : "213",
     "label" : {
       "IRI-based" : "chemicalClass",
       "en" : "Chemical Class"
@@ -3079,11 +3049,11 @@
       "en" : "Chemical Class generated using ClassyFire."
     },
     "attributes" : [ "datatype" ],
-    "id" : "220"
+    "id" : "218"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#rank",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "222",
+    "range" : "220",
     "label" : {
       "IRI-based" : "rank",
       "en" : "Rank"
@@ -3093,11 +3063,11 @@
       "en" : "The hierarchical rank that helps categorize and describe the relationships from organisms to other organisms."
     },
     "attributes" : [ "datatype" ],
-    "id" : "221"
+    "id" : "219"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#hasVariants",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "167",
+    "range" : "166",
     "label" : {
       "IRI-based" : "hasVariants",
       "en" : "has Variants"
@@ -3107,11 +3077,11 @@
       "en" : "Indicates if there are alternative forms or variants of the entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "223"
+    "id" : "221"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#fractioncsp3",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "166",
+    "range" : "165",
     "label" : {
       "IRI-based" : "fractioncsp3",
       "en" : "Fraction CSP3"
@@ -3121,7 +3091,7 @@
       "en" : "The fraction of C atoms that are SP3 hybridized."
     },
     "attributes" : [ "datatype" ],
-    "id" : "224"
+    "id" : "222"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#includes",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3135,7 +3105,7 @@
       "en" : "The collection includes a molecule."
     },
     "attributes" : [ "object" ],
-    "id" : "225"
+    "id" : "223"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#contains",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3149,11 +3119,11 @@
       "en" : "An entry contains a given molecule."
     },
     "attributes" : [ "object" ],
-    "id" : "226"
+    "id" : "224"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#isTautomer",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "207",
+    "range" : "205",
     "label" : {
       "IRI-based" : "isTautomer",
       "en" : "is Tautomer"
@@ -3163,11 +3133,11 @@
       "en" : "Indicates whether the molecule is a tautomer, which is a specific type of chemical structure that can easily interconvert with another form."
     },
     "attributes" : [ "datatype" ],
-    "id" : "227"
+    "id" : "225"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#aromaticRingCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
-    "range" : "214",
+    "range" : "212",
     "label" : {
       "IRI-based" : "aromaticRingCount",
       "en" : "Aromatic Ring Count"
@@ -3177,7 +3147,7 @@
       "en" : "The number of aromatic rings in a molecule."
     },
     "attributes" : [ "datatype" ],
-    "id" : "228"
+    "id" : "226"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#citationCount",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3191,7 +3161,7 @@
       "en" : "The number of times the molecule has been cited in literature or other references."
     },
     "attributes" : [ "datatype" ],
-    "id" : "229"
+    "id" : "227"
   }, {
     "iri" : "http://coconutKG.aksw.org/ontology#specifiesExtractionLocationOf",
     "baseIri" : "http://coconutKG.aksw.org/ontology",
@@ -3205,6 +3175,6 @@
       "en" : "The sample location specifies from where the molecule was extracted from."
     },
     "attributes" : [ "object" ],
-    "id" : "230"
+    "id" : "228"
   } ]
 }

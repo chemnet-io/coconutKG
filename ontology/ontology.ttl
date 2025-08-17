@@ -80,14 +80,6 @@
          rdfs:label "defines"@en .
 
 
-###  http://coconutKG.aksw.org/ontology#derivedFrom
-:derivedFrom rdf:type owl:ObjectProperty ;
-             rdfs:domain :Entry ;
-             rdfs:range :Organism ;
-             rdfs:comment ""@en ;
-             rdfs:label "derivedFrom"@en .
-
-
 ###  http://coconutKG.aksw.org/ontology#describedBy
 :describedBy rdf:type owl:ObjectProperty ;
              rdfs:domain :Molecule ;
@@ -150,14 +142,6 @@
            rdfs:range :Identifier ;
            rdfs:comment "A molceule is labeled by an Identifier."@en ;
            rdfs:label "labeledBy"@en .
-
-
-###  http://coconutKG.aksw.org/ontology#locatedIn
-:locatedIn rdf:type owl:ObjectProperty ;
-           rdfs:domain :Entry ;
-           rdfs:range :GeoLocation ;
-           rdfs:comment ""@en ;
-           rdfs:label "locatedIn"@en .
 
 
 ###  http://coconutKG.aksw.org/ontology#originatesFrom

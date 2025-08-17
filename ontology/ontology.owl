@@ -135,18 +135,6 @@
     
 
 
-    <!-- http://coconutKG.aksw.org/ontology#derivedFrom -->
-
-
-    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#derivedFrom">
-        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
-        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Organism"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">derivedFrom</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://coconutKG.aksw.org/ontology#describedBy -->
 
 
@@ -239,18 +227,6 @@
         <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#Identifier"/>
         <rdfs:comment xml:lang="en">A molceule is labeled by an Identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">labeledBy</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://coconutKG.aksw.org/ontology#locatedIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://coconutKG.aksw.org/ontology#locatedIn">
-        <rdfs:domain rdf:resource="http://coconutKG.aksw.org/ontology#Entry"/>
-        <rdfs:range rdf:resource="http://coconutKG.aksw.org/ontology#GeoLocation"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">locatedIn</rdfs:label>
     </owl:ObjectProperty>
     
 
