@@ -59,27 +59,24 @@
                 }
             }
         });
-    querya = "PREFIX coco:  <http://coconutKG.aksw.org/ontology#>" ;
-    queryb = "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" ;
-    queryc = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" ;
-    queryd = "PREFIX owl:  <http://www.w3.org/2002/07/owl#>" ;
-    querye = "PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>" ;
+    const query = `
+    PREFIX coco:  <http://coconutKG.aksw.org/ontology#>
+    PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+    PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-    queryf = "SELECT DISTINCT ?formula ?name ?weight ?smile WHERE {" ;
-    queryg = "?compound a coco:Compound ." ;
-    queryh = "?compound coco:molecularFormula ?formula ." ;
-    queryi = "?compound coco:name ?name ." ;
+    SELECT * WHERE {
+        ?molecule a coco:Molecule .
+        ?molecule rdfs:label ?moleculeLabel .
+        ?molecule coco:labeledBy ?moleculeIdentifier .
+        ?moleculeIdentifier coco:iupacName ?moleculeName .
+        ?molecule owl:sameAs ?sameMolecule .
+    }
 
-    queryj = "?compound coco:hasDescriptors ?descriptor ." ;
-    queryk = "?descriptor coco:isMolecular ?mdescriptor ." ;
-    queryl = "?mdescriptor coco:molecularWeight ?weight ." ;
+    LIMIT 20
+    `;
 
-
-    querym = "?compound coco:isIdentifiedBy ?unique ." ;
-    queryn = "?unique coco:smiles ?smile .}" ;
-
-    queryo = "LIMIT 10" ;
-    query = querya+"\n"+queryb+"\n"+queryc+"\n"+queryd+"\n"+querye+"\n\n"+queryf+"\n"+queryg+"\n"+queryh+"\n"+queryi+"\n\n"+queryj+"\n"+queryk+"\n"+queryl+"\n\n"+querym+"\n"+queryn+"\n\n"+queryo ;
     yasgui.getTab().yasqe.setValue(query);
     </script>
 </html>
