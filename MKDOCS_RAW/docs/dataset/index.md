@@ -1,42 +1,25 @@
-# Dataset statistics
+# Graph Statistics
 
+To evaluate the quality and completeness of the Knowledge Graph, both core and linking 
+statistics were collected. Core statistics measure the scale and density of information, 
+while linking statistics highlight the degree of integration with external sources.
 
+## Core Statistics
 
-<table>
-                        <tr>
-                            <td>triples</td>
-                            <td align="right">296853511</td>
-                        </tr>
-                        <tr>
-                            <td>entities</td>
-                            <td align="right">1536262</td>
-                        </tr>
-                        <tr>
-                            <td>object properties</td>
-                            <td align="right">15</td>
-                        </tr>
-                        <tr>
-                            <td>data properties</td>
-                            <td align="right">80</td>
-                        </tr>
-                        <tr>
-                            <td>classes</td>
-                            <td align="right">12</td>
-                        </tr>
-</table>
+- Total triples: ~92.5 million  
+- Classes: 16  
+- Predicates: 98  
+- Average relations per molecule: 9.2  
 
-**Triples**: The data was stored as RDF triples. A triple consists of subject, predicate and object.
+## Linking Statistics
 
-**Entities**: In this context, an entity is a chemical compound.
+The following table shows the share of instances connected via `owl:sameAs`:
 
-**Object properties**: Are used to connect classes. *coco:hasDescriptors* is an example for an object property.
+| Class       | Total Instances | With sameAs | Without sameAs | Share with Links |
+|-------------|-----------------|--------------|----------------|------------------|
+| Molecule    | ~1,000,000        | ~260,000         | ~740,000          | ~26%              |
+| Organism    | ~53,000         | ~28,000        | ~25,000           | ~54%              |
+| GeoLocation | ~2,640          | ~240          | ~2,400         | ~9%               |
 
-**Data properties**: Are used to add attributes to classes. *coco:molecularWeight* is an example for a data property.
-
-**Classes**: They are used to classify a resource. In COCONUT[KG] *coco:Geolocation* would be a class.
-
-___ 
-
-Below is a table of all the data properties and their appearance count in the dataset:
-
-<object data="property_count.svg" width="700" height="1100"> </object>
+These numbers provide insights into both the richness of the dataset and the degree of 
+its interlinking with external Knowledge Graphs.

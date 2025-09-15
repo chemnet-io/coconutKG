@@ -1,13 +1,19 @@
-# Improving</h3>
-Requests and ideas for improvement are recorded here.
+# Improving the Knowledge Graph
 
-## Current dataset issues</h4>
+The current version of the graph already provides a consistent RDF representation 
+of the COCONUT dataset and connects it to external sources like Wikidata and DBpedia.  
+However, several improvements are possible.
 
- - The taxonomy data is currently not yet satisfactory.
- - Some properties might have some "urn:instance ..." entries, which equals no data.
+- **Automatic Updates**: Incorporating new data dumps automatically would ensure 
+  continuous freshness of the graph.  
+- **Extended Linking**: Additional connections to other Knowledge Graphs 
+  (e.g., NuBBE[KG]) could further enrich the data.  
+- **Descriptors**: Newly introduced descriptor classes require expert validation 
+  to guarantee their scientific quality.  
+- **User Interfaces**: A graphical frontend for semantic search and visualization 
+  would make the graph more accessible for researchers.  
+- **Machine Learning**: Future work could include predictive modeling of molecular 
+  properties or the automatic generation of vocabularies.  
 
-## Planned future updates
-
- - In-depth refinement of the taxonomy data.
- - Remove empty properties/properties that falsely hold automated data(currently: taxonomyReferenceObjects, all textTaxa that simply say "notax")
- - Further improve the ontology with input from chemists and biologists.
+These improvements would significantly increase the usability, interoperability, 
+and long-term sustainability of the Knowledge Graph.

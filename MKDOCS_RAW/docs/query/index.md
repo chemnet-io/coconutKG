@@ -1,15 +1,14 @@
 # Querying COCONUT[KG]
 
-COCONUT[KG] allows a variety of queries on a large number of natural products.
-You can query the COCONUT[KG] online with a SPARQL endpoint.
-
+The COCONUT[KG] Knowledge Graph can be queried through its public SPARQL endpoint.  
+Example queries demonstrate how knowledge can be discovered and enriched beyond the 
+original dataset.
 
 ## SPARQL endpoint
 
 At [https://coconut-kg.aksw.org/sparql](https://coconut-kg.aksw.org/sparql) you'll find a SPARQL endpoint.
 Both back-end and front-end are provided by OpenLink Virtuoso.
 The back-end serves a SPARQL engine.
-In the front-end we find a HTTP/SPARQL server with nginx overlay.
 
 *NOTE: Before using the SPARQL endpoint we recommend to read this documentation first*
 
@@ -25,92 +24,84 @@ The SPARQL enpoint is provided by the [OpenLink Software Virtuoso](https://virtu
 
 You can make a limited number of connections. The settings can be seen below:
 
-            ResultSetMaxRows           = 25000
+            ResultSetMaxRows           = 10000
             MaxQueryExecutionTime      =   600  (seconds)
             MaxQueryCostEstimationTime =   400  (seconds)
             Connection limit           =    10  (parallel connections per IP address
 
-**ATTENTION**: *The result size is currently limited to 25000 rows. This way partial results are displayed as complete ones and there is no HTTP error.*
+**ATTENTION**: *The result size is currently limited to 10000 rows. This way partial results are displayed as complete ones and there is no HTTP error.*
 
 ## SPARQL example queries
-The following query gives you formula, name, weight and smile of a compound:
-```
+
+## Query 1: Molecules of a given organism
+
+This first query retrieves all molecules associated with *Cocos nucifera* and their labels.
+
+```sparql
 PREFIX coco: <http://coconutKG.aksw.org/ontology#>
-PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?formula ?name ?weight ?smile WHERE {
-  ?compound a coco:Compound . 
-  ?compound coco:molecularFormula ?formula .
-  ?compound coco:name ?name .
+SELECT DISTINCT ?organism ?organismLabel ?molecule ?moleculeLabel
+WHERE {
+  ?organism a coco:Organism ;
+            rdfs:label "Cocos nucifera" ;
+            rdfs:label ?organismLabel .
 
-  ?compound coco:hasDescriptors ?descriptor .
-  ?descriptor coco:isMolecular ?mdescriptor .
-  ?mdescriptor coco:molecularWeight ?weight .
-
-  ?compound coco:isIdentifiedBy ?unique .
-  ?unique coco:smiles ?smile .
-} 
-LIMIT 10
+  ?molecule coco:originatesFrom ?organism .
+  OPTIONAL { ?molecule rdfs:label ?moleculeLabel }
+}
+ORDER BY ?moleculeLabel
 ```
-The following query gives you formula and weight of a compound where the weight is between 320.00 and 320.20:
-```
+
+## Query 2: Molecules of a given organism with their InChIKeys
+
+```sparql
 PREFIX coco: <http://coconutKG.aksw.org/ontology#>
-PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?formula ?weight  WHERE {
-  ?compound a coco:Compound . 
-  ?compound coco:molecularFormula ?formula .
+SELECT DISTINCT ?organismLabel ?moleculeLabel ?inchi
+WHERE {
+  ?organism a coco:Organism ;
+            rdfs:label "Cocos nucifera" ;
+            rdfs:label ?organismLabel .
 
-  ?compound coco:hasDescriptors ?descriptor .
-  ?descriptor coco:isMolecular ?mdescriptor .
-  ?mdescriptor coco:molecularWeight ?weight .
+  ?molecule coco:originatesFrom ?organism .
+  OPTIONAL { ?molecule rdfs:label ?moleculeLabel }
 
-FILTER (?weight > 320.00 && ?weight < 320.20) .
-} 
-LIMIT 10
+  OPTIONAL {
+    ?molecule coco:labeledBy ?identifier .
+    ?identifier coco:standardInchiKey ?inchi .
+  }
+}
+ORDER BY ?moleculeLabel
 ```
 
-It is also possible to query without our query GUI, but with a self written script that connects to our endpoint. Below is a example in python with SPARQLWrapper:
+## Query 3: Molecules of a given organism with their InChIKeys and their owl:sameAs links
+
+```sparql
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX coco: <http://coconutKG.aksw.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?organismLabel ?moleculeLabel ?inchi
+       (GROUP_CONCAT(DISTINCT ?sameAsOrganism; SEPARATOR=", ") AS ?sameAsOrganisms)
+       (GROUP_CONCAT(DISTINCT ?sameAsMolecule; SEPARATOR=", ") AS ?sameAsMolecules)
+WHERE {
+  ?organism a coco:Organism ;
+            rdfs:label "Cocos nucifera" ;
+            rdfs:label ?organismLabel .
+  OPTIONAL { ?organism owl:sameAs ?sameAsOrganism }
+
+  ?molecule coco:originatesFrom ?organism .
+  OPTIONAL { ?molecule rdfs:label ?moleculeLabel }
+  OPTIONAL { ?molecule owl:sameAs ?sameAsMolecule }
+
+  OPTIONAL {
+    ?molecule coco:labeledBy ?identifier .
+    ?identifier coco:standardInchiKey ?inchi .
+  }
+}
+GROUP BY ?organismLabel ?moleculeLabel ?inchi
+ORDER BY ?moleculeLabel
 ```
-from SPARQLWrapper import SPARQLWrapper, JSON
 
-sparql = SPARQLWrapper(
-    "https://coconut-kg.aksw.org/sparql"
-)
-sparql.setReturnFormat(JSON)
-
-sparql.setQuery(
-    """
-    PREFIX coco:  <http://coconutKG.aksw.org/ontology#>
-    PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-    PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-    SELECT DISTINCT ?formula ?name ?weight ?smile WHERE {
-        ?compound a coco:Compound .
-        ?compound coco:molecularFormula ?formula .
-        ?compound coco:name ?name .
-        ?compound coco:hasDescriptors ?descriptor .
-        ?descriptor coco:isMolecular ?mdescriptor .
-        ?mdescriptor coco:molecularWeight ?weight .
-        ?compound coco:isIdentifiedBy ?unique .
-        ?unique coco:smiles ?smile .}
-    LIMIT 10
-    """
-)
-
-try:
-    ret = sparql.queryAndConvert()
-
-    for r in ret["results"]["bindings"]:
-        print(r)
-except Exception as e:
-    print(e)
-```
-You can check out a real simple tutorial for SPARQL [here](https://www.w3.org/TR/sparql11-query/):
